@@ -346,6 +346,7 @@ body {
   display: flex;
   flex-direction: column;
   gap: 5px;
+  min-width: 0;
 }
 
 .form-group.full {
@@ -374,6 +375,7 @@ body {
   font-size: .84rem;
   outline: none;
   transition: border .3s;
+  width: 100%;
 }
 
 .form-input:focus,
@@ -492,6 +494,7 @@ body {
 
 .album-dd {
   position: relative;
+  max-width: 100%;
 }
 
 .album-dd-trigger {
@@ -501,6 +504,7 @@ body {
   border-radius: var(--radius-sm);
   overflow: hidden;
   transition: border .3s;
+  max-width: 100%;
 }
 
 .album-dd-trigger:focus-within {
@@ -1313,7 +1317,8 @@ tr:hover td {
   max-width: 340px;
   border: 1px solid;
   pointer-events: auto;
-  transition: transform .4s cubic-bezier(.4, 0, .2, 1), opacity .4s cubic-bezier(.4, 0, .2, 1);
+  transition: transform .4s cubic-bezier(.4, 0, .2, 1),
+              opacity .4s cubic-bezier(.4, 0, .2, 1);
 }
 
 .toast.show {
@@ -1354,6 +1359,7 @@ tr:hover td {
   position: relative;
   display: flex;
   align-items: stretch;
+  max-width: 100%;
 }
 
 .input-prefix {
@@ -1374,6 +1380,8 @@ tr:hover td {
 .form-input.has-prefix {
   border-top-left-radius: 0;
   border-bottom-left-radius: 0;
+  flex: 1;
+  min-width: 0;
 }
 
 .input-prefix-wrap:focus-within .input-prefix {
@@ -1381,7 +1389,7 @@ tr:hover td {
   color: var(--accent2);
 }
 
-@media (max-width: 640px) {
+@media (max-width: 745px) {
   .stats {
     grid-template-columns: repeat(2, 1fr);
   }
@@ -1392,6 +1400,10 @@ tr:hover td {
 
   .form-grid {
     grid-template-columns: 1fr;
+  }
+
+  .form-section {
+    padding: 16px;
   }
 
   .admin-header {
@@ -1424,5 +1436,49 @@ tr:hover td {
 
   .pagination-controls {
     flex-wrap: wrap;
+  }
+
+  .range-row {
+    flex-wrap: wrap;
+  }
+
+  .range-row .form-input {
+    width: auto;
+    min-width: 60px;
+    flex: 1;
+  }
+
+  .album-dd-arrow {
+    width: 36px;
+    flex-shrink: 0;
+  }
+
+  .album-dd-input {
+    padding: 10px 10px;
+  }
+
+  .form-row {
+    flex-wrap: wrap;
+  }
+
+  .base-path-tag {
+    font-size: .7rem;
+    word-break: break-all;
+  }
+
+  .modal-body {
+    padding: 16px;
+  }
+
+  .modal-head {
+    padding: 16px;
+  }
+
+  .modal-foot {
+    padding: 12px 16px;
+  }
+
+  .login-box {
+    padding: 28px 20px;
   }
 }
