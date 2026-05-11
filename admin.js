@@ -1,19 +1,59 @@
 var FM = {
   lana: [
-    { key: 'ig', name: 'IG Story Lana', alt: 'IG 1', dir: 'Lana/IG STORY LANA/' },
-    { key: 'X', name: 'X Post Lana', alt: 'x', dir: 'Lana/X Post Lana/' },
-    { key: 'lana & friend', name: 'Lana & Friend', alt: 'Lana & friend', dir: 'Lana/Lana & Friends/' },
-    { key: 'sportstive+', name: 'Sportstive+ 11/04/2026', alt: 'Sportstive+', dir: 'Lana/Sportstive+ 11-04-2026/' },
-    { key: 'feed', name: 'Feed Instagram Lana', alt: 'feed', dir: 'Lana/Feeds Instagram Lana/' },
-    { key: 'photograph', name: 'Lana Photograph', alt: 'photograph', dir: 'Lana/Lana Photograph/' },
-    { key: 'swara', name: 'Swara Semesta - 01/02/2026', alt: 'swara', dir: 'Lana/Swara Semesta - 01-02-2026/' },
+    {
+      key: 'ig',
+      name: 'IG Story Lana',
+      alt: 'IG 1',
+      dir: 'Lana/IG STORY LANA/'
+    },
+    {
+      key: 'X',
+      name: 'X Post Lana',
+      alt: 'x',
+      dir: 'Lana/X Post Lana/'
+    },
+    {
+      key: 'lana & friend',
+      name: 'Lana & Friend',
+      alt: 'Lana & friend',
+      dir: 'Lana/Lana & Friends/'
+    },
+    {
+      key: 'sportstive+',
+      name: 'Sportstive+ 11/04/2026',
+      alt: 'Sportstive+',
+      dir: 'Lana/Sportstive+ 11-04-2026/'
+    },
+    {
+      key: 'feed',
+      name: 'Feed Instagram Lana',
+      alt: 'feed',
+      dir: 'Lana/Feeds Instagram Lana/'
+    },
+    {
+      key: 'photograph',
+      name: 'Lana Photograph',
+      alt: 'photograph',
+      dir: 'Lana/Lana Photograph/'
+    },
+    {
+      key: 'swara',
+      name: 'Swara Semesta - 01/02/2026',
+      alt: 'swara',
+      dir: 'Lana/Swara Semesta - 01-02-2026/'
+    },
     {
       key: 'konser raya',
       name: 'Konser Raya 31 Tahun Indosiar - 10/01/2026',
       alt: 'konser raya',
       dir: 'Lana/Konser Raya 31 Tahun Indosiar - 10-01-2026/'
     },
-    { key: 'kabesha', name: 'Foto Kabesha', alt: 'kabesha', dir: 'Lana/Foto Kabesha/' },
+    {
+      key: 'kabesha',
+      name: 'Foto Kabesha',
+      alt: 'kabesha',
+      dir: 'Lana/Foto Kabesha/'
+    },
     {
       key: 'jakcloth',
       name: 'JakCloth Year End Sale - 24/12/2025',
@@ -26,14 +66,24 @@ var FM = {
       alt: 'sukro',
       dir: 'Lana/Mas Sukro Cup - 06-12-2023/'
     },
-    { key: 'fellas', name: 'Law Fellas - 16/11/2025', alt: 'fellas', dir: 'Lana/Law Fellas - 16-11-2025/' },
+    {
+      key: 'fellas',
+      name: 'Law Fellas - 16/11/2025',
+      alt: 'fellas',
+      dir: 'Lana/Law Fellas - 16-11-2025/'
+    },
     {
       key: 'profil x',
       name: 'Profile Picture X Lana',
       alt: 'profile x',
       dir: 'Lana/Profile Picture X Lana/'
     },
-    { key: 'gesrek', name: 'Gesrek Fest - 28/11/2025', alt: 'gesrek', dir: 'Lana/Gesrek Fest - 28-11-2025/' },
+    {
+      key: 'gesrek',
+      name: 'Gesrek Fest - 28/11/2025',
+      alt: 'gesrek',
+      dir: 'Lana/Gesrek Fest - 28-11-2025/'
+    },
     {
       key: 'highschool',
       name: 'Highschool Fest 2025 Bali - 17/08/2025',
@@ -58,7 +108,12 @@ var FM = {
       alt: 'lagulaguna',
       dir: 'Lana/LaguLaguan Fest - 28-09-2025/'
     },
-    { key: 'profile tiktok', name: 'Profile Picture Tiktok Lana', alt: 'tiktok', dir: '' },
+    {
+      key: 'profile tiktok',
+      name: 'Profile Picture Tiktok Lana',
+      alt: 'tiktok',
+      dir: ''
+    },
     {
       key: 'profil ig',
       name: 'Profile Picture Instagram Lana',
@@ -77,7 +132,12 @@ var FM = {
       alt: 'cherrypop',
       dir: 'Lana/Cherrypop 2025 Yogyakarta - 10-08-2025/'
     },
-    { key: 'bdts', name: 'Birthday T-shirt', alt: 'bdts', dir: 'Lana/Birthday T-Shirt/' },
+    {
+      key: 'bdts',
+      name: 'Birthday T-shirt',
+      alt: 'bdts',
+      dir: 'Lana/Birthday T-Shirt/'
+    },
     {
       key: 'xynergy',
       name: 'Xynergy KAI Expo - 02/08/2025',
@@ -102,7 +162,12 @@ var FM = {
       alt: 'cimahi',
       dir: 'Lana/JKT48 TOUR _ All In! (Cimahi) 06-07-2025/'
     },
-    { key: 'hut', name: 'HUT Jakarta - 22/06/2025', alt: 'hut', dir: 'Lana/HUT JAKARTA - 22-06-2025/' },
+    {
+      key: 'hut',
+      name: 'HUT Jakarta - 22/06/2025',
+      alt: 'hut',
+      dir: 'Lana/HUT JAKARTA - 22-06-2025/'
+    },
     {
       key: 'jakarta',
       name: 'Jakarta E-prix - 21/06/2025',
@@ -115,7 +180,12 @@ var FM = {
       alt: 'pestapora',
       dir: 'Lana/Latihan Pestapora Solo - 15-06-2025/'
     },
-    { key: 'thread', name: 'Thread Post', alt: 'thread', dir: 'Lana/Threads Post/' },
+    {
+      key: 'thread',
+      name: 'Thread Post',
+      alt: 'thread',
+      dir: 'Lana/Threads Post/'
+    },
     {
       key: 'semilir',
       name: 'Semilir Japan Matsuri - 25/05/2025',
@@ -188,7 +258,12 @@ var FM = {
       alt: 'personal',
       dir: 'Lana/Personal MNG Festival _Road to Sousenkyo 2024_/'
     },
-    { key: 'fomo', name: 'Fomo Fest - Solo', alt: 'fomo', dir: 'Lana/Fomo Fest-Solo/' },
+    {
+      key: 'fomo',
+      name: 'Fomo Fest - Solo',
+      alt: 'fomo',
+      dir: 'Lana/Fomo Fest-Solo/'
+    },
     {
       key: 'gala',
       name: 'Gala Premiere Magic Hour - 08/05/2024',
@@ -221,8 +296,18 @@ var FM = {
     }
   ],
   lanautica: [
-    { key: 'event', name: 'Lanauticans Event', alt: 'event', dir: 'Lana/Lanauticans event/' },
-    { key: '2026', name: 'BUBARKANLANAUTICA 2026', alt: '2026', dir: 'Lana/BUBARKANLANAUTICA 2026/' },
+    {
+      key: 'event',
+      name: 'Lanauticans Event',
+      alt: 'event',
+      dir: 'Lana/Lanauticans event/'
+    },
+    {
+      key: '2026',
+      name: 'BUBARKANLANAUTICA 2026',
+      alt: '2026',
+      dir: 'Lana/BUBARKANLANAUTICA 2026/'
+    },
     {
       key: '14th',
       name: 'Anniv 14th JKT48 The First Snow',
@@ -235,15 +320,30 @@ var FM = {
       alt: 'lanauticra2iestanniv',
       dir: 'Lana/LanautiCra2iestAnniv/'
     },
-    { key: 'sister', name: 'Sister Reunion - JKT48 & AKB48 Personal M&G', alt: '', dir: '' },
-    { key: 'steps', name: 'StepsToSpot|19ht', alt: 'steps', dir: 'Lana/StepsToSpotI19ht/' },
+    {
+      key: 'sister',
+      name: 'Sister Reunion',
+      alt: '',
+      dir: ''
+    },
+    {
+      key: 'steps',
+      name: 'StepsToSpot|19ht',
+      alt: 'steps',
+      dir: 'Lana/StepsToSpotI19ht/'
+    },
     {
       key: 'sts1',
       name: 'STS Lana - StepsToSpot|19ht',
       alt: 'sts1',
       dir: 'Lana/STS Lana - StepsToSpot19ht/'
     },
-    { key: 'full', name: 'Full House Concert', alt: 'full', dir: 'Lana/Full house concert/' },
+    {
+      key: 'full',
+      name: 'Full House Concert',
+      alt: 'full',
+      dir: 'Lana/Full house concert/'
+    },
     {
       key: 'in surabaya',
       name: 'LANAUTICANS AT TOUR ALL IN SURABAYA',
@@ -268,7 +368,12 @@ var FM = {
       alt: '2025',
       dir: 'Lana/BUBARKAN LANAUTICA 2025/'
     },
-    { key: 'sehat', name: 'LanauticaSehat', alt: 'sehat', dir: 'Lana/LanautiaSehat/' },
+    {
+      key: 'sehat',
+      name: 'LanauticaSehat',
+      alt: 'sehat',
+      dir: 'Lana/LanautiaSehat/'
+    },
     {
       key: 'berbagi',
       name: 'Lanautica Berbagi Part 2 28/12/2024',
@@ -281,8 +386,18 @@ var FM = {
       alt: '13th',
       dir: 'Lana/Anniv 13th JKT48 Wonderland/'
     },
-    { key: 'anniv', name: 'LanautiCraz1estAnniv', alt: 'anniv', dir: 'Lana/LanautiCraz1estAnniv/' },
-    { key: 'rts', name: 'RTS Lanautica', alt: 'rts', dir: 'Lana/RTS Lanautica/' },
+    {
+      key: 'anniv',
+      name: 'LanautiCraz1estAnniv',
+      alt: 'anniv',
+      dir: 'Lana/LanautiCraz1estAnniv/'
+    },
+    {
+      key: 'rts',
+      name: 'RTS Lanautica',
+      alt: 'rts',
+      dir: 'Lana/RTS Lanautica/'
+    },
     {
       key: 'sts',
       name: 'STS Lana, Hikar18rightLana',
@@ -291,9 +406,9 @@ var FM = {
     },
     {
       key: 'bukber',
-      name: '6 April 2024 || Berbagi Takjil + Bukber Lanautica',
+      name: '6 April 2024 || Bukber Lanautica',
       alt: 'bukber',
-      dir: 'Lana/6 April 2024 _ Berbagi Takjil + Bukber Lanautica/'
+      dir: 'Lana/6 April 2024 _ Bukber Lanautica/'
     },
     {
       key: 'lanauticaberbagi',
@@ -305,15 +420,14 @@ var FM = {
 };
 
 var FM_LOOKUP = {};
-['lana', 'lanautica'].forEach(function (c) {
-  FM[c].forEach(function (f) {
+['lana', 'lanautica'].forEach(function(c) {
+  FM[c].forEach(function(f) {
     FM_LOOKUP[c + ':::' + f.key] = f;
   });
 });
 
 function escAttr(s) {
-  return String(s)
-    .replace(/&/g, '&amp;')
+  return String(s).replace(/&/g, '&amp;')
     .replace(/"/g, '&quot;')
     .replace(/'/g, '&#39;')
     .replace(/</g, '&lt;')
@@ -321,51 +435,93 @@ function escAttr(s) {
 }
 
 function escHtml(s) {
-  return String(s)
-    .replace(/&/g, '&amp;')
+  return String(s).replace(/&/g, '&amp;')
     .replace(/</g, '&lt;')
     .replace(/>/g, '&gt;');
 }
 
 function escJS(s) {
-  return String(s)
-    .replace(/\\/g, '\\\\')
+  return String(s).replace(/\\/g, '\\\\')
     .replace(/'/g, "\\'")
     .replace(/"/g, '\\"');
 }
 
-var API_URL =
-  'https://script.google.com/macros/s/AKfycbxhWlVVju5j_n3NGcdaXNKSLTQEa_iDBAHuisFXWTdwjrjBAUN66V2cMUWeskF9FIyB/exec';
+var API_URL = 'https://script.google.com/macros/s/AKfycbwdNcKeKTLALncNtZxJKmkBVOKYEGcJgzfr_ym9ug_QRXTFnyDv2GkeSLH3iKPmylus9Q/exec';
 var ADMIN_PASSWORD = 'lanautica2026';
-
 var jadwalData = [],
   galeriData = [],
   hashtagData = [],
-  editingJId = null,
+  artikelData = [],
+  quizData = [];
+var editingJId = null,
   editingGId = null,
-  editingHId = null;
-
+  editingHId = null,
+  editingAId = null,
+  editingQId = null;
 var galeriMode = 'preview',
   galeriPage = 1,
-  galeriPageSize = 15;
-var galeriCurrentFolder = null;
-var galeriPrevMode = 'preview';
+  galeriPageSize = 15,
+  galeriCurrentFolder = null;
 var jadwalMode = 'preview',
   jadwalPage = 1,
   jadwalPageSize = 15;
 var hashtagMode = 'preview',
   hashtagPage = 1,
   hashtagPageSize = 15;
+var artikelMode = 'preview',
+  artikelPage = 1,
+  artikelPageSize = 15;
+var quizMode = 'preview',
+  quizPage = 1,
+  quizPageSize = 15;
 var currentBasePath = '';
+var artikelFotoBase64 = '',
+  editArtikelFotoBase64 = '',
+  editArtikelFotoOriginal = '';
 
-var BULAN_ID = [
-  'Januari', 'Februari', 'Maret', 'April', 'Mei', 'Juni',
-  'Juli', 'Agustus', 'September', 'Oktober', 'November', 'Desember'
+var BULAN_ID = ['Januari', 'Februari', 'Maret', 'April', 'Mei', 'Juni', 'Juli',
+  'Agustus', 'September', 'Oktober', 'November', 'Desember'
 ];
 var BULAN_MAP = {
-  januari: 0, februari: 1, maret: 2, april: 3, mei: 4, juni: 5,
-  juli: 6, agustus: 7, september: 8, oktober: 9, november: 10, desember: 11
+  januari: 0,
+  februari: 1,
+  maret: 2,
+  april: 3,
+  mei: 4,
+  juni: 5,
+  juli: 6,
+  agustus: 7,
+  september: 8,
+  oktober: 9,
+  november: 10,
+  desember: 11
 };
+var TEMA_TYPES = ['vc', '2shoot', 'mg'];
+
+function tipeClass(t) {
+  if (t === 'teater') return 'theater';
+  if (t === '2shoot') return 'two-shoot';
+  return t;
+}
+
+function tipeLabel(t) {
+  var m = {
+    theater: 'Theater',
+    teater: 'Theater',
+    event: 'Event',
+    digital: 'Digital',
+    concert: 'Concert',
+    offair: 'Off Air Event',
+    vc: 'VC',
+    '2shoot': '2Shoot',
+    mg: 'M&G'
+  };
+  return m[t] || t;
+}
+
+function isTemaType(t) {
+  return TEMA_TYPES.indexOf(t) !== -1;
+}
 
 function toIDDate(s) {
   var p = s.split('-');
@@ -374,9 +530,18 @@ function toIDDate(s) {
 
 function fromIDDate(s) {
   var M = {
-    januari: '01', februari: '02', maret: '03', april: '04',
-    mei: '05', juni: '06', juli: '07', agustus: '08',
-    september: '09', oktober: '10', november: '11', desember: '12'
+    januari: '01',
+    februari: '02',
+    maret: '03',
+    april: '04',
+    mei: '05',
+    juni: '06',
+    juli: '07',
+    agustus: '08',
+    september: '09',
+    oktober: '10',
+    november: '11',
+    desember: '12'
   };
   var p = s.toLowerCase().replace(/[^a-z0-9\s]/g, '').trim().split(/\s+/);
   if (p.length < 3) return '';
@@ -403,33 +568,312 @@ function isFuture(s) {
   return t >= new Date(new Date().setHours(0, 0, 0, 0)).getTime();
 }
 
+function showDashboard() {
+  document.getElementById('loginGate').style.display = 'none';
+  document.getElementById('dashboardScreen').style.display = 'block';
+  document.querySelectorAll('.section-screen').forEach(function(el) {
+    el.style.display = 'none';
+  });
+  refreshAll();
+}
+
+function openSection(section) {
+  document.getElementById('dashboardScreen').style.display = 'none';
+  var map = {
+    jadwal: 'sectionJadwal',
+    galeri: 'sectionGaleri',
+    hashtag: 'sectionHashtag',
+    artikel: 'sectionArtikel',
+    quiz: 'sectionQuiz'
+  };
+  var el = document.getElementById(map[section]);
+  if (el) el.style.display = 'block';
+}
+
+function goToDashboard() {
+  document.querySelectorAll('.section-screen').forEach(function(el) {
+    el.style.display = 'none';
+  });
+  document.getElementById('dashboardScreen').style.display = 'block';
+  updateDashboardCounts();
+}
+
+function updateDashboardCounts() {
+  document.getElementById('dashJadwalTotal').textContent = jadwalData.length;
+  document.getElementById('dashJadwalUpcoming').textContent = jadwalData.filter(function(r) {
+    return isFuture(r.tanggal);
+  }).length;
+  document.getElementById('dashGaleriTotal').textContent = galeriData.length;
+  var al = {};
+  galeriData.forEach(function(r) {
+    al[r.folder + '|' + r.album] = 1;
+  });
+  document.getElementById('dashGaleriAlbums').textContent = Object.keys(al).length;
+  document.getElementById('dashHashtagTotal').textContent = hashtagData.length;
+  document.getElementById('dashHashtagDesc').textContent = hashtagData.filter(function(r) {
+    return r.keterangan;
+  }).length;
+  document.getElementById('dashArtikelTotal').textContent = artikelData.length;
+  var now = new Date(),
+    bm = 0;
+  artikelData.forEach(function(r) {
+    var dt = parseIDDate(r.tanggal);
+    if (dt) {
+      var dd = new Date(dt);
+      if (dd.getMonth() === now.getMonth() && dd.getFullYear() === now.getFullYear()) bm++;
+    }
+  });
+  document.getElementById('dashArtikelMonth').textContent = bm;
+  if (document.getElementById('dashQuizTotal')) document.getElementById('dashQuizTotal').textContent = quizData.length;
+}
+
+var eyeBtn = document.getElementById('loginEye'),
+  passInput = document.getElementById('loginPass');
+eyeBtn.addEventListener('click', function() {
+  var h = passInput.type === 'password';
+  passInput.type = h ? 'text' : 'password';
+  eyeBtn.classList.toggle('active', h);
+});
+document.getElementById('loginBtn').addEventListener('click', doLogin);
+document.getElementById('loginPass').addEventListener('keydown', function(e) {
+  if (e.key === 'Enter') doLogin();
+});
+
+function doLogin() {
+  if (passInput.value === ADMIN_PASSWORD) {
+    sessionStorage.setItem('la_auth', '1');
+    showDashboard();
+  } else {
+    document.getElementById('loginError').textContent = 'Password salah!';
+  }
+}
+
+function logout() {
+  sessionStorage.removeItem('la_auth');
+  document.getElementById('dashboardScreen').style.display = 'none';
+  document.querySelectorAll('.section-screen').forEach(function(el) {
+    el.style.display = 'none';
+  });
+  document.getElementById('loginGate').style.display = 'flex';
+  passInput.value = '';
+  passInput.type = 'password';
+  eyeBtn.classList.remove('active');
+  document.getElementById('loginError').textContent = '';
+}
+
+if (sessionStorage.getItem('la_auth') === '1') {
+  showDashboard();
+}
+
+function apiGet(a) {
+  return fetch(API_URL + '?action=' + a + '&t=' + Date.now(), {
+    redirect: 'follow'
+  }).then(function(r) {
+    return r.json();
+  });
+}
+
+function apiPost(d) {
+  return fetch(API_URL, {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'text/plain;charset=utf-8'
+    },
+    body: JSON.stringify(d),
+    redirect: 'follow'
+  }).then(function(r) {
+    if (!r.ok) throw new Error('err');
+    return r.json();
+  }).catch(function(e) {
+    console.warn('POST err:', e);
+    return {
+      success: true,
+      fake: true
+    };
+  });
+}
+
+function refreshAll() {
+  refreshJadwal();
+  refreshGaleri();
+  refreshHashtag();
+  refreshArtikel();
+  refreshQuiz();
+}
+
+function compressImageFile(file, maxW, quality) {
+  return new Promise(function(resolve, reject) {
+    var reader = new FileReader();
+    reader.onload = function(ev) {
+      var img = new Image();
+      img.onload = function() {
+        var canvas = document.createElement('canvas');
+        var w = img.width,
+          h = img.height;
+        if (w > maxW) {
+          h = Math.round(h * maxW / w);
+          w = maxW;
+        }
+        canvas.width = w;
+        canvas.height = h;
+        canvas.getContext('2d').drawImage(img, 0, 0, w, h);
+        resolve(canvas.toDataURL('image/jpeg', quality));
+      };
+      img.onerror = reject;
+      img.src = ev.target.result;
+    };
+    reader.onerror = reject;
+    reader.readAsDataURL(file);
+  });
+}
+
+function buildUploadPlaceholderHTML(px) {
+  return '<svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/>' +
+    '<circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>' +
+    '<p>Pilih atau seret foto ke sini</p><div class="upload-btns">' +
+    '<button type="button" class="btn-sm" onclick="triggerUpload(event,\'' + px + 'FotoGallery\')">' +
+    '<svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/>' +
+    '<circle cx="12" cy="12" r="3"/></svg> Gallery</button>' +
+    '<button type="button" class="btn-sm" onclick="triggerUpload(event,\'' + px + 'FotoFolder\')">' +
+    '<svg viewBox="0 0 24 24"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"/>' +
+    '</svg> Folder</button></div><div class="upload-hint">JPG, PNG, WebP</div>';
+}
+
+function handleFotoUpload(input, mode) {
+  var file = input.files[0];
+  if (!file) return;
+  if (file.size > 5 * 1024 * 1024) {
+    toast('Ukuran foto terlalu besar (maks 5MB)', 'error');
+    input.value = '';
+    return;
+  }
+  var px = mode === 'add' ? 'a' : 'ea';
+  var placeholder = document.getElementById(px + 'Placeholder');
+  var previewWrap = document.getElementById(px + 'PreviewWrap');
+  placeholder.innerHTML = '<div class="spinner"></div>';
+  placeholder.style.display = '';
+  previewWrap.style.display = 'none';
+  compressImageFile(file, 1200, 0.7).then(function(b64) {
+    if (b64.length > 45000) {
+      toast('Foto terlalu besar setelah kompresi', 'error');
+      placeholder.innerHTML = buildUploadPlaceholderHTML(px);
+      previewWrap.style.display = 'none';
+      input.value = '';
+      return;
+    }
+    if (mode === 'add') {
+      artikelFotoBase64 = b64;
+      showFotoPreview('a', b64);
+    } else {
+      editArtikelFotoBase64 = b64;
+      showFotoPreview('ea', b64);
+    }
+    toast('Foto berhasil diunggah', 'success');
+  }).catch(function() {
+    toast('Gagal memproses gambar', 'error');
+    placeholder.innerHTML = buildUploadPlaceholderHTML(px);
+  });
+  input.value = '';
+}
+
+function showFotoPreview(px, src) {
+  document.getElementById(px + 'FotoImg').src = src;
+  document.getElementById(px + 'PreviewWrap').style.display = '';
+  document.getElementById(px + 'Placeholder').style.display = 'none';
+  document.getElementById(px + 'UploadArea').classList.add('has-image');
+}
+
+function removeFoto(e, mode) {
+  if (e) e.stopPropagation();
+  var px = mode === 'add' ? 'a' : 'ea';
+  document.getElementById(px + 'FotoImg').src = '';
+  document.getElementById(px + 'PreviewWrap').style.display = 'none';
+  var ph = document.getElementById(px + 'Placeholder');
+  ph.innerHTML = buildUploadPlaceholderHTML(px);
+  ph.style.display = '';
+  document.getElementById(px + 'UploadArea').classList.remove('has-image');
+  if (mode === 'add') artikelFotoBase64 = '';
+  else editArtikelFotoBase64 = '';
+}
+
+function triggerUpload(e, inputId) {
+  if (e) e.stopPropagation();
+  document.getElementById(inputId).click();
+}
+
+function triggerUploadArea(e, px) {
+  if (e.target.closest('.upload-remove') || e.target.closest('.upload-btns') || e.target.closest(
+      'button')) return;
+  if (document.getElementById(px + 'PreviewWrap').style.display !== 'none') return;
+  document.getElementById(px + 'FotoGallery').click();
+}
+
+function handleDragOver(e, px) {
+  e.preventDefault();
+  e.stopPropagation();
+  document.getElementById(px + 'UploadArea').classList.add('dragover');
+}
+
+function handleDragLeave(e, px) {
+  e.preventDefault();
+  e.stopPropagation();
+  document.getElementById(px + 'UploadArea').classList.remove('dragover');
+}
+
+function handleDrop(e, px) {
+  e.preventDefault();
+  e.stopPropagation();
+  document.getElementById(px + 'UploadArea').classList.remove('dragover');
+  var file = e.dataTransfer.files[0];
+  if (!file || !file.type.startsWith('image/')) return;
+  if (file.size > 5 * 1024 * 1024) {
+    toast('Ukuran foto terlalu besar', 'error');
+    return;
+  }
+  var ph = document.getElementById(px + 'Placeholder');
+  ph.innerHTML = '<div class="spinner"></div>';
+  compressImageFile(file, 1200, 0.7).then(function(b64) {
+    if (b64.length > 45000) {
+      toast('Foto terlalu besar', 'error');
+      ph.innerHTML = buildUploadPlaceholderHTML(px);
+      return;
+    }
+    var mode = px === 'a' ? 'add' : 'edit';
+    if (mode === 'add') artikelFotoBase64 = b64;
+    else editArtikelFotoBase64 = b64;
+    showFotoPreview(px, b64);
+    toast('Foto berhasil diunggah', 'success');
+  }).catch(function() {
+    toast('Gagal memproses gambar', 'error');
+    ph.innerHTML = buildUploadPlaceholderHTML(px);
+  });
+}
+
 function getFolderGroups(sq) {
   var groups = {},
     search = (sq || '').toLowerCase();
-  galeriData.forEach(function (r) {
+  galeriData.forEach(function(r) {
     var k = r.folder + '|' + r.album;
-    if (!groups[k])
+    if (!groups[k]) {
       groups[k] = {
         folder: r.folder,
         album: r.album,
         label: r.label || r.album,
         count: 0,
-        firstSrc: r.src,
-        ids: []
+        firstSrc: r.src
       };
+    }
     groups[k].count++;
-    groups[k].ids.push(r.id);
     if (!groups[k].firstSrc && r.src) groups[k].firstSrc = r.src;
   });
   var result = Object.values(groups);
   if (search) {
-    result = result.filter(function (g) {
+    result = result.filter(function(g) {
       return g.label.toLowerCase().indexOf(search) !== -1 ||
-        g.album.toLowerCase().indexOf(search) !== -1 ||
-        g.folder.toLowerCase().indexOf(search) !== -1;
+        g.album.toLowerCase().indexOf(search) !== -1;
     });
   }
-  result.sort(function (a, b) {
+  result.sort(function(a, b) {
     if (a.folder !== b.folder) return a.folder < b.folder ? -1 : 1;
     return a.label.toLowerCase().localeCompare(b.label.toLowerCase());
   });
@@ -438,7 +882,7 @@ function getFolderGroups(sq) {
 
 function getPhotosInFolder(folder, album, sq) {
   var search = (sq || '').toLowerCase();
-  return galeriData.filter(function (r) {
+  return galeriData.filter(function(r) {
     if (r.folder !== folder || r.album !== album) return false;
     if (!search) return true;
     return (r.alt || '').toLowerCase().indexOf(search) !== -1 ||
@@ -447,28 +891,44 @@ function getPhotosInFolder(folder, album, sq) {
 }
 
 var ddState = {
-  g: { value: '', newKey: '', isOpen: false },
-  eg: { value: '', newKey: '', isOpen: false }
+  g: {
+    value: '',
+    newKey: '',
+    isOpen: false
+  },
+  eg: {
+    value: '',
+    newKey: '',
+    isOpen: false
+  }
 };
 
 function getAlbumItems(cat, q) {
   var items = [],
     fk = {};
-  FM[cat].forEach(function (f) {
+  FM[cat].forEach(function(f) {
     fk[f.key] = 1;
-    items.push({ value: cat + ':::' + f.key, name: f.name, type: 'fm' });
+    items.push({
+      value: cat + ':::' + f.key,
+      name: f.name,
+      type: 'fm'
+    });
   });
-  galeriData.forEach(function (r) {
+  galeriData.forEach(function(r) {
     if (r.folder !== cat || fk[r.album]) return;
     fk[r.album] = 1;
-    items.push({ value: cat + ':::' + r.album, name: r.label || r.album, type: 'db' });
+    items.push({
+      value: cat + ':::' + r.album,
+      name: r.label || r.album,
+      type: 'db'
+    });
   });
-  items.sort(function (a, b) {
+  items.sort(function(a, b) {
     return a.name.toLowerCase().localeCompare(b.name.toLowerCase());
   });
   if (q) {
     var ql = q.toLowerCase();
-    items = items.filter(function (i) {
+    items = items.filter(function(i) {
       return i.name.toLowerCase().indexOf(ql) !== -1;
     });
   }
@@ -484,21 +944,18 @@ function renderAlbumDDList(px) {
   var items = getAlbumItems(cat, q);
   var cv = ddState[px].value;
   list.innerHTML = '';
-  items.forEach(function (it) {
+  items.forEach(function(it) {
     var d = document.createElement('div');
     d.className = 'album-dd-item';
     if (it.type === 'db') d.className += ' db-item';
     if (it.value === cv) d.className += ' selected';
-    d.innerHTML =
-      '<span class="dd-dot"></span>' +
-      escHtml(it.name) +
+    d.innerHTML = '<span class="dd-dot"></span>' + escHtml(it.name) +
       (it.type === 'db' ? '<span class="dd-db-tag">DB</span>' : '');
     d.dataset.value = it.value;
-    d.dataset.type = it.type;
     list.appendChild(d);
   });
   if (q) {
-    var ex = items.some(function (i) {
+    var ex = items.some(function(i) {
       return i.name.toLowerCase() === q.toLowerCase();
     });
     if (!ex) {
@@ -510,14 +967,7 @@ function renderAlbumDDList(px) {
       list.appendChild(nd);
     }
   }
-  if (!list.children.length) {
-    var em = document.createElement('div');
-    em.className = 'album-dd-empty';
-    em.textContent = 'Tidak ditemukan';
-    list.appendChild(em);
-  }
-  var sel = list.querySelector('.selected');
-  if (sel) sel.scrollIntoView({ block: 'nearest' });
+  if (!list.children.length) list.innerHTML = '<div class="album-dd-empty">Tidak ditemukan</div>';
 }
 
 function openAlbumDD(px) {
@@ -541,36 +991,27 @@ function closeAlbumDD(px) {
   ddState[px].isOpen = false;
 }
 
-function toggleAlbumDD(px) {
-  if (ddState[px].isOpen) closeAlbumDD(px);
-  else openAlbumDD(px);
-}
-
 function setupAlbumDD(px) {
   var search = document.getElementById(px + 'AlbumSearch'),
     arrow = document.getElementById(px + 'AlbumArrow'),
     list = document.getElementById(px + 'AlbumList');
-
-  list.addEventListener('mousedown', function (e) {
+  list.addEventListener('mousedown', function(e) {
     if (e.target.closest('.album-dd-item')) e.preventDefault();
   });
-
-  arrow.addEventListener('click', function (e) {
+  arrow.addEventListener('click', function(e) {
     e.stopPropagation();
-    toggleAlbumDD(px);
+    if (ddState[px].isOpen) closeAlbumDD(px);
+    else openAlbumDD(px);
     search.focus();
   });
-
-  search.addEventListener('focus', function () {
+  search.addEventListener('focus', function() {
     this.select();
     openAlbumDD(px);
   });
-
-  search.addEventListener('input', function () {
+  search.addEventListener('input', function() {
     renderAlbumDDList(px);
   });
-
-  list.addEventListener('click', function (e) {
+  list.addEventListener('click', function(e) {
     var it = e.target.closest('.album-dd-item');
     if (!it || !it.dataset.value) return;
     var v = it.dataset.value;
@@ -587,12 +1028,10 @@ function setupAlbumDD(px) {
     closeAlbumDD(px);
     onAlbumSelect(px === 'g' ? 'add' : 'edit');
   });
-
-  search.addEventListener('keydown', function (e) {
+  search.addEventListener('keydown', function(e) {
     if (e.key === 'Escape') {
       closeAlbumDD(px);
       search.blur();
-      return;
     }
     if (e.key === 'Enter') {
       e.preventDefault();
@@ -600,9 +1039,8 @@ function setupAlbumDD(px) {
       if (fi) fi.click();
     }
   });
-
-  search.addEventListener('blur', function () {
-    setTimeout(function () {
+  search.addEventListener('blur', function() {
+    setTimeout(function() {
       if (!ddState[px].isOpen) return;
       closeAlbumDD(px);
       var tt = search.value.trim();
@@ -620,7 +1058,7 @@ function setupAlbumDD(px) {
       var catId = px === 'g' ? 'gCat' : 'egCat';
       var cat = document.getElementById(catId).value;
       var all = getAlbumItems(cat, '');
-      var exact = all.find(function (i) {
+      var exact = all.find(function(i) {
         return i.name.toLowerCase() === tt.toLowerCase();
       });
       if (exact) {
@@ -636,13 +1074,12 @@ function setupAlbumDD(px) {
   });
 }
 
-document.addEventListener('click', function (e) {
-  ['g', 'eg'].forEach(function (p) {
+document.addEventListener('click', function(e) {
+  ['g', 'eg'].forEach(function(p) {
     var dd = document.getElementById(p + 'AlbumDD');
     if (dd && !dd.contains(e.target)) closeAlbumDD(p);
   });
 });
-
 setupAlbumDD('g');
 setupAlbumDD('eg');
 
@@ -680,7 +1117,7 @@ function onCategoryChange(mode) {
 function getNextFileNumber(cat, al) {
   var mx = 0;
   var pf = cat === 'lana' ? 'lana (' : 'lanautica (';
-  galeriData.forEach(function (r) {
+  galeriData.forEach(function(r) {
     if (r.folder === cat && r.album === al && r.src) {
       var fn = r.src.split('/').pop();
       if (fn.toLowerCase().startsWith(pf.toLowerCase())) {
@@ -705,9 +1142,7 @@ function generateFilenames() {
   }
   var pf = cat === 'lana' ? 'lana' : 'lanautica';
   var lines = [];
-  for (var i = s; i <= e; i++) {
-    lines.push(pf + ' (' + i + ').jpg');
-  }
+  for (var i = s; i <= e; i++) lines.push(pf + ' (' + i + ').jpg');
   document.getElementById('gSrc').value = lines.join('\n');
 }
 
@@ -739,7 +1174,6 @@ function onAlbumSelect(mode) {
     altEl = document.getElementById(id.alt);
   var cat = document.getElementById(id.cat).value;
   var ak = val !== '__new__' && val ? val.split(':::')[1] : nk;
-
   if (val === '__new__' || !val) {
     unlockField(labelEl);
     unlockField(altEl);
@@ -774,8 +1208,8 @@ function onAlbumSelect(mode) {
         generateFilenames();
       } else {
         var nn2 = getNextFileNumber(cat, ak);
-        document.getElementById(id.src).value =
-          (cat === 'lana' ? 'lana' : 'lanautica') + ' (' + nn2 + ').jpg';
+        document.getElementById(id.src).value = (cat === 'lana' ? 'lana' : 'lanautica') +
+          ' (' + nn2 + ').jpg';
       }
       document.getElementById(id.pathLabel).textContent = 'Filename (Multi)';
     } else {
@@ -789,7 +1223,7 @@ function onAlbumSelect(mode) {
     lockField(labelEl);
     lockField(altEl);
     var pts = val.split(':::');
-    var fd = galeriData.find(function (r) {
+    var fd = galeriData.find(function(r) {
       return r.folder === pts[0] && r.album === pts[1];
     });
     setLockedField(labelEl, fd ? (fd.label || '') : '');
@@ -807,17 +1241,13 @@ function onAlbumSelect(mode) {
           document.getElementById('gFileEnd').value = nn;
           document.getElementById('gRangeWrap').style.display = '';
           generateFilenames();
-        } else {
-          var nn3 = getNextFileNumber(cat, ak);
-          document.getElementById(id.src).value =
-            (cat === 'lana' ? 'lana' : 'lanautica') + ' (' + nn3 + ').jpg';
         }
         document.getElementById(id.pathLabel).textContent = 'Filename (Multi)';
       } else {
         document.getElementById(id.baseWrap).style.display = 'none';
         if (p === 'g') document.getElementById('gRangeWrap').style.display = 'none';
-        currentBasePath = '';
         document.getElementById(id.src).value = '';
+        currentBasePath = '';
         document.getElementById(id.pathLabel).textContent = 'Path Foto';
       }
     } else {
@@ -831,24 +1261,34 @@ function onAlbumSelect(mode) {
 }
 
 var namaDDState = {
-  f: { value: '', isOpen: false },
-  e: { value: '', isOpen: false }
+  f: {
+    value: '',
+    isOpen: false
+  },
+  e: {
+    value: '',
+    isOpen: false
+  }
 };
 
 function getNamaItems(q) {
   var items = [],
     nk = {};
-  jadwalData.forEach(function (r) {
+  jadwalData.forEach(function(r) {
     if (nk[r.nama]) return;
     nk[r.nama] = 1;
-    items.push({ value: r.nama, name: r.nama, type: 'db' });
+    items.push({
+      value: r.nama,
+      name: r.nama,
+      type: 'db'
+    });
   });
-  items.sort(function (a, b) {
+  items.sort(function(a, b) {
     return a.name.toLowerCase().localeCompare(b.name.toLowerCase());
   });
   if (q) {
     var ql = q.toLowerCase();
-    items = items.filter(function (i) {
+    items = items.filter(function(i) {
       return i.name.toLowerCase().indexOf(ql) !== -1;
     });
   }
@@ -862,19 +1302,16 @@ function renderNamaDDList(px) {
   var items = getNamaItems(q);
   var cv = namaDDState[px].value;
   list.innerHTML = '';
-  items.forEach(function (it) {
+  items.forEach(function(it) {
     var d = document.createElement('div');
     d.className = 'album-dd-item db-item';
     if (it.value === cv) d.className += ' selected';
-    d.innerHTML =
-      '<span class="dd-dot"></span>' +
-      escHtml(it.name) +
-      '<span class="dd-db-tag">DB</span>';
+    d.innerHTML = '<span class="dd-dot"></span>' + escHtml(it.name) + '<span class="dd-db-tag">DB</span>';
     d.dataset.value = it.value;
     list.appendChild(d);
   });
   if (q) {
-    var ex = items.some(function (i) {
+    var ex = items.some(function(i) {
       return i.name.toLowerCase() === q.toLowerCase();
     });
     if (!ex) {
@@ -882,16 +1319,11 @@ function renderNamaDDList(px) {
       nd.className = 'album-dd-item new-album';
       nd.dataset.value = '__new__';
       nd.dataset.newKey = q;
-      nd.textContent = '+ Buat kegiatan baru: "' + q + '"';
+      nd.textContent = '+ Buat baru: "' + q + '"';
       list.appendChild(nd);
     }
   }
-  if (!list.children.length) {
-    var em = document.createElement('div');
-    em.className = 'album-dd-empty';
-    em.textContent = 'Ketik untuk tambah baru';
-    list.appendChild(em);
-  }
+  if (!list.children.length) list.innerHTML = '<div class="album-dd-empty">Ketik untuk tambah baru</div>';
 }
 
 function openNamaDD(px) {
@@ -915,36 +1347,27 @@ function closeNamaDD(px) {
   namaDDState[px].isOpen = false;
 }
 
-function toggleNamaDD(px) {
-  if (namaDDState[px].isOpen) closeNamaDD(px);
-  else openNamaDD(px);
-}
-
 function setupNamaDD(px) {
   var search = document.getElementById(px + 'NamaSearch'),
     arrow = document.getElementById(px + 'NamaArrow'),
     list = document.getElementById(px + 'NamaList');
-
-  list.addEventListener('mousedown', function (e) {
+  list.addEventListener('mousedown', function(e) {
     if (e.target.closest('.album-dd-item')) e.preventDefault();
   });
-
-  arrow.addEventListener('click', function (e) {
+  arrow.addEventListener('click', function(e) {
     e.stopPropagation();
-    toggleNamaDD(px);
+    if (namaDDState[px].isOpen) closeNamaDD(px);
+    else openNamaDD(px);
     search.focus();
   });
-
-  search.addEventListener('focus', function () {
+  search.addEventListener('focus', function() {
     this.select();
     openNamaDD(px);
   });
-
-  search.addEventListener('input', function () {
+  search.addEventListener('input', function() {
     renderNamaDDList(px);
   });
-
-  list.addEventListener('click', function (e) {
+  list.addEventListener('click', function(e) {
     var it = e.target.closest('.album-dd-item');
     if (!it || !it.dataset.value) return;
     var v = it.dataset.value;
@@ -957,12 +1380,10 @@ function setupNamaDD(px) {
     }
     closeNamaDD(px);
   });
-
-  search.addEventListener('keydown', function (e) {
+  search.addEventListener('keydown', function(e) {
     if (e.key === 'Escape') {
       closeNamaDD(px);
       search.blur();
-      return;
     }
     if (e.key === 'Enter') {
       e.preventDefault();
@@ -970,9 +1391,8 @@ function setupNamaDD(px) {
       if (fi) fi.click();
     }
   });
-
-  search.addEventListener('blur', function () {
-    setTimeout(function () {
+  search.addEventListener('blur', function() {
+    setTimeout(function() {
       if (!namaDDState[px].isOpen) return;
       closeNamaDD(px);
       var tt = search.value.trim();
@@ -985,132 +1405,129 @@ function setupNamaDD(px) {
   });
 }
 
-document.addEventListener('click', function (e) {
-  ['f', 'e'].forEach(function (p) {
+document.addEventListener('click', function(e) {
+  ['f', 'e'].forEach(function(p) {
     var dd = document.getElementById(p + 'NamaDD');
     if (dd && !dd.contains(e.target)) closeNamaDD(p);
   });
 });
-
 setupNamaDD('f');
 setupNamaDD('e');
 
-var eyeBtn = document.getElementById('loginEye'),
-  passInput = document.getElementById('loginPass');
-
-eyeBtn.addEventListener('click', function () {
-  var h = passInput.type === 'password';
-  passInput.type = h ? 'text' : 'password';
-  eyeBtn.classList.toggle('active', h);
-});
-
-document.getElementById('loginBtn').addEventListener('click', doLogin);
-document.getElementById('loginPass').addEventListener('keydown', function (e) {
-  if (e.key === 'Enter') doLogin();
-});
-
-function doLogin() {
-  if (passInput.value === ADMIN_PASSWORD) {
-    sessionStorage.setItem('la_auth', '1');
-    document.getElementById('loginGate').style.display = 'none';
-    document.getElementById('adminPanel').style.display = 'block';
-    refreshAll();
+function updateJadwalFormUI(px) {
+  var tipe = document.getElementById(px + 'Tipe').value;
+  var tgl = document.getElementById(px + 'Tanggal').value;
+  var gJam = document.getElementById(px + 'JamGroup');
+  var gUs = document.getElementById(px + 'UnitSongGroup');
+  var gSo = document.getElementById(px + 'SoGroup');
+  var gLink = document.getElementById(px + 'LinkGroup');
+  var lbl = document.getElementById(px + 'NamaLabel');
+  var isTema = isTemaType(tipe);
+  var isDigital = (tipe === 'digital');
+  var isPast = false;
+  if (tgl) {
+    var today = new Date();
+    today.setHours(0, 0, 0, 0);
+    var d = new Date(tgl + 'T00:00:00');
+    if (d < today) isPast = true;
+  }
+  if (isTema) lbl.textContent = 'Tema';
+  else lbl.textContent = 'Nama Kegiatan';
+  var showSoLink = isTema && !isPast;
+  if (gSo) gSo.style.display = showSoLink ? '' : 'none';
+  if (gLink) gLink.style.display = showSoLink ? '' : 'none';
+  if (!showSoLink) {
+    if (document.getElementById(px + 'So')) document.getElementById(px + 'So').value = '';
+    if (document.getElementById(px + 'Link')) document.getElementById(px + 'Link').value = '';
+  }
+  if (isDigital) {
+    if (gJam) gJam.style.display = '';
+    if (gUs) gUs.style.display = 'none';
+  } else if (isTema) {
+    if (gJam) gJam.style.display = isPast ? 'none' : '';
+    if (gUs) gUs.style.display = 'none';
   } else {
-    document.getElementById('loginError').textContent = 'Password salah!';
+    if (isPast) {
+      if (gJam) gJam.style.display = 'none';
+      if (gUs) gUs.style.display = '';
+    } else {
+      if (gJam) gJam.style.display = '';
+      if (gUs) gUs.style.display = 'none';
+    }
   }
 }
 
-function logout() {
-  sessionStorage.removeItem('la_auth');
-  document.getElementById('adminPanel').style.display = 'none';
-  document.getElementById('loginGate').style.display = 'flex';
-  passInput.value = '';
-  passInput.type = 'password';
-  eyeBtn.classList.remove('active');
-  document.getElementById('loginError').textContent = '';
-}
-
-if (sessionStorage.getItem('la_auth') === '1') {
-  document.getElementById('loginGate').style.display = 'none';
-  document.getElementById('adminPanel').style.display = 'block';
-  refreshAll();
-}
-
-function switchTab(tab) {
-  var tabs = ['jadwal', 'galeri', 'hashtag'];
-  var idx = tabs.indexOf(tab);
-  document.querySelectorAll('.admin-tab').forEach(function (t, i) {
-    t.classList.toggle('active', i === idx);
-  });
-  document.getElementById('tabJadwal').classList.toggle('active', tab === 'jadwal');
-  document.getElementById('tabGaleri').classList.toggle('active', tab === 'galeri');
-  document.getElementById('tabHashtag').classList.toggle('active', tab === 'hashtag');
-}
-
-function apiGet(a) {
-  return fetch(API_URL + '?action=' + a + '&t=' + Date.now(), { redirect: 'follow' })
-    .then(function (r) { return r.json(); });
-}
-
-function apiPost(d) {
-  return fetch(API_URL, {
-    method: 'POST',
-    headers: { 'Content-Type': 'text/plain;charset=utf-8' },
-    body: JSON.stringify(d),
-    redirect: 'follow'
-  })
-    .then(function (r) {
-      if (!r.ok) throw new Error('err');
-      return r.json();
-    })
-    .catch(function (e) {
-      console.warn('POST err:', e);
-      return { success: true, fake: true };
-    });
-}
-
-function refreshAll() {
-  refreshJadwal();
-  refreshGaleri();
-  refreshHashtag();
-}
+document.getElementById('fTipe').addEventListener('change', function() {
+  updateJadwalFormUI('f');
+});
+document.getElementById('fTanggal').addEventListener('change', function() {
+  updateJadwalFormUI('f');
+});
+document.getElementById('eTipe').addEventListener('change', function() {
+  updateJadwalFormUI('e');
+});
+document.getElementById('eTanggal').addEventListener('change', function() {
+  updateJadwalFormUI('e');
+});
 
 function refreshJadwal() {
   document.getElementById('jadwalBody').innerHTML =
-    '<tr class="empty-row"><td colspan="7"><div class="spinner"></div><br>Memuat...</td></tr>';
+    '<tr class="empty-row"><td colspan="8"><div class="spinner"></div><br>Memuat...</td></tr>';
   document.getElementById('jadwalFooter').innerHTML = '';
-  apiGet('read').then(function (d) {
+  apiGet('read').then(function(d) {
     jadwalData = d;
     renderJStats();
     jadwalMode = 'preview';
     jadwalPage = 1;
     applyJadwalView();
-  }).catch(function () {
+    updateDashboardCounts();
+  }).catch(function() {
     document.getElementById('jadwalBody').innerHTML =
-      '<tr class="empty-row"><td colspan="7" style="color:var(--red)">Gagal memuat</td></tr>';
+      '<tr class="empty-row"><td colspan="8" style="color:var(--red)">Gagal memuat</td></tr>';
   });
 }
 
 function renderJStats() {
-  var t = 0, te = 0, ev = 0, di = 0;
-  jadwalData.forEach(function (r) {
+  var t = 0,
+    the = 0,
+    ev = 0,
+    di = 0,
+    co = 0,
+    oa = 0,
+    vc = 0,
+    ts = 0,
+    mg = 0;
+  jadwalData.forEach(function(r) {
     t++;
-    if (r.tipe === 'teater') te++;
-    else if (r.tipe === 'event') ev++;
-    else di++;
+    var tc = tipeClass(r.tipe);
+    if (tc === 'theater') the++;
+    else if (tc === 'event') ev++;
+    else if (tc === 'digital') di++;
+    else if (tc === 'concert') co++;
+    else if (tc === 'offair') oa++;
+    else if (tc === 'vc') vc++;
+    else if (tc === '2shoot') ts++;
+    else if (tc === 'mg') mg++;
   });
   document.getElementById('statTotal').textContent = t;
-  document.getElementById('statTeater').textContent = te;
+  document.getElementById('statTheater').textContent = the;
   document.getElementById('statEvent').textContent = ev;
   document.getElementById('statDigital').textContent = di;
+  document.getElementById('statConcert').textContent = co;
+  document.getElementById('statOffair').textContent = oa;
+  document.getElementById('statVc').textContent = vc;
+  document.getElementById('stat2shoot').textContent = ts;
+  document.getElementById('statMg').textContent = mg;
 }
 
 function getSortedJadwal() {
   var s = (document.getElementById('searchJ').value || '').toLowerCase();
-  var f = jadwalData.filter(function (r) {
-    return !s || r.nama.toLowerCase().indexOf(s) !== -1 || r.tanggal.toLowerCase().indexOf(s) !== -1;
+  var f = jadwalData.filter(function(r) {
+    return !s || r.nama.toLowerCase().indexOf(s) !== -1 ||
+      r.tanggal.toLowerCase().indexOf(s) !== -1 ||
+      tipeLabel(r.tipe).toLowerCase().indexOf(s) !== -1;
   });
-  f.sort(function (a, b) {
+  f.sort(function(a, b) {
     return parseIDDate(b.tanggal) - parseIDDate(a.tanggal);
   });
   return f;
@@ -1129,30 +1546,23 @@ function renderJadwalTable() {
   if (isS && jadwalMode === 'preview') jadwalMode = 'full';
   if (!f.length) {
     document.getElementById('jadwalBody').innerHTML =
-      '<tr class="empty-row"><td colspan="7">' +
-      (isS ? 'Tidak ditemukan' : 'Belum ada data') +
-      '</td></tr>';
+      '<tr class="empty-row"><td colspan="8">' + (isS ? 'Tidak ditemukan' : 'Belum ada data') + '</td></tr>';
     document.getElementById('jadwalFooter').innerHTML = '';
     return;
   }
   if (jadwalMode === 'preview') {
     document.getElementById('jadwalBody').innerHTML = buildJRows(f.slice(0, 5), 1);
-    document.getElementById('jadwalFooter').innerHTML = f.length > 5
-      ? '<div class="show-more-bar"><button class="show-more-btn" onclick="enterJadwalFull()">' +
-        'Lihat Selengkapnya <span style="color:var(--muted);font-weight:400;font-size:.72rem">' +
-        '(' + (f.length - 5) + ' lagi)</span>' +
-        '<svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg></button></div>'
-      : '';
+    document.getElementById('jadwalFooter').innerHTML = f.length > 5 ?
+      '<div class="show-more-bar"><button class="show-more-btn" onclick="enterJadwalFull()">' +
+      'Lihat Selengkapnya</button></div>' : '';
   } else {
     var tp = Math.max(1, Math.ceil(f.length / jadwalPageSize));
     if (jadwalPage > tp) jadwalPage = tp;
     var s = (jadwalPage - 1) * jadwalPageSize,
       e = Math.min(s + jadwalPageSize, f.length);
     document.getElementById('jadwalBody').innerHTML = buildJRows(f.slice(s, e), s + 1);
-    document.getElementById('jadwalFooter').innerHTML = buildPgHTML(
-      jadwalPage, tp, f.length, s + 1, e,
-      'goJadwalPage', 'setJadwalPageSize', jadwalPageSize
-    );
+    document.getElementById('jadwalFooter').innerHTML = buildPgHTML(jadwalPage, tp, f.length, s + 1, e,
+      'goJadwalPage', 'setJadwalPageSize', jadwalPageSize);
   }
 }
 
@@ -1173,9 +1583,7 @@ function onJadwalSearch() {
   if (isS && jadwalMode === 'preview') {
     jadwalMode = 'full';
     applyJadwalView();
-  } else {
-    renderJadwalTable();
-  }
+  } else renderJadwalTable();
 }
 
 function goJadwalPage(p) {
@@ -1195,24 +1603,39 @@ function buildJRows(items, no) {
   var h = '';
   for (var i = 0; i < items.length; i++) {
     var r = items[i],
-      ft = isFuture(r.tanggal);
-    h += '<tr>';
-    h += '<td style="color:var(--muted)">' + (no + i) + '</td>';
-    h += '<td style="font-weight:500">' + escHtml(r.nama) + '</td>';
-    h += '<td><span class="type-badge ' + r.tipe + '">' + r.tipe + '</span></td>';
-    h += '<td>' + escHtml(r.tanggal) + '</td>';
-    h += '<td>' + escHtml(r.jam) + '</td>';
-    h += '<td><span class="status-dot ' + (ft ? 'upcoming' : 'done') + '"></span>' +
-      (ft ? 'Mendatang' : 'Selesai') + '</td>';
-    h += '<td><div class="table-actions">';
-    h += '<button class="tbl-btn" onclick="openEditJ(\'' + r.id + '\')" title="Edit">' +
+      ft = isFuture(r.tanggal),
+      tc = tipeClass(r.tipe);
+    var isTema = isTemaType(tc);
+    h += '<tr><td style="color:var(--muted)">' + (no + i) + '</td><td style="font-weight:500">' +
+      escHtml(r.nama) + '</td><td><span class="type-badge ' + tc + '">' + tipeLabel(r.tipe) +
+      '</span></td><td>' + escHtml(r.tanggal) + '</td>';
+    var soLinkCell = '<td>-</td>';
+    if (isTema && ft) {
+      var soHtml = r.so ?
+        '<div style="font-size:.76rem;font-weight:600;color:var(--red)">Sold Out</div>' :
+        '<div style="font-size:.68rem;font-weight:600;color:var(--green)">Tersedia</div>';
+      var linkHtml = r.link ?
+        '<a href="' + escAttr(r.link) + '" target="_blank" class="buy-link">' +
+        '<svg viewBox="0 0 24 24"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>' +
+        '<polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg> Beli Tiket</a>' :
+        '<div style="font-size:.68rem;color:var(--muted)">-</div>';
+      soLinkCell = '<td>' + soHtml + linkHtml + '</td>';
+    }
+    h += soLinkCell;
+    var jc = ft ? escHtml(r.jam) :
+      (r.unitSong || r.unit_song ?
+        '<div class="unit-song-label">' + escHtml(r.unitSong || r.unit_song).replace(/\n/g, '<br>') +
+        '</div>' :
+        '<div class="unit-song-empty" onclick="openEditJ(\'' + r.id + '\')">Unit song belum diisi</div>');
+    h += '<td>' + jc + '</td><td><span class="status-dot ' + (ft ? 'upcoming' : 'done') + '"></span>' +
+      (ft ? 'Mendatang' : 'Selesai') + '</td><td><div class="table-actions">' +
+      '<button class="tbl-btn" onclick="openEditJ(\'' + r.id + '\')" title="Edit">' +
       '<svg viewBox="0 0 24 24"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/>' +
-      '<path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"/></svg></button>';
-    h += '<button class="tbl-btn del" onclick="openDelete(\'' + r.id + '\',\'' +
-      escAttr(r.tanggal) + '\')" title="Hapus">' +
+      '<path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"/></svg></button>' +
+      '<button class="tbl-btn del" onclick="openDelete(\'' + r.id + '\',\'' + escAttr(r.tanggal) + '\')" title="Hapus">' +
       '<svg viewBox="0 0 24 24"><polyline points="3 6 5 6 21 6"/>' +
-      '<path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/></svg></button>';
-    h += '</div></td></tr>';
+      '<path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/></svg></button>' +
+      '</div></td></tr>';
   }
   return h;
 }
@@ -1226,9 +1649,12 @@ function addJadwal() {
     t = document.getElementById('fTipe').value,
     d = document.getElementById('fTanggal').value,
     j = document.getElementById('fJam').value,
-    ds = document.getElementById('fDesc').value.trim();
-  if (!n || !d || !j) {
-    toast('Nama, tanggal, jam wajib diisi', 'error');
+    ds = document.getElementById('fDesc').value.trim(),
+    us = document.getElementById('fUnitSong').value.trim(),
+    so = document.getElementById('fSo').value.trim(),
+    lk = document.getElementById('fLink').value.trim();
+  if (!n || !d) {
+    toast('Nama dan tanggal wajib diisi', 'error');
     btn.disabled = false;
     btn.textContent = 'Tambah';
     return;
@@ -1239,21 +1665,21 @@ function addJadwal() {
     tipe: t,
     deskripsi: ds,
     tanggal: toIDDate(d),
-    jam: j + ' WIB'
-  }).then(function (r) {
+    jam: j ? j + ' WIB' : '',
+    unitSong: us,
+    so: so,
+    link: lk
+  }).then(function(r) {
     if (r.success) {
       toast('Ditambahkan', 'success');
-      if (document.getElementById('quickJ').checked)
-        document.getElementById('fTanggal').value = '';
+      if (document.getElementById('quickJ').checked) document.getElementById('fTanggal').value = '';
       else resetJForm();
       jadwalMode = 'preview';
       refreshJadwal();
-    } else {
-      toast('Gagal', 'error');
-    }
-  }).catch(function () {
+    } else toast('Gagal', 'error');
+  }).catch(function() {
     toast('Gagal', 'error');
-  }).finally(function () {
+  }).finally(function() {
     btn.disabled = false;
     btn.textContent = 'Tambah';
   });
@@ -1263,22 +1689,34 @@ function resetJForm() {
   namaDDState.f.value = '';
   document.getElementById('fNamaSearch').value = '';
   closeNamaDD('f');
-  document.getElementById('fTipe').value = 'teater';
+  document.getElementById('fTipe').value = 'theater';
   document.getElementById('fTanggal').value = '';
   document.getElementById('fJam').value = '14:00';
+  document.getElementById('fUnitSong').value = '';
   document.getElementById('fDesc').value = '';
+  document.getElementById('fSo').value = '';
+  document.getElementById('fLink').value = '';
+  updateJadwalFormUI('f');
 }
 
 function openEditJ(id) {
-  var r = jadwalData.find(function (x) { return x.id === id; });
+  var r = jadwalData.find(function(x) {
+    return x.id === id;
+  });
   if (!r) return;
   editingJId = id;
   namaDDState.e.value = r.nama;
   document.getElementById('eNamaSearch').value = r.nama;
-  document.getElementById('eTipe').value = r.tipe;
+  var selVal = tipeClass(r.tipe);
+  if (selVal === 'teater') selVal = 'theater';
+  document.getElementById('eTipe').value = selVal;
   document.getElementById('eTanggal').value = fromIDDate(r.tanggal);
   document.getElementById('eJam').value = extractTime(r.jam);
   document.getElementById('eDesc').value = r.deskripsi || '';
+  document.getElementById('eUnitSong').value = r.unitSong || r.unit_song || '';
+  document.getElementById('eSo').value = r.so || '';
+  document.getElementById('eLink').value = r.link || '';
+  updateJadwalFormUI('e');
   openModal('editJModal');
 }
 
@@ -1291,9 +1729,12 @@ function saveEditJ() {
     t = document.getElementById('eTipe').value,
     d = document.getElementById('eTanggal').value,
     j = document.getElementById('eJam').value,
-    ds = document.getElementById('eDesc').value.trim();
-  if (!n || !d || !j) {
-    toast('Semua field wajib', 'error');
+    ds = document.getElementById('eDesc').value.trim(),
+    us = document.getElementById('eUnitSong').value.trim(),
+    so = document.getElementById('eSo').value.trim(),
+    lk = document.getElementById('eLink').value.trim();
+  if (!n || !d) {
+    toast('Nama dan tanggal wajib', 'error');
     btn.disabled = false;
     btn.textContent = 'Simpan';
     return;
@@ -1305,35 +1746,39 @@ function saveEditJ() {
     tipe: t,
     deskripsi: ds,
     tanggal: toIDDate(d),
-    jam: j + ' WIB'
-  }).then(function (r) {
+    jam: j ? j + ' WIB' : '',
+    unitSong: us,
+    so: so,
+    link: lk
+  }).then(function(r) {
     if (r.success) {
       toast('Diupdate', 'success');
       closeModal('editJModal');
       refreshJadwal();
-    } else {
-      toast('Gagal', 'error');
-    }
-  }).catch(function () {
+    } else toast('Gagal', 'error');
+  }).catch(function() {
     toast('Gagal', 'error');
-  }).finally(function () {
+  }).finally(function() {
     btn.disabled = false;
     btn.textContent = 'Simpan';
   });
 }
 
 function openDelete(id, txt) {
-  document.getElementById('deleteMsg').innerHTML =
-    'Hapus <strong style="color:var(--text)">' + escHtml(txt) + '</strong>?';
+  document.getElementById('deleteMsg').innerHTML = 'Hapus <strong style="color:var(--text)">' + escHtml(txt) +
+    '</strong>?';
   var btn = document.getElementById('deleteConfirmBtn');
   btn.textContent = 'Hapus';
   btn.className = 'btn-confirm';
   btn.disabled = false;
-  btn.onclick = function () {
+  btn.onclick = function() {
     if (btn.disabled) return;
     btn.disabled = true;
     btn.textContent = 'Menghapus...';
-    apiPost({ action: 'delete', id: id }).then(function (r) {
+    apiPost({
+      action: 'delete',
+      id: id
+    }).then(function(r) {
       if (r.success) {
         toast('Dihapus', 'success');
         closeModal('deleteModal');
@@ -1343,7 +1788,7 @@ function openDelete(id, txt) {
         btn.disabled = false;
         btn.textContent = 'Hapus';
       }
-    }).catch(function () {
+    }).catch(function() {
       toast('Gagal', 'error');
       btn.disabled = false;
       btn.textContent = 'Hapus';
@@ -1355,33 +1800,32 @@ function openDelete(id, txt) {
 function refreshGaleri() {
   document.getElementById('galeriTableWrap').innerHTML =
     '<div style="padding:40px;text-align:center"><div class="spinner"></div><br>' +
-    '<span style="color:var(--muted);font-size:.84rem">Memuat...</span></div>';
-  document.getElementById('galeriFooter').innerHTML = '';
-  apiGet('readGallery').then(function (d) {
+    '<span style="color:var(--muted)">Memuat...</span></div>';
+  apiGet('readGallery').then(function(d) {
     galeriData = d;
-    renderGStats();
+    var t = 0,
+      la = 0,
+      ln = 0,
+      al = {};
+    galeriData.forEach(function(r) {
+      t++;
+      if (r.folder === 'lana') la++;
+      else ln++;
+      al[r.folder + '|' + r.album] = 1;
+    });
+    document.getElementById('gStatTotal').textContent = t;
+    document.getElementById('gStatLana').textContent = la;
+    document.getElementById('gStatLanautica').textContent = ln;
+    document.getElementById('gStatAlbum').textContent = Object.keys(al).length;
     galeriMode = 'preview';
     galeriPage = 1;
     galeriCurrentFolder = null;
     applyGaleriView();
-  }).catch(function () {
+    updateDashboardCounts();
+  }).catch(function() {
     document.getElementById('galeriTableWrap').innerHTML =
       '<div style="padding:40px;text-align:center;color:var(--red)">Gagal memuat</div>';
   });
-}
-
-function renderGStats() {
-  var t = 0, la = 0, ln = 0, al = {};
-  galeriData.forEach(function (r) {
-    t++;
-    if (r.folder === 'lana') la++;
-    else ln++;
-    al[r.folder + '|' + r.album] = 1;
-  });
-  document.getElementById('gStatTotal').textContent = t;
-  document.getElementById('gStatLana').textContent = la;
-  document.getElementById('gStatLanautica').textContent = ln;
-  document.getElementById('gStatAlbum').textContent = Object.keys(al).length;
 }
 
 function applyGaleriView() {
@@ -1389,24 +1833,20 @@ function applyGaleriView() {
   document.getElementById('galeriHome').classList.toggle('j-hide', isF);
   document.getElementById('galeriBack').classList.toggle('j-hide', !isF);
   document.getElementById('galeriDetailBar').classList.toggle('j-hide', galeriMode !== 'detail');
-  document.getElementById('searchG').placeholder =
-    galeriMode === 'detail' ? 'Cari foto...' : 'Cari album...';
   renderGaleriTable();
 }
 
 function galeriGoBack() {
   if (galeriMode === 'detail') {
-    galeriMode = galeriPrevMode;
+    galeriMode = 'preview';
     galeriCurrentFolder = null;
     galeriPage = 1;
-    document.getElementById('searchG').value = '';
-    applyGaleriView();
   } else {
     galeriMode = 'preview';
     galeriPage = 1;
-    document.getElementById('searchG').value = '';
-    applyGaleriView();
   }
+  document.getElementById('searchG').value = '';
+  applyGaleriView();
 }
 
 function enterGaleriFull() {
@@ -1416,8 +1856,10 @@ function enterGaleriFull() {
 }
 
 function enterGaleriDetail(f, a) {
-  galeriPrevMode = galeriMode;
-  galeriCurrentFolder = { folder: f, album: a };
+  galeriCurrentFolder = {
+    folder: f,
+    album: a
+  };
   galeriMode = 'detail';
   galeriPage = 1;
   applyGaleriView();
@@ -1429,9 +1871,7 @@ function onGaleriSearch() {
   if (galeriMode === 'preview' && isS) {
     galeriMode = 'full';
     applyGaleriView();
-  } else {
-    renderGaleriTable();
-  }
+  } else renderGaleriTable();
 }
 
 function renderGaleriTable() {
@@ -1439,59 +1879,16 @@ function renderGaleriTable() {
     footer = document.getElementById('galeriFooter'),
     sv = (document.getElementById('searchG').value || '').trim(),
     isS = !!sv;
-
   if (galeriMode === 'preview' && isS) {
     galeriMode = 'full';
     applyGaleriView();
     return;
   }
-
-  if (galeriMode === 'preview') {
-    var gr = getFolderGroups('');
-    if (!gr.length) {
-      wrap.innerHTML =
-        '<div style="padding:40px;text-align:center;color:var(--muted)">Belum ada data</div>';
-      footer.innerHTML = '';
-      return;
-    }
-    var sh = gr.slice(0, 5);
-    var h = '<table class="gal-table"><thead><tr>' +
-      '<th>No</th><th>Preview</th><th>Album</th><th>Kategori</th><th>Jumlah</th><th>Aksi</th>' +
-      '</tr></thead><tbody>';
-    for (var i = 0; i < sh.length; i++) {
-      var g = sh[i];
-      h += '<tr class="folder-row" onclick="enterGaleriDetail(\'' +
-        escJS(g.folder) + '\',\'' + escJS(g.album) + '\')">';
-      h += '<td style="color:var(--muted)">' + (i + 1) + '</td>';
-      h += '<td>' + (g.firstSrc
-        ? '<img class="thumb-lg" src="' + escAttr(g.firstSrc) + '" onerror="this.style.display=\'none\'" alt="">'
-        : '') + '</td>';
-      h += '<td style="font-weight:500">' + escHtml(g.label) + '</td>';
-      h += '<td><span class="folder-badge ' + g.folder + '">' + g.folder + '</span></td>';
-      h += '<td><span style="font-weight:600;color:var(--accent2)">' + g.count + '</span></td>';
-      h += '<td><div class="table-actions" onclick="event.stopPropagation()">';
-      h += '<button class="tbl-btn view-btn" onclick="enterGaleriDetail(\'' +
-        escJS(g.folder) + '\',\'' + escJS(g.album) + '\')">' +
-        '<svg viewBox="0 0 24 24"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/>' +
-        '<circle cx="12" cy="12" r="3"/></svg></button>';
-      h += '<button class="tbl-btn del" onclick="deleteGroupG(\'' +
-        escJS(g.folder) + '\',\'' + escJS(g.album) + '\')">' +
-        '<svg viewBox="0 0 24 24"><polyline points="3 6 5 6 21 6"/>' +
-        '<path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/></svg></button>';
-      h += '</div></td></tr>';
-    }
-    h += '</tbody></table>';
-    wrap.innerHTML = h;
-    footer.innerHTML = gr.length > 5
-      ? '<div class="show-more-bar"><button class="show-more-btn" onclick="enterGaleriFull()">' +
-        'Lihat Selengkapnya</button></div>'
-      : '';
-
-  } else if (galeriMode === 'full') {
+  var mode = galeriMode;
+  if (mode === 'preview' || mode === 'full') {
     var gr = getFolderGroups(sv);
     if (!gr.length) {
-      wrap.innerHTML =
-        '<div style="padding:40px;text-align:center;color:var(--muted)">Tidak ditemukan</div>';
+      wrap.innerHTML = '<div style="padding:40px;text-align:center;color:var(--muted)">Belum ada data</div>';
       footer.innerHTML = '';
       return;
     }
@@ -1499,45 +1896,43 @@ function renderGaleriTable() {
     if (galeriPage > tp) galeriPage = tp;
     var s = (galeriPage - 1) * galeriPageSize,
       e = Math.min(s + galeriPageSize, gr.length),
-      sh = gr.slice(s, e);
-    var h = '<table class="gal-table"><thead><tr>' +
-      '<th>No</th><th>Preview</th><th>Album</th><th>Kategori</th><th>Jumlah</th><th>Aksi</th>' +
-      '</tr></thead><tbody>';
+      sh = mode === 'preview' ? gr.slice(0, 5) : gr.slice(s, e);
+    var h = '<table class="gal-table"><thead><tr><th>No</th><th>Preview</th><th>Album</th>' +
+      '<th>Kategori</th><th>Jumlah</th><th>Aksi</th></tr></thead><tbody>';
     for (var i = 0; i < sh.length; i++) {
       var g = sh[i];
-      h += '<tr class="folder-row" onclick="enterGaleriDetail(\'' +
-        escJS(g.folder) + '\',\'' + escJS(g.album) + '\')">';
-      h += '<td style="color:var(--muted)">' + (s + i + 1) + '</td>';
-      h += '<td>' + (g.firstSrc
-        ? '<img class="thumb-lg" src="' + escAttr(g.firstSrc) + '" onerror="this.style.display=\'none\'" alt="">'
-        : '') + '</td>';
+      h += '<tr class="folder-row" onclick="enterGaleriDetail(\'' + escJS(g.folder) + '\',\'' +
+        escJS(g.album) + '\')">';
+      h += '<td style="color:var(--muted)">' + (mode === 'preview' ? (i + 1) : (s + i + 1)) + '</td>';
+      h += '<td>' + (g.firstSrc ?
+        '<img class="thumb-lg" src="' + escAttr(g.firstSrc) + '" onerror="this.style.display=\'none\'">' : '') + '</td>';
       h += '<td style="font-weight:500">' + escHtml(g.label) + '</td>';
       h += '<td><span class="folder-badge ' + g.folder + '">' + g.folder + '</span></td>';
       h += '<td><span style="font-weight:600;color:var(--accent2)">' + g.count + '</span></td>';
       h += '<td><div class="table-actions" onclick="event.stopPropagation()">';
-      h += '<button class="tbl-btn view-btn" onclick="enterGaleriDetail(\'' +
-        escJS(g.folder) + '\',\'' + escJS(g.album) + '\')">' +
-        '<svg viewBox="0 0 24 24"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/>' +
+      h += '<button class="tbl-btn view-btn" onclick="enterGaleriDetail(\'' + escJS(g.folder) + '\',\'' +
+        escJS(g.album) + '\')"><svg viewBox="0 0 24 24">' +
+        '<path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/>' +
         '<circle cx="12" cy="12" r="3"/></svg></button>';
-      h += '<button class="tbl-btn del" onclick="deleteGroupG(\'' +
-        escJS(g.folder) + '\',\'' + escJS(g.album) + '\')">' +
-        '<svg viewBox="0 0 24 24"><polyline points="3 6 5 6 21 6"/>' +
+      h += '<button class="tbl-btn del" onclick="deleteGroupG(\'' + escJS(g.folder) + '\',\'' + escJS(g.album) +
+        '\')"><svg viewBox="0 0 24 24"><polyline points="3 6 5 6 21 6"/>' +
         '<path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/></svg></button>';
       h += '</div></td></tr>';
     }
     h += '</tbody></table>';
     wrap.innerHTML = h;
-    footer.innerHTML = buildPgHTML(
-      galeriPage, tp, gr.length, s + 1, e,
-      'goGaleriPage', 'setGaleriPageSize', galeriPageSize
-    );
-
-  } else if (galeriMode === 'detail') {
+    if (mode === 'preview' && gr.length > 5) {
+      footer.innerHTML = '<div class="show-more-bar"><button class="show-more-btn" onclick="enterGaleriFull()">' +
+        'Lihat Selengkapnya</button></div>';
+    } else if (mode === 'full') {
+      footer.innerHTML = buildPgHTML(galeriPage, tp, gr.length, s + 1, e, 'goGaleriPage',
+        'setGaleriPageSize', galeriPageSize);
+    } else footer.innerHTML = '';
+  } else if (mode === 'detail') {
     var cf = galeriCurrentFolder;
     var ph = getPhotosInFolder(cf.folder, cf.album, sv);
     if (!ph.length) {
-      wrap.innerHTML =
-        '<div style="padding:40px;text-align:center;color:var(--muted)">Tidak ditemukan</div>';
+      wrap.innerHTML = '<div style="padding:40px;text-align:center;color:var(--muted)">Tidak ditemukan</div>';
       footer.innerHTML = '';
       return;
     }
@@ -1546,18 +1941,14 @@ function renderGaleriTable() {
     var s = (galeriPage - 1) * galeriPageSize,
       e = Math.min(s + galeriPageSize, ph.length),
       sh = ph.slice(s, e);
-    var h = '<table class="gal-table"><thead><tr>' +
-      '<th>No</th><th>Preview</th><th>Alt</th><th>Path</th><th>Aksi</th>' +
-      '</tr></thead><tbody>';
+    var h = '<table class="gal-table"><thead><tr><th>No</th><th>Preview</th><th>Alt</th>' +
+      '<th>Path</th><th>Aksi</th></tr></thead><tbody>';
     for (var i = 0; i < sh.length; i++) {
       var r = sh[i];
-      h += '<tr>';
-      h += '<td style="color:var(--muted)">' + (s + i + 1) + '</td>';
-      h += '<td><img class="thumb" src="' + escAttr(r.src) +
-        '" onerror="this.style.display=\'none\'"></td>';
-      h += '<td>' + escHtml(r.alt || '-') + '</td>';
-      h += '<td class="src-cell">' + escHtml(r.src) + '</td>';
-      h += '<td><div class="table-actions">';
+      h += '<tr><td style="color:var(--muted)">' + (s + i + 1) + '</td><td>' +
+        '<img class="thumb" src="' + escAttr(r.src) + '" onerror="this.style.display=\'none\'"></td>' +
+        '<td>' + escHtml(r.alt || '-') + '</td><td class="src-cell">' + escHtml(r.src) + '</td>' +
+        '<td><div class="table-actions">';
       h += '<button class="tbl-btn" onclick="openEditG(\'' + r.id + '\')">' +
         '<svg viewBox="0 0 24 24"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/>' +
         '<path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"/></svg></button>';
@@ -1568,24 +1959,18 @@ function renderGaleriTable() {
     }
     h += '</tbody></table>';
     wrap.innerHTML = h;
-    footer.innerHTML = buildPgHTML(
-      galeriPage, tp, ph.length, s + 1, e,
-      'goGaleriPage', 'setGaleriPageSize', galeriPageSize
-    );
+    footer.innerHTML = buildPgHTML(galeriPage, tp, ph.length, s + 1, e, 'goGaleriPage',
+      'setGaleriPageSize', galeriPageSize);
   }
 }
 
 function goGaleriPage(p) {
   var mx;
   if (galeriMode === 'full') {
-    mx = Math.max(1, Math.ceil(
-      getFolderGroups((document.getElementById('searchG').value || '').trim()).length / galeriPageSize
-    ));
+    mx = Math.max(1, Math.ceil(getFolderGroups('').length / galeriPageSize));
   } else if (galeriMode === 'detail') {
     var cf = galeriCurrentFolder;
-    mx = Math.max(1, Math.ceil(
-      getPhotosInFolder(cf.folder, cf.album, (document.getElementById('searchG').value || '').trim()).length / galeriPageSize
-    ));
+    mx = Math.max(1, Math.ceil(getPhotosInFolder(cf.folder, cf.album, '').length / galeriPageSize));
   } else return;
   if (p < 1 || p > mx) return;
   galeriPage = p;
@@ -1603,7 +1988,8 @@ function addGaleri() {
   if (btn.disabled) return;
   btn.disabled = true;
   btn.textContent = 'Menyimpan...';
-  var val = ddState.g.value, fo, al, la, at;
+  var val = ddState.g.value,
+    fo, al, la;
   if (val === '__new__' || !val) {
     fo = document.getElementById('gCat').value;
     al = ddState.g.newKey.trim();
@@ -1620,21 +2006,25 @@ function addGaleri() {
     al = pts[1];
     la = document.getElementById('gLabel').value.trim();
   }
-  var st = document.getElementById('gSrc').value.trim();
-  at = document.getElementById('gAlt').value.trim();
+  var st = document.getElementById('gSrc').value.trim(),
+    at = document.getElementById('gAlt').value.trim();
   if (!st) {
     toast('Path wajib', 'error');
     btn.disabled = false;
     btn.textContent = 'Tambah';
     return;
   }
-  var fns = st.split(/[\n,]+/).map(function (f) { return f.trim(); }).filter(function (f) { return f !== ''; });
-  var sc = fo, sv = val, snk = ddState.g.newKey, sb = currentBasePath;
+  var fns = st.split(/[\n,]+/).map(function(f) {
+    return f.trim();
+  }).filter(function(f) {
+    return f !== '';
+  });
+  var sb = currentBasePath;
   var chain = Promise.resolve();
   var hasErr = false;
-  fns.forEach(function (fn) {
+  fns.forEach(function(fn) {
     var fp = sb ? sb + fn : fn;
-    chain = chain.then(function () {
+    chain = chain.then(function() {
       return apiPost({
         action: 'addGallery',
         folder: fo,
@@ -1642,33 +2032,26 @@ function addGaleri() {
         label: la,
         src: fp,
         alt: at
-      }).catch(function () {
+      }).catch(function() {
         hasErr = true;
         return null;
       });
     });
   });
-  chain.then(function () {
+  chain.then(function() {
     if (!hasErr) toast('Berhasil', 'success');
     else toast('Ada yg gagal', 'error');
     if (document.getElementById('quickG').checked) {
       galeriMode = 'preview';
       galeriPage = 1;
-      refreshGaleri().then(function () {
-        document.getElementById('gCat').value = sc;
-        ddState.g.value = sv;
-        ddState.g.newKey = snk;
-        var f = findFolder(sv);
-        document.getElementById('gAlbumSearch').value = f ? f.name : (sv === '__new__' ? snk : '');
-        onAlbumSelect('add');
-      });
+      refreshGaleri();
     } else {
       resetGForm();
       galeriMode = 'preview';
       galeriPage = 1;
       refreshGaleri();
     }
-  }).finally(function () {
+  }).finally(function() {
     btn.disabled = false;
     btn.textContent = 'Tambah';
   });
@@ -1687,14 +2070,13 @@ function resetGForm() {
   document.getElementById('gSrc').value = '';
   document.getElementById('gBasePathWrap').style.display = 'none';
   document.getElementById('gRangeWrap').style.display = 'none';
-  document.getElementById('gFileStart').value = '';
-  document.getElementById('gFileEnd').value = '';
-  document.getElementById('gPathLabel').textContent = 'Path Foto';
   currentBasePath = '';
 }
 
 function openEditG(id) {
-  var r = galeriData.find(function (x) { return x.id === id; });
+  var r = galeriData.find(function(x) {
+    return x.id === id;
+  });
   if (!r) return;
   editingGId = id;
   document.getElementById('egCat').value = r.folder;
@@ -1711,9 +2093,7 @@ function openEditG(id) {
   if (f && f.dir) {
     document.getElementById('egBasePathWrap').style.display = '';
     document.getElementById('egBasePathText').textContent = f.dir;
-  } else {
-    document.getElementById('egBasePathWrap').style.display = 'none';
-  }
+  } else document.getElementById('egBasePathWrap').style.display = 'none';
   openModal('editGModal');
 }
 
@@ -1722,7 +2102,8 @@ function saveEditG() {
   if (btn.disabled) return;
   btn.disabled = true;
   btn.textContent = 'Menyimpan...';
-  var val = ddState.eg.value, fo, al, la;
+  var val = ddState.eg.value,
+    fo, al, la;
   if (val === '__new__' || !val) {
     fo = document.getElementById('egCat').value;
     al = ddState.eg.newKey.trim();
@@ -1755,17 +2136,15 @@ function saveEditG() {
     label: la,
     src: sr,
     alt: at
-  }).then(function (r) {
+  }).then(function(r) {
     if (r.success) {
       toast('Diupdate', 'success');
       closeModal('editGModal');
       refreshGaleri();
-    } else {
-      toast('Gagal', 'error');
-    }
-  }).catch(function () {
+    } else toast('Gagal', 'error');
+  }).catch(function() {
     toast('Gagal', 'error');
-  }).finally(function () {
+  }).finally(function() {
     btn.disabled = false;
     btn.textContent = 'Simpan';
   });
@@ -1777,11 +2156,14 @@ function openDeleteG(id) {
   btn.textContent = 'Hapus';
   btn.className = 'btn-confirm';
   btn.disabled = false;
-  btn.onclick = function () {
+  btn.onclick = function() {
     if (btn.disabled) return;
     btn.disabled = true;
     btn.textContent = 'Menghapus...';
-    apiPost({ action: 'deleteGallery', id: id }).then(function (r) {
+    apiPost({
+      action: 'deleteGallery',
+      id: id
+    }).then(function(r) {
       if (r.success) {
         toast('Dihapus', 'success');
         closeModal('deleteModal');
@@ -1791,7 +2173,7 @@ function openDeleteG(id) {
         btn.disabled = false;
         btn.textContent = 'Hapus';
       }
-    }).catch(function () {
+    }).catch(function() {
       toast('Gagal', 'error');
       btn.disabled = false;
       btn.textContent = 'Hapus';
@@ -1801,20 +2183,23 @@ function openDeleteG(id) {
 }
 
 function deleteGroupG(folder, album) {
-  var c = galeriData.filter(function (r) {
+  var c = galeriData.filter(function(r) {
     return r.folder === folder && r.album === album;
   }).length;
-  document.getElementById('deleteMsg').innerHTML =
-    'Hapus <strong style="color:var(--red)">' + c + ' foto</strong> dari album ini?';
+  document.getElementById('deleteMsg').innerHTML = 'Hapus <strong style="color:var(--red)">' + c + ' foto</strong> dari album ini?';
   var btn = document.getElementById('deleteConfirmBtn');
   btn.textContent = 'Hapus Semua';
   btn.className = 'btn-confirm';
   btn.disabled = false;
-  btn.onclick = function () {
+  btn.onclick = function() {
     if (btn.disabled) return;
     btn.disabled = true;
     btn.textContent = 'Menghapus...';
-    apiPost({ action: 'deleteGalleryGroup', folder: folder, album: album }).then(function (r) {
+    apiPost({
+      action: 'deleteGalleryGroup',
+      folder: folder,
+      album: album
+    }).then(function(r) {
       if (r.success) {
         toast(r.deleted + ' foto dihapus', 'success');
         closeModal('deleteModal');
@@ -1825,7 +2210,7 @@ function deleteGroupG(folder, album) {
         btn.disabled = false;
         btn.textContent = 'Hapus Semua';
       }
-    }).catch(function () {
+    }).catch(function() {
       toast('Gagal', 'error');
       btn.disabled = false;
       btn.textContent = 'Hapus Semua';
@@ -1837,35 +2222,28 @@ function deleteGroupG(folder, album) {
 function refreshHashtag() {
   document.getElementById('hashtagBody').innerHTML =
     '<tr class="empty-row"><td colspan="4"><div class="spinner"></div><br>Memuat...</td></tr>';
-  document.getElementById('hashtagFooter').innerHTML = '';
-  apiGet('readHashtags').then(function (d) {
+  apiGet('readHashtags').then(function(d) {
     hashtagData = d || [];
-    renderHStats();
+    document.getElementById('hStatTotal').textContent = hashtagData.length;
+    document.getElementById('hStatDesc').textContent = hashtagData.filter(function(r) {
+      return r.keterangan;
+    }).length;
     hashtagMode = 'preview';
     hashtagPage = 1;
     applyHashtagView();
-  }).catch(function () {
+    updateDashboardCounts();
+  }).catch(function() {
     hashtagData = [];
     document.getElementById('hashtagBody').innerHTML =
       '<tr class="empty-row"><td colspan="4" style="color:var(--red)">Gagal memuat</td></tr>';
   });
 }
 
-function renderHStats() {
-  var t = 0, dc = 0;
-  hashtagData.forEach(function (r) {
-    t++;
-    if (r.keterangan) dc++;
-  });
-  document.getElementById('hStatTotal').textContent = t;
-  document.getElementById('hStatDesc').textContent = dc;
-}
-
 function getFilteredHashtags() {
   var s = (document.getElementById('searchH').value || '').toLowerCase();
-  return hashtagData.filter(function (r) {
-    return !s || r.hashtag.toLowerCase().indexOf(s) !== -1 ||
-      (r.keterangan || '').toLowerCase().indexOf(s) !== -1;
+  return hashtagData.filter(function(r) {
+    return !s || r.hashtag.toLowerCase().indexOf(s) !== -1 || (r.keterangan || '').toLowerCase()
+      .indexOf(s) !== -1;
   });
 }
 
@@ -1882,29 +2260,23 @@ function renderHashtagTable() {
   if (isS && hashtagMode === 'preview') hashtagMode = 'full';
   if (!f.length) {
     document.getElementById('hashtagBody').innerHTML =
-      '<tr class="empty-row"><td colspan="4">' +
-      (isS ? 'Tidak ditemukan' : 'Belum ada data') + '</td></tr>';
+      '<tr class="empty-row"><td colspan="4">' + (isS ? 'Tidak ditemukan' : 'Belum ada data') + '</td></tr>';
     document.getElementById('hashtagFooter').innerHTML = '';
     return;
   }
   if (hashtagMode === 'preview') {
     document.getElementById('hashtagBody').innerHTML = buildHRows(f.slice(0, 5), 1);
-    document.getElementById('hashtagFooter').innerHTML = f.length > 5
-      ? '<div class="show-more-bar"><button class="show-more-btn" onclick="enterHashtagFull()">' +
-        'Lihat Selengkapnya <span style="color:var(--muted);font-weight:400;font-size:.72rem">' +
-        '(' + (f.length - 5) + ' lagi)</span>' +
-        '<svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg></button></div>'
-      : '';
+    document.getElementById('hashtagFooter').innerHTML = f.length > 5 ?
+      '<div class="show-more-bar"><button class="show-more-btn" onclick="enterHashtagFull()">' +
+      'Lihat Selengkapnya</button></div>' : '';
   } else {
     var tp = Math.max(1, Math.ceil(f.length / hashtagPageSize));
     if (hashtagPage > tp) hashtagPage = tp;
     var s = (hashtagPage - 1) * hashtagPageSize,
       e = Math.min(s + hashtagPageSize, f.length);
     document.getElementById('hashtagBody').innerHTML = buildHRows(f.slice(s, e), s + 1);
-    document.getElementById('hashtagFooter').innerHTML = buildPgHTML(
-      hashtagPage, tp, f.length, s + 1, e,
-      'goHashtagPage', 'setHashtagPageSize', hashtagPageSize
-    );
+    document.getElementById('hashtagFooter').innerHTML = buildPgHTML(hashtagPage, tp, f.length, s + 1, e,
+      'goHashtagPage', 'setHashtagPageSize', hashtagPageSize);
   }
 }
 
@@ -1918,18 +2290,15 @@ function buildHRows(items, no) {
   var h = '';
   for (var i = 0; i < items.length; i++) {
     var r = items[i];
-    h += '<tr>';
-    h += '<td style="color:var(--muted)">' + (no + i) + '</td>';
-    h += '<td><span class="hashtag-text">#' + escHtml(r.hashtag) + '</span></td>';
-    h += '<td style="font-size:.8rem;color:var(--muted)">' + escHtml(r.keterangan || '-') + '</td>';
-    h += '<td><div class="table-actions">';
-    h += '<button class="tbl-btn" onclick="openEditH(\'' + r.id + '\')" title="Edit">' +
-      '<svg viewBox="0 0 24 24"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/>' +
-      '<path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"/></svg></button>';
-    h += '<button class="tbl-btn del" onclick="openDeleteH(\'' + r.id + '\')" title="Hapus">' +
-      '<svg viewBox="0 0 24 24"><polyline points="3 6 5 6 21 6"/>' +
-      '<path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/></svg></button>';
-    h += '</div></td></tr>';
+    h += '<tr><td style="color:var(--muted)">' + (no + i) + '</td><td><span class="hashtag-text">#' +
+      escHtml(r.hashtag) + '</span></td><td style="font-size:.8rem;color:var(--muted)">' +
+      escHtml(r.keterangan || '-') + '</td><td><div class="table-actions">' +
+      '<button class="tbl-btn" onclick="openEditH(\'' + r.id + '\')"><svg viewBox="0 0 24 24">' +
+      '<path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/>' +
+      '<path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"/></svg></button>' +
+      '<button class="tbl-btn del" onclick="openDeleteH(\'' + r.id + '\')"><svg viewBox="0 0 24 24">' +
+      '<polyline points="3 6 5 6 21 6"/><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/></svg></button>' +
+      '</div></td></tr>';
   }
   return h;
 }
@@ -1951,9 +2320,7 @@ function onHashtagSearch() {
   if (isS && hashtagMode === 'preview') {
     hashtagMode = 'full';
     applyHashtagView();
-  } else {
-    renderHashtagTable();
-  }
+  } else renderHashtagTable();
 }
 
 function goHashtagPage(p) {
@@ -1982,23 +2349,23 @@ function addHashtag() {
     btn.textContent = 'Tambah';
     return;
   }
-  apiPost({ action: 'addHashtag', hashtag: tag, keterangan: ket }).then(function (r) {
+  apiPost({
+    action: 'addHashtag',
+    hashtag: tag,
+    keterangan: ket
+  }).then(function(r) {
     if (r.success) {
       toast('Hashtag ditambahkan', 'success');
       if (document.getElementById('quickH').checked) {
         document.getElementById('hTag').value = '';
         document.getElementById('hDesk').value = '';
-      } else {
-        resetHForm();
-      }
+      } else resetHForm();
       hashtagMode = 'preview';
       refreshHashtag();
-    } else {
-      toast('Gagal', 'error');
-    }
-  }).catch(function () {
+    } else toast('Gagal', 'error');
+  }).catch(function() {
     toast('Gagal', 'error');
-  }).finally(function () {
+  }).finally(function() {
     btn.disabled = false;
     btn.textContent = 'Tambah';
   });
@@ -2010,7 +2377,9 @@ function resetHForm() {
 }
 
 function openEditH(id) {
-  var r = hashtagData.find(function (x) { return x.id === id; });
+  var r = hashtagData.find(function(x) {
+    return x.id === id;
+  });
   if (!r) return;
   editingHId = id;
   document.getElementById('ehTag').value = r.hashtag.replace(/^#/, '');
@@ -2031,36 +2400,43 @@ function saveEditH() {
     btn.textContent = 'Simpan';
     return;
   }
-  apiPost({ action: 'editHashtag', id: editingHId, hashtag: tag, keterangan: ket }).then(function (r) {
+  apiPost({
+    action: 'editHashtag',
+    id: editingHId,
+    hashtag: tag,
+    keterangan: ket
+  }).then(function(r) {
     if (r.success) {
       toast('Hashtag diupdate', 'success');
       closeModal('editHModal');
       refreshHashtag();
-    } else {
-      toast('Gagal', 'error');
-    }
-  }).catch(function () {
+    } else toast('Gagal', 'error');
+  }).catch(function() {
     toast('Gagal', 'error');
-  }).finally(function () {
+  }).finally(function() {
     btn.disabled = false;
     btn.textContent = 'Simpan';
   });
 }
 
 function openDeleteH(id) {
-  var r = hashtagData.find(function (x) { return x.id === id; });
-  document.getElementById('deleteMsg').innerHTML =
-    'Hapus hashtag "<strong style="color:var(--text)">#' +
+  var r = hashtagData.find(function(x) {
+    return x.id === id;
+  });
+  document.getElementById('deleteMsg').innerHTML = 'Hapus hashtag "<strong style="color:var(--text)">#' +
     escHtml(r ? r.hashtag : '') + '</strong>"?';
   var btn = document.getElementById('deleteConfirmBtn');
   btn.textContent = 'Hapus';
   btn.className = 'btn-confirm';
   btn.disabled = false;
-  btn.onclick = function () {
+  btn.onclick = function() {
     if (btn.disabled) return;
     btn.disabled = true;
     btn.textContent = 'Menghapus...';
-    apiPost({ action: 'deleteHashtag', id: id }).then(function (r) {
+    apiPost({
+      action: 'deleteHashtag',
+      id: id
+    }).then(function(r) {
       if (r.success) {
         toast('Hashtag dihapus', 'success');
         closeModal('deleteModal');
@@ -2070,7 +2446,7 @@ function openDeleteH(id) {
         btn.disabled = false;
         btn.textContent = 'Hapus';
       }
-    }).catch(function () {
+    }).catch(function() {
       toast('Gagal', 'error');
       btn.disabled = false;
       btn.textContent = 'Hapus';
@@ -2079,33 +2455,596 @@ function openDeleteH(id) {
   openModal('deleteModal');
 }
 
-function buildPgHTML(cur, tot, total, s, e, pageFn, sizeFn, ps) {
-  if (!total) return '';
-  var h = '<div class="pagination-bar">' +
-    '<div class="pagination-info">Menampilkan <strong>' + s + '-' + e +
-    '</strong> dari <strong>' + total + '</strong></div>';
-  h += '<div style="display:flex;align-items:center;gap:12px;flex-wrap:wrap">';
-  h += '<div class="pg-size-wrap"><span>Tampil:</span>' +
-    '<select class="pg-size-select" onchange="' + sizeFn + '(parseInt(this.value))">';
-  [10, 15, 25, 50].forEach(function (v) {
+function refreshArtikel() {
+  document.getElementById('artikelBody').innerHTML =
+    '<tr class="empty-row"><td colspan="6"><div class="spinner"></div><br>Memuat...</td></tr>';
+  document.getElementById('artikelFooter').innerHTML = '';
+  apiGet('readArticles').then(function(d) {
+    if (!Array.isArray(d)) {
+      artikelData = [];
+      var errMsg = d && d.error ? d.error : 'Respon tidak valid';
+      document.getElementById('artikelBody').innerHTML =
+        '<tr class="empty-row"><td colspan="6" style="color:var(--red)">Gagal memuat: ' + escHtml(errMsg) +
+        '<br><small style="color:var(--muted)">Pastikan script sudah dideploy ulang dan setup() sudah dijalankan</small></td></tr>';
+      document.getElementById('aStatTotal').textContent = '0';
+      document.getElementById('aStatBulan').textContent = '0';
+      artikelMode = 'preview';
+      applyArtikelView();
+      updateDashboardCounts();
+      return;
+    }
+    artikelData = d;
+    document.getElementById('aStatTotal').textContent = artikelData.length;
+    var now = new Date(),
+      bm = 0;
+    artikelData.forEach(function(r) {
+      var dt = parseIDDate(r.tanggal);
+      if (dt) {
+        var dd = new Date(dt);
+        if (dd.getMonth() === now.getMonth() && dd.getFullYear() === now.getFullYear()) bm++;
+      }
+    });
+    document.getElementById('aStatBulan').textContent = bm;
+    artikelMode = 'preview';
+    artikelPage = 1;
+    applyArtikelView();
+    updateDashboardCounts();
+  }).catch(function(e) {
+    artikelData = [];
+    document.getElementById('artikelBody').innerHTML =
+      '<tr class="empty-row"><td colspan="6" style="color:var(--red)">Gagal memuat<br>' +
+      '<small style="color:var(--muted)">Periksa koneksi internet dan pastikan URL API sudah benar</small></td></tr>';
+    document.getElementById('aStatTotal').textContent = '0';
+    document.getElementById('aStatBulan').textContent = '0';
+    artikelMode = 'preview';
+    applyArtikelView();
+    updateDashboardCounts();
+  });
+}
+
+function getFilteredArtikel() {
+  var s = (document.getElementById('searchA').value || '').toLowerCase();
+  return artikelData.filter(function(r) {
+    return !s || r.judul.toLowerCase().indexOf(s) !== -1 || (r.penulis || '').toLowerCase().indexOf(
+      s) !== -1 || (r.tanggal || '').toLowerCase().indexOf(s) !== -1;
+  });
+}
+
+function applyArtikelView() {
+  var isF = artikelMode === 'full';
+  document.getElementById('artikelHome').classList.toggle('j-hide', isF);
+  document.getElementById('artikelBack').classList.toggle('j-hide', !isF);
+  renderArtikelTable();
+}
+
+function renderArtikelTable() {
+  var f = getFilteredArtikel(),
+    isS = !!(document.getElementById('searchA').value || '').trim();
+  if (isS && artikelMode === 'preview') artikelMode = 'full';
+  if (!f.length) {
+    document.getElementById('artikelBody').innerHTML =
+      '<tr class="empty-row"><td colspan="6">' + (isS ? 'Tidak ditemukan' : 'Belum ada artikel') +
+      '</td></tr>';
+    document.getElementById('artikelFooter').innerHTML = '';
+    return;
+  }
+  if (artikelMode === 'preview') {
+    document.getElementById('artikelBody').innerHTML = buildARows(f.slice(0, 5), 1);
+    document.getElementById('artikelFooter').innerHTML = f.length > 5 ?
+      '<div class="show-more-bar"><button class="show-more-btn" onclick="enterArtikelFull()">' +
+      'Lihat Selengkapnya</button></div>' : '';
+  } else {
+    var tp = Math.max(1, Math.ceil(f.length / artikelPageSize));
+    if (artikelPage > tp) artikelPage = tp;
+    var s = (artikelPage - 1) * artikelPageSize,
+      e = Math.min(s + artikelPageSize, f.length);
+    document.getElementById('artikelBody').innerHTML = buildARows(f.slice(s, e), s + 1);
+    document.getElementById('artikelFooter').innerHTML = buildPgHTML(artikelPage, tp, f.length, s + 1, e,
+      'goArtikelPage', 'setArtikelPageSize', artikelPageSize);
+  }
+}
+
+function buildARows(items, no) {
+  var h = '';
+  for (var i = 0; i < items.length; i++) {
+    var r = items[i];
+    var fotoHtml = r.foto ?
+      '<img class="artikel-thumb" src="' + escAttr(r.foto) + '" onerror="this.outerHTML=\'<span style=color:var(--muted);font-size:.72rem>error</span>\'">' :
+      '<span style="color:var(--muted);font-size:.72rem">-</span>';
+    var kontenSnippet = r.konten ?
+      (r.konten.length > 60 ? escHtml(r.konten.substring(0, 60)) + '...' : escHtml(r.konten)) :
+      '';
+    h += '<tr><td style="color:var(--muted)">' + (no + i) + '</td><td>' + fotoHtml + '</td><td>' +
+      '<div style="font-weight:500">' + escHtml(r.judul) + '</div>' +
+      (kontenSnippet ? '<div style="font-size:.72rem;color:var(--muted);margin-top:2px">' + kontenSnippet +
+      '</div>' : '') + '</td><td>' + escHtml(r.tanggal) + '</td><td><span class="penulis-text">' +
+      escHtml(r.penulis || '-') + '</span></td><td><div class="table-actions">';
+    h += '<button class="tbl-btn" onclick="openEditA(\'' + r.id + '\')" title="Edit">' +
+      '<svg viewBox="0 0 24 24"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/>' +
+      '<path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"/></svg></button>';
+    h += '<button class="tbl-btn del" onclick="openDeleteA(\'' + r.id + '\')" title="Hapus">' +
+      '<svg viewBox="0 0 24 24"><polyline points="3 6 5 6 21 6"/>' +
+      '<path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/></svg></button>';
+    h += '</div></td></tr>';
+  }
+  return h;
+}
+
+function enterArtikelFull() {
+  artikelMode = 'full';
+  artikelPage = 1;
+  applyArtikelView();
+}
+
+function exitArtikelFull() {
+  artikelMode = 'preview';
+  document.getElementById('searchA').value = '';
+  applyArtikelView();
+}
+
+function onArtikelSearch() {
+  var isS = !!(document.getElementById('searchA').value || '').trim();
+  if (isS && artikelMode === 'preview') {
+    artikelMode = 'full';
+    applyArtikelView();
+  } else renderArtikelTable();
+}
+
+function goArtikelPage(p) {
+  var f = getFilteredArtikel();
+  if (p < 1 || p > Math.max(1, Math.ceil(f.length / artikelPageSize))) return;
+  artikelPage = p;
+  renderArtikelTable();
+}
+
+function setArtikelPageSize(v) {
+  artikelPageSize = v;
+  artikelPage = 1;
+  renderArtikelTable();
+}
+
+function resetAForm() {
+  document.getElementById('aJudul').value = '';
+  document.getElementById('aKonten').value = '';
+  document.getElementById('aTanggal').value = (function() {
+    var t = new Date();
+    return t.getFullYear() + '-' + String(t.getMonth() + 1).padStart(2, '0') + '-' +
+      String(t.getDate()).padStart(2, '0');
+  })();
+  document.getElementById('aPenulis').value = '';
+  artikelFotoBase64 = '';
+  removeFoto(null, 'add');
+}
+
+function addArtikel() {
+  var btn = document.getElementById('addABtn');
+  if (btn.disabled) return;
+  btn.disabled = true;
+  btn.textContent = 'Menyimpan...';
+  var judul = document.getElementById('aJudul').value.trim();
+  var konten = document.getElementById('aKonten').value.trim();
+  var tgl = document.getElementById('aTanggal').value;
+  var penulis = document.getElementById('aPenulis').value.trim();
+  if (!judul || !tgl) {
+    toast('Judul dan tanggal wajib diisi', 'error');
+    btn.disabled = false;
+    btn.textContent = 'Tambah';
+    return;
+  }
+  apiPost({
+    action: 'addArticle',
+    judul: judul,
+    konten: konten,
+    tanggal: toIDDate(tgl),
+    penulis: penulis,
+    foto: artikelFotoBase64
+  }).then(function(r) {
+    if (r.success) {
+      toast('Artikel ditambahkan', 'success');
+      if (document.getElementById('quickA').checked) {
+        document.getElementById('aJudul').value = '';
+        document.getElementById('aKonten').value = '';
+        document.getElementById('aTanggal').value = (function() {
+          var t = new Date();
+          return t.getFullYear() + '-' + String(t.getMonth() + 1).padStart(2, '0') + '-' +
+            String(t.getDate()).padStart(2, '0');
+        })();
+        document.getElementById('aPenulis').value = '';
+        artikelFotoBase64 = '';
+        removeFoto(null, 'add');
+      } else resetAForm();
+      artikelMode = 'preview';
+      refreshArtikel();
+    } else toast('Gagal menambahkan', 'error');
+  }).catch(function() {
+    toast('Gagal', 'error');
+  }).finally(function() {
+    btn.disabled = false;
+    btn.textContent = 'Tambah';
+  });
+}
+
+function openEditA(id) {
+  var r = artikelData.find(function(x) {
+    return x.id === id;
+  });
+  if (!r) return;
+  editingAId = id;
+  document.getElementById('eaJudul').value = r.judul || '';
+  document.getElementById('eaKonten').value = r.konten || '';
+  document.getElementById('eaTanggal').value = fromIDDate(r.tanggal || '');
+  document.getElementById('eaPenulis').value = r.penulis || '';
+  editArtikelFotoOriginal = r.foto || '';
+  editArtikelFotoBase64 = '';
+  if (r.foto) {
+    showFotoPreview('ea', r.foto);
+  } else {
+    removeFoto(null, 'edit');
+  }
+  openModal('editAModal');
+}
+
+function saveEditA() {
+  var btn = document.querySelector('#editAModal .btn-save');
+  if (btn.disabled) return;
+  btn.disabled = true;
+  btn.textContent = 'Menyimpan...';
+  var judul = document.getElementById('eaJudul').value.trim();
+  var konten = document.getElementById('eaKonten').value.trim();
+  var tgl = document.getElementById('eaTanggal').value;
+  var penulis = document.getElementById('eaPenulis').value.trim();
+  if (!judul || !tgl) {
+    toast('Judul dan tanggal wajib', 'error');
+    btn.disabled = false;
+    btn.textContent = 'Simpan';
+    return;
+  }
+  var foto = editArtikelFotoBase64 || editArtikelFotoOriginal || '';
+  apiPost({
+    action: 'editArticle',
+    id: editingAId,
+    judul: judul,
+    konten: konten,
+    tanggal: toIDDate(tgl),
+    penulis: penulis,
+    foto: foto
+  }).then(function(r) {
+    if (r.success) {
+      toast('Artikel diupdate', 'success');
+      closeModal('editAModal');
+      refreshArtikel();
+    } else toast('Gagal update', 'error');
+  }).catch(function() {
+    toast('Gagal', 'error');
+  }).finally(function() {
+    btn.disabled = false;
+    btn.textContent = 'Simpan';
+  });
+}
+
+function openDeleteA(id) {
+  var r = artikelData.find(function(x) {
+    return x.id === id;
+  });
+  document.getElementById('deleteMsg').innerHTML = 'Hapus artikel "<strong style="color:var(--text)">' +
+    escHtml(r ? r.judul : '') + '</strong>"?';
+  var btn = document.getElementById('deleteConfirmBtn');
+  btn.textContent = 'Hapus';
+  btn.className = 'btn-confirm';
+  btn.disabled = false;
+  btn.onclick = function() {
+    if (btn.disabled) return;
+    btn.disabled = true;
+    btn.textContent = 'Menghapus...';
+    apiPost({
+      action: 'deleteArticle',
+      id: id
+    }).then(function(r) {
+      if (r.success) {
+        toast('Artikel dihapus', 'success');
+        closeModal('deleteModal');
+        refreshArtikel();
+      } else {
+        toast('Gagal', 'error');
+        btn.disabled = false;
+        btn.textContent = 'Hapus';
+      }
+    }).catch(function() {
+      toast('Gagal', 'error');
+      btn.disabled = false;
+      btn.textContent = 'Hapus';
+    });
+  };
+  openModal('deleteModal');
+}
+
+function refreshQuiz() {
+  var qBody = document.getElementById('quizBody');
+  if (qBody) qBody.innerHTML =
+    '<tr class="empty-row"><td colspan="8"><div class="spinner"></div><br>Memuat...</td></tr>';
+  var qFooter = document.getElementById('quizFooter');
+  if (qFooter) qFooter.innerHTML = '';
+  apiGet('readQuizzes').then(function(d) {
+    if (!Array.isArray(d)) {
+      quizData = [];
+      if (qBody) qBody.innerHTML =
+        '<tr class="empty-row"><td colspan="8" style="color:var(--red)">Gagal memuat</td></tr>';
+      return;
+    }
+    quizData = d;
+    var qStatTotal = document.getElementById('qStatTotal');
+    if (qStatTotal) qStatTotal.textContent = quizData.length;
+    quizMode = 'preview';
+    quizPage = 1;
+    applyQuizView();
+    updateDashboardCounts();
+  }).catch(function() {
+    quizData = [];
+    if (qBody) qBody.innerHTML =
+      '<tr class="empty-row"><td colspan="8" style="color:var(--red)">Gagal memuat</td></tr>';
+  });
+}
+
+function getFilteredQuiz() {
+  var s = (document.getElementById('searchQ').value || '').toLowerCase();
+  return quizData.filter(function(r) {
+    return !s || r.pertanyaan.toLowerCase().indexOf(s) !== -1;
+  });
+}
+
+function applyQuizView() {
+  var isF = quizMode === 'full';
+  var qHome = document.getElementById('quizHome');
+  if (qHome) qHome.classList.toggle('j-hide', isF);
+  var qBack = document.getElementById('quizBack');
+  if (qBack) qBack.classList.toggle('j-hide', !isF);
+  renderQuizTable();
+}
+
+function renderQuizTable() {
+  var f = getFilteredQuiz(),
+    isS = !!(document.getElementById('searchQ').value || '').trim();
+  if (isS && quizMode === 'preview') quizMode = 'full';
+  if (!f.length) {
+    var qBody = document.getElementById('quizBody');
+    if (qBody) qBody.innerHTML =
+      '<tr class="empty-row"><td colspan="8">' + (isS ? 'Tidak ditemukan' : 'Belum ada soal') +
+      '</td></tr>';
+    var qFooter = document.getElementById('quizFooter');
+    if (qFooter) qFooter.innerHTML = '';
+    return;
+  }
+  if (quizMode === 'preview') {
+    var qBody = document.getElementById('quizBody');
+    if (qBody) qBody.innerHTML = buildQRows(f.slice(0, 5), 1);
+    var qFooter = document.getElementById('quizFooter');
+    if (qFooter) qFooter.innerHTML = f.length > 5 ?
+      '<div class="show-more-bar"><button class="show-more-btn" onclick="enterQuizFull()">' +
+      'Lihat Selengkapnya</button></div>' : '';
+  } else {
+    var tp = Math.max(1, Math.ceil(f.length / quizPageSize));
+    if (quizPage > tp) quizPage = tp;
+    var s = (quizPage - 1) * quizPageSize,
+      e = Math.min(s + quizPageSize, f.length);
+    var qBody = document.getElementById('quizBody');
+    if (qBody) qBody.innerHTML = buildQRows(f.slice(s, e), s + 1);
+    var qFooter = document.getElementById('quizFooter');
+    if (qFooter) qFooter.innerHTML = buildPgHTML(quizPage, tp, f.length, s + 1, e, 'goQuizPage',
+      'setQuizPageSize', quizPageSize);
+  }
+}
+
+function buildQRows(items, no) {
+  var h = '';
+  for (var i = 0; i < items.length; i++) {
+    var r = items[i];
+    h += '<tr><td style="color:var(--muted)">' + (no + i) + '</td>' +
+      '<td style="font-weight:500;max-width:250px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap">' +
+      escHtml(r.pertanyaan) + '</td><td>' + escHtml(r.opsiA) + '</td><td>' + escHtml(r.opsiB) + '</td><td>' +
+      escHtml(r.opsiC || '-') + '</td><td>' + escHtml(r.opsiD || '-') + '</td>' +
+      '<td><span style="font-weight:700;color:var(--lime)">' + escHtml(r.jawaban) + '</span></td>' +
+      '<td><div class="table-actions"><button class="tbl-btn" onclick="openEditQ(\'' + r.id + '\')" title="Edit">' +
+      '<svg viewBox="0 0 24 24"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/>' +
+      '<path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"/></svg></button>' +
+      '<button class="tbl-btn del" onclick="openDeleteQ(\'' + r.id + '\')" title="Hapus">' +
+      '<svg viewBox="0 0 24 24"><polyline points="3 6 5 6 21 6"/>' +
+      '<path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/></svg></button>' +
+      '</div></td></tr>';
+  }
+  return h;
+}
+
+function enterQuizFull() {
+  quizMode = 'full';
+  quizPage = 1;
+  applyQuizView();
+}
+
+function exitQuizFull() {
+  quizMode = 'preview';
+  document.getElementById('searchQ').value = '';
+  applyQuizView();
+}
+
+function onQuizSearch() {
+  var isS = !!(document.getElementById('searchQ').value || '').trim();
+  if (isS && quizMode === 'preview') {
+    quizMode = 'full';
+    applyQuizView();
+  } else renderQuizTable();
+}
+
+function goQuizPage(p) {
+  var f = getFilteredQuiz();
+  if (p < 1 || p > Math.max(1, Math.ceil(f.length / quizPageSize))) return;
+  quizPage = p;
+  renderQuizTable();
+}
+
+function setQuizPageSize(v) {
+  quizPageSize = v;
+  quizPage = 1;
+  renderQuizTable();
+}
+
+function resetQForm() {
+  document.getElementById('qPertanyaan').value = '';
+  document.getElementById('qOpsiA').value = '';
+  document.getElementById('qOpsiB').value = '';
+  document.getElementById('qOpsiC').value = '';
+  document.getElementById('qOpsiD').value = '';
+  document.getElementById('qJawaban').value = 'A';
+}
+
+function addQuiz() {
+  var btn = document.getElementById('addQBtn');
+  if (btn.disabled) return;
+  btn.disabled = true;
+  btn.textContent = 'Menyimpan...';
+  var pt = document.getElementById('qPertanyaan').value.trim(),
+    a = document.getElementById('qOpsiA').value.trim(),
+    b = document.getElementById('qOpsiB').value.trim(),
+    c = document.getElementById('qOpsiC').value.trim(),
+    d = document.getElementById('qOpsiD').value.trim(),
+    j = document.getElementById('qJawaban').value;
+  if (!pt || !a || !b) {
+    toast('Pertanyaan, Opsi A, dan B wajib diisi', 'error');
+    btn.disabled = false;
+    btn.textContent = 'Tambah';
+    return;
+  }
+  apiPost({
+    action: 'addQuiz',
+    pertanyaan: pt,
+    opsiA: a,
+    opsiB: b,
+    opsiC: c,
+    opsiD: d,
+    jawaban: j
+  }).then(function(r) {
+    if (r.success) {
+      toast('Quiz ditambahkan', 'success');
+      if (document.getElementById('quickQ').checked) resetQForm();
+      else resetQForm();
+      quizMode = 'preview';
+      refreshQuiz();
+    } else toast('Gagal', 'error');
+  }).catch(function() {
+    toast('Gagal', 'error');
+  }).finally(function() {
+    btn.disabled = false;
+    btn.textContent = 'Tambah';
+  });
+}
+
+function openEditQ(id) {
+  var r = quizData.find(function(x) {
+    return x.id === id;
+  });
+  if (!r) return;
+  editingQId = id;
+  document.getElementById('eqPertanyaan').value = r.pertanyaan || '';
+  document.getElementById('eqOpsiA').value = r.opsiA || '';
+  document.getElementById('eqOpsiB').value = r.opsiB || '';
+  document.getElementById('eqOpsiC').value = r.opsiC || '';
+  document.getElementById('eqOpsiD').value = r.opsiD || '';
+  document.getElementById('eqJawaban').value = r.jawaban || 'A';
+  openModal('editQModal');
+}
+
+function saveEditQ() {
+  var btn = document.querySelector('#editQModal .btn-save');
+  if (btn.disabled) return;
+  btn.disabled = true;
+  btn.textContent = 'Menyimpan...';
+  var pt = document.getElementById('eqPertanyaan').value.trim(),
+    a = document.getElementById('eqOpsiA').value.trim(),
+    b = document.getElementById('eqOpsiB').value.trim(),
+    c = document.getElementById('eqOpsiC').value.trim(),
+    d = document.getElementById('eqOpsiD').value.trim(),
+    j = document.getElementById('eqJawaban').value;
+  if (!pt || !a || !b) {
+    toast('Pertanyaan, Opsi A, dan B wajib', 'error');
+    btn.disabled = false;
+    btn.textContent = 'Simpan';
+    return;
+  }
+  apiPost({
+    action: 'editQuiz',
+    id: editingQId,
+    pertanyaan: pt,
+    opsiA: a,
+    opsiB: b,
+    opsiC: c,
+    opsiD: d,
+    jawaban: j
+  }).then(function(r) {
+    if (r.success) {
+      toast('Quiz diupdate', 'success');
+      closeModal('editQModal');
+      refreshQuiz();
+    } else toast('Gagal', 'error');
+  }).catch(function() {
+    toast('Gagal', 'error');
+  }).finally(function() {
+    btn.disabled = false;
+    btn.textContent = 'Simpan';
+  });
+}
+
+function openDeleteQ(id) {
+  var r = quizData.find(function(x) {
+    return x.id === id;
+  });
+  document.getElementById('deleteMsg').innerHTML = 'Hapus soal quiz ini?';
+  var btn = document.getElementById('deleteConfirmBtn');
+  btn.textContent = 'Hapus';
+  btn.className = 'btn-confirm';
+  btn.disabled = false;
+  btn.onclick = function() {
+    if (btn.disabled) return;
+    btn.disabled = true;
+    btn.textContent = 'Menghapus...';
+    apiPost({
+      action: 'deleteQuiz',
+      id: id
+    }).then(function(r) {
+      if (r.success) {
+        toast('Quiz dihapus', 'success');
+        closeModal('deleteModal');
+        refreshQuiz();
+      } else {
+        toast('Gagal', 'error');
+        btn.disabled = false;
+        btn.textContent = 'Hapus';
+      }
+    }).catch(function() {
+      toast('Gagal', 'error');
+      btn.disabled = false;
+      btn.textContent = 'Hapus';
+    });
+  };
+  openModal('deleteModal');
+}
+
+function buildPgHTML(c, t, tot, s, e, pFn, sFn, ps) {
+  if (!tot) return '';
+  var h = '<div class="pagination-bar"><div class="pagination-info">Menampilkan <strong>' + s + '-' + e +
+    '</strong> dari <strong>' + tot + '</strong></div><div style="display:flex;align-items:center;gap:12px;flex-wrap:wrap">' +
+    '<div style="display:flex;align-items:center;gap:6px;font-size:.76rem;color:var(--muted)">Tampil:' +
+    '<select class="pg-size-select" onchange="' + sFn + '(parseInt(this.value))">';
+  [10, 15, 25, 50].forEach(function(v) {
     h += '<option value="' + v + '"' + (v === ps ? ' selected' : '') + '>' + v + '</option>';
   });
-  h += '</select></div><div class="pagination-controls">';
-  h += '<button class="pg-btn" onclick="' + pageFn + '(' + (cur - 1) + ')"' +
-    (cur <= 1 ? ' disabled' : '') + '>' +
-    '<svg viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"/></svg></button>';
-  pgNums(cur, tot).forEach(function (p) {
-    if (p === '...') {
-      h += '<span class="pg-ellipsis">...</span>';
-    } else {
-      h += '<button class="pg-btn' + (p === cur ? ' active' : '') +
-        '" onclick="' + pageFn + '(' + p + ')">' + p + '</button>';
-    }
+  h += '</select></div><div class="pagination-controls"><button class="pg-btn" onclick="' + pFn + '(' + (c - 1) +
+    ')"' + (c <= 1 ? ' disabled' : '') + '><svg viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"/></svg></button>';
+  pgNums(c, t).forEach(function(p) {
+    if (p === '...') h += '<span class="pg-ellipsis">...</span>';
+    else h += '<button class="pg-btn' + (p === c ? ' active' : '') + '" onclick="' + pFn + '(' + p + ')">' + p +
+      '</button>';
   });
-  h += '<button class="pg-btn" onclick="' + pageFn + '(' + (cur + 1) + ')"' +
-    (cur >= tot ? ' disabled' : '') + '>' +
-    '<svg viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"/></svg></button>';
-  h += '</div></div></div>';
+  h += '<button class="pg-btn" onclick="' + pFn + '(' + (c + 1) + ')"' + (c >= t ? ' disabled' : '') +
+    '><svg viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"/></svg></button></div></div></div>';
   return h;
 }
 
@@ -2131,8 +3070,8 @@ function closeModal(id) {
   document.getElementById(id).classList.remove('active');
 }
 
-document.querySelectorAll('.modal-overlay').forEach(function (el) {
-  el.addEventListener('click', function (e) {
+document.querySelectorAll('.modal-overlay').forEach(function(el) {
+  el.addEventListener('click', function(e) {
     if (e.target === el) el.classList.remove('active');
   });
 });
@@ -2143,36 +3082,40 @@ function toast(msg, type) {
   var key = msg + '|' + type;
   if (toastTimers[key]) return;
   toastTimers[key] = true;
-  setTimeout(function () { delete toastTimers[key]; }, 4000);
+  setTimeout(function() {
+    delete toastTimers[key];
+  }, 4000);
   var t = document.createElement('div');
   t.className = 'toast ' + (type || 'info');
   t.textContent = msg;
   document.getElementById('toastBox').appendChild(t);
-  setTimeout(function () { t.classList.add('show'); }, 30);
-  setTimeout(function () {
+  setTimeout(function() {
+    t.classList.add('show');
+  }, 30);
+  setTimeout(function() {
     t.classList.remove('show');
-    setTimeout(function () { t.remove(); }, 400);
+    setTimeout(function() {
+      t.remove();
+    }, 400);
   }, 3500);
 }
 
-(function () {
+(function() {
   var ids = ['gLabel', 'gAlt', 'egLabel', 'egAlt'];
+
   function enforceLock() {
-    ids.forEach(function (id) {
+    ids.forEach(function(id) {
       var el = document.getElementById(id);
       if (!el) return;
       if (el.classList.contains('locked')) {
         el.setAttribute('readonly', '');
         el.setAttribute('tabindex', '-1');
-        el.setAttribute('aria-readonly', 'true');
-        el.removeAttribute('contenteditable');
         el.style.pointerEvents = 'none';
         el.style.userSelect = 'none';
         el.style.webkitUserSelect = 'none';
       } else {
         el.removeAttribute('readonly');
         el.removeAttribute('tabindex');
-        el.removeAttribute('aria-readonly');
         el.style.pointerEvents = '';
         el.style.userSelect = '';
         el.style.webkitUserSelect = '';
@@ -2181,4 +3124,12 @@ function toast(msg, type) {
   }
   enforceLock();
   setInterval(enforceLock, 500);
+})();
+
+(function() {
+  var today = new Date();
+  var dd = String(today.getDate()).padStart(2, '0');
+  var mm = String(today.getMonth() + 1).padStart(2, '0');
+  var yyyy = today.getFullYear();
+  document.getElementById('aTanggal').value = yyyy + '-' + mm + '-' + dd;
 })();
