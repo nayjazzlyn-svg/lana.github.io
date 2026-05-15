@@ -211,7 +211,7 @@ function loadVideos() {
         VIDEO_DATA = data
           .map(function (row) {
             return {
-              id: row.id || row.videoId || '',
+              id: row.videoId || row.id || '',
               title: row.title || row.judul || ''
             };
           })
@@ -226,7 +226,7 @@ function loadVideos() {
 }
 
 function loadHistory() {
-  return fetch(API_URL + '?action=readHistory&t=' + Date.now())
+  return fetch(API_URL + '?action=readInfo&t=' + Date.now())
     .then(function (r) {
       return r.json();
     })
@@ -237,7 +237,7 @@ function loadHistory() {
             return {
               section: (row.section || row.tipe || '').toLowerCase().trim(),
               title: row.title || row.judul || '',
-              description: row.description || row.deskripsi || '',
+              description: row.description || row.deskripsi || row.konten || '',
               photo: row.photo || row.foto || ''
             };
           })
@@ -246,11 +246,11 @@ function loadHistory() {
           });
       }
     })
-    .catch(function () {});
+    .catch(function () { });
 }
 
 function loadRules() {
-  return fetch(API_URL + '?action=readRules&t=' + Date.now())
+  return fetch(API_URL + '?action=readPeraturan&t=' + Date.now())
     .then(function (r) {
       return r.json();
     })
@@ -264,11 +264,11 @@ function loadRules() {
             return r.length > 0;
           });
     })
-    .catch(function () {});
+    .catch(function () { });
 }
 
 function loadFAQ() {
-  return fetch(API_URL + '?action=readFAQ&t=' + Date.now())
+  return fetch(API_URL + '?action=readFaq&t=' + Date.now())
     .then(function (r) {
       return r.json();
     })
@@ -285,30 +285,30 @@ function loadFAQ() {
             return f.question.length > 0;
           });
     })
-    .catch(function () {});
+    .catch(function () { });
 }
 
 function loadRegStatus() {
-  return fetch(API_URL + '?action=readRegStatus&t=' + Date.now())
+  return fetch(API_URL + '?action=readPendaftaran&t=' + Date.now())
     .then(function (r) {
       return r.json();
     })
     .then(function (data) {
-      if (Array.isArray(data) && data.length > 0) {
-        var row = data[0];
+      if (data && (data.status || data.link)) {
+        var statusStr = String(data.status || '').toLowerCase().trim();
         REG_STATUS = {
-          status: (row.status || 'closed').toLowerCase().trim(),
-          link: row.link || row.url || ''
+          status: statusStr === 'true' || statusStr === 'open',
+          link: String(data.link || data.url || '').trim()
         };
-      } else if (data && data.status) {
-        REG_STATUS = {
-          status: (data.status || 'closed').toLowerCase().trim(),
-          link: data.link || data.url || ''
-        };
+      } else {
+        REG_STATUS = { status: false, link: '' };
       }
     })
-    .catch(function () {});
+    .catch(function () {
+      REG_STATUS = { status: false, link: '' };
+    });
 }
+
 
 function loadArticles() {
   return fetch(API_URL + '?action=readArticles&t=' + Date.now())
@@ -325,7 +325,7 @@ function loadArticles() {
               date: row.date || row.tanggal || '',
               author: row.author || row.penulis || '',
               excerpt: row.excerpt || row.ringkasan || '',
-              content: row.content || row.isi || '',
+              content: row.content || row.isi || row.konten || '',
               thumbnail: row.thumbnail || row.foto || row.gambar || '',
               category: row.category || row.kategori || ''
             };
@@ -343,7 +343,7 @@ function loadArticles() {
 }
 
 function loadQuiz() {
-  return fetch(API_URL + '?action=readQuiz&t=' + Date.now())
+  return fetch(API_URL + '?action=readQuizzes&t=' + Date.now())
     .then(function (r) {
       return r.json();
     })
@@ -382,15 +382,23 @@ function loadProjects() {
       if (Array.isArray(data) && data.length > 0) {
         PROJECT_DATA = data
           .map(function (row) {
+            var rawStatus = (row.status || 'upcoming').toLowerCase().trim();
+            var normalizedStatus = 'upcoming';
+            if (rawStatus === 'selesai' || rawStatus === 'completed') {
+              normalizedStatus = 'completed';
+            } else if (rawStatus === 'ongoing') {
+              normalizedStatus = 'ongoing';
+            }
+
             return {
               id: row.id || row.row || '',
-              title: row.title || row.judul || '',
+              title: row.nama || row.title || row.judul || '',
               date: row.date || row.tanggal || '',
-              excerpt: row.excerpt || row.ringkasan || '',
-              content: row.content || row.isi || '',
-              thumbnail: row.thumbnail || row.foto || row.gambar || '',
-              status: (row.status || 'upcoming').toLowerCase().trim(),
-              photos: row.photos || row.galeri || row.dokumentasi || ''
+              excerpt: row.deskripsi || row.excerpt || row.ringkasan || '',
+              content: row.deskripsi || row.content || row.isi || row.konten || '',
+              thumbnail: row.link || row.thumbnail || row.foto || row.gambar || '',
+              photos: row.photos || row.galeri || row.dokumentasi || '',
+              status: normalizedStatus
             };
           })
           .filter(function (p) {
@@ -562,23 +570,23 @@ function renderSchedule() {
     var rowDoneClass = timePassed ? ' sched-row-done' : '';
     rows.push(
       '<div class="sched-row sched-type-' +
-        toSafeClass(group.type) +
-        rowDoneClass +
-        '"><span class="sched-no">' +
-        (rows.length + 1) +
-        '</span><span class="sched-name"><span class="sched-name-dot"></span><span class="sched-name-text">' +
-        group.name +
-        '</span></span><span class="sched-date">' +
-        s.date +
-        '</span><span class="' +
-        infoCls +
-        '">' +
-        infoDisplay +
-        '</span><span class="sched-status-wrap"><span class="sched-status ' +
-        statusCls +
-        '">' +
-        statusTxt +
-        '</span></span></div>'
+      toSafeClass(group.type) +
+      rowDoneClass +
+      '"><span class="sched-no">' +
+      (rows.length + 1) +
+      '</span><span class="sched-name"><span class="sched-name-dot"></span><span class="sched-name-text">' +
+      group.name +
+      '</span></span><span class="sched-date">' +
+      s.date +
+      '</span><span class="' +
+      infoCls +
+      '">' +
+      infoDisplay +
+      '</span><span class="sched-status-wrap"><span class="sched-status ' +
+      statusCls +
+      '">' +
+      statusTxt +
+      '</span></span></div>'
     );
   });
   var totalCompleted = 0;
@@ -591,13 +599,13 @@ function renderSchedule() {
     '</strong> Mendatang</div>' +
     (todayCount > 0
       ? '<div class="sched-summary-chip"><span class="sched-summary-dot today"></span><strong>' +
-        todayCount +
-        '</strong> Hari Ini</div>'
+      todayCount +
+      '</strong> Hari Ini</div>'
       : '') +
     (doneTodayCount > 0
       ? '<div class="sched-summary-chip"><strong>' +
-        doneTodayCount +
-        '</strong> Selesai</div>'
+      doneTodayCount +
+      '</strong> Selesai</div>'
       : '') +
     '<div class="sched-summary-chip"><strong>' +
     totalCompleted +
@@ -1047,20 +1055,15 @@ function renderVideoPreview() {
   }
   var featured = VIDEO_DATA[0];
   document.getElementById('videoFeatured').innerHTML =
-    '<div class="video-featured-card"><div class="video-featured-wrap"><iframe src="https://www.youtube.com/embed/' +
-    featured.id +
-    '" title="' +
-    escapeHtml(featured.title) +
-    '" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div><div class="video-featured-info"><div class="video-featured-label">Video Perkenalan</div><div class="video-featured-title">' +
+    '<div class="video-featured-card"><div class="video-featured-wrap" style="position:relative;cursor:pointer" onclick="openYtPopup(\'' + featured.id + '\')"><img src="https://img.youtube.com/vi/' + featured.id + '/maxresdefault.jpg" alt="' + escapeHtml(featured.title) + '" style="width:100%;height:100%;object-fit:cover;position:absolute;top:0;left:0" onerror="this.src=\'https://img.youtube.com/vi/' + featured.id + '/hqdefault.jpg\'"><div style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:68px;height:48px;background:red;border-radius:12px;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 12px rgba(0,0,0,.5)"><svg viewBox="0 0 24 24" style="width:24px;height:24px;fill:white;stroke:none"><polygon points="5 3 19 12 5 21 5 3"/></svg></div></div><div class="video-featured-info"><div class="video-featured-label">Video Perkenalan</div><div class="video-featured-title">' +
     escapeHtml(featured.title) +
     '</div></div></div>';
+
   var smallVids = VIDEO_DATA.slice(1, 3);
   var smallHtml = '';
   smallVids.forEach(function (v) {
     smallHtml +=
-      '<div class="video-small-card" onclick="playSmallVideo(this, \'' +
-      v.id +
-      '\')"><div class="video-small-thumb"><img src="https://img.youtube.com/vi/' +
+      '<div class="video-small-card" onclick="openYtPopup(\'' + v.id + '\')" style="cursor:pointer"><div class="video-small-thumb" style="position:relative"><img src="https://img.youtube.com/vi/' +
       v.id +
       '/hqdefault.jpg" alt="' +
       escapeHtml(v.title) +
@@ -1069,6 +1072,7 @@ function renderVideoPreview() {
       '</div></div></div>';
   });
   document.getElementById('videoSmallGrid').innerHTML = smallHtml;
+
   var seeMoreWrap = document.getElementById('videoSeeMoreWrap');
   if (VIDEO_DATA.length > 3) {
     seeMoreWrap.innerHTML =
@@ -1104,11 +1108,9 @@ function renderVideoPage() {
     html +=
       '<div class="vid-page-card" style="transition-delay:' +
       delay +
-      'ms"><div class="vid-page-embed"><iframe src="https://www.youtube.com/embed/' +
-      v.id +
-      '" title="' +
+      'ms"><div class="vid-page-embed" style="position:relative;cursor:pointer" onclick="openYtPopup(\'' + v.id + '\')"><img src="https://img.youtube.com/vi/' + v.id + '/hqdefault.jpg" alt="' +
       escapeHtml(v.title) +
-      '" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div><div class="vid-page-info"><div class="vid-page-card-title">' +
+      '" style="width:100%;height:100%;object-fit:cover;position:absolute;top:0;left:0" loading="lazy"><div style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:68px;height:48px;background:red;border-radius:12px;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 12px rgba(0,0,0,.5)"><svg viewBox="0 0 24 24" style="width:24px;height:24px;fill:white;stroke:none"><polygon points="5 3 19 12 5 21 5 3"/></svg></div></div><div class="vid-page-info"><div class="vid-page-card-title">' +
       escapeHtml(v.title) +
       '</div></div></div>';
   });
@@ -1211,21 +1213,17 @@ function submitBdayCard() {
   }
   fetch(API_URL, {
     method: 'POST',
+    redirect: 'follow',
+    mode: 'no-cors',
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify({ action: 'addWish', nama: name, pesan: msg })
   })
-    .then(function (r) {
-      return r.json();
-    })
     .then(function (res) {
-      if (res.success) {
-        closeBdayModal();
-        loadWishes().then(function () {
-          renderBdayCards();
-        });
-      } else {
-        alert('Gagal mengirim ucapan, coba lagi nanti.');
-      }
+      closeBdayModal();
+      loadWishes().then(function () {
+        renderBdayCards();
+      });
+      alert('Ucapan berhasil dikirim! ✨');
     })
     .catch(function () {
       alert('Terjadi kesalahan jaringan.');
@@ -1237,7 +1235,7 @@ function renderHistoryPage() {
     return item.section === 'sejarah';
   });
   var logoItem = HISTORY_DATA.find(function (item) {
-    return item.section === 'makna-logo';
+    return item.section === 'makna';
   });
   var mottoItem = HISTORY_DATA.find(function (item) {
     return item.section === 'motto';
@@ -1256,10 +1254,10 @@ function renderHistoryPage() {
         'ms"><div class="history-tl-dot"></div><div class="history-tl-card">' +
         (hasPhoto
           ? '<div class="history-tl-photo"><img src="' +
-            item.photo +
-            '" alt="' +
-            escapeHtml(item.title) +
-            '" loading="lazy"></div>'
+          item.photo +
+          '" alt="' +
+          escapeHtml(item.title) +
+          '" loading="lazy"></div>'
           : '') +
         '<div class="history-tl-text"><div class="history-tl-title">' +
         escapeHtml(item.title) +
@@ -1349,20 +1347,23 @@ function renderFAQ() {
 
 function renderRegStatus() {
   var el = document.getElementById('fbRegSection');
-  if (!REG_STATUS.status) {
+  var isOpen = REG_STATUS.status === true || String(REG_STATUS.status).toLowerCase().trim() === 'true' || String(REG_STATUS.status).toLowerCase().trim() === 'open';
+
+  if (!isOpen) {
     el.innerHTML =
       '<div class="fb-reg-card"><div class="fb-reg-title"><svg viewBox="0 0 24 24"><path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="8.5" cy="7" r="4"/><line x1="20" y1="8" x2="20" y2="14"/><line x1="23" y1="11" x2="17" y2="11"/></svg> Pendaftaran Member</div><div class="fb-reg-status closed"><span class="fb-reg-dot"></span>Belum Tersedia</div><button class="fb-reg-btn closed" disabled>Info Pendaftaran Belum Ada</button></div>';
     return;
   }
-  var isOpen = REG_STATUS.status === 'open';
-  var statusLabel = isOpen ? 'Open' : 'Close';
-  var statusClass = isOpen ? 'open' : 'closed';
+
+  var statusLabel = 'Open';
+  var statusClass = 'open';
   var html =
     '<div class="fb-reg-card"><div class="fb-reg-title"><svg viewBox="0 0 24 24"><path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="8.5" cy="7" r="4"/><line x1="20" y1="8" x2="20" y2="14"/><line x1="23" y1="11" x2="17" y2="11"/></svg> Pendaftaran Member</div><div class="fb-reg-status ' +
     statusClass +
     '"><span class="fb-reg-dot"></span>' +
     statusLabel +
     '</div>';
+
   if (isOpen && REG_STATUS.link) {
     html +=
       '<a href="' +
@@ -1371,9 +1372,6 @@ function renderRegStatus() {
   } else if (isOpen) {
     html +=
       '<button class="fb-reg-btn open">Daftar Sekarang</button>';
-  } else {
-    html +=
-      '<button class="fb-reg-btn closed" disabled>Pendaftaran Tutup</button>';
   }
   html += '</div>';
   el.innerHTML = html;
@@ -1455,6 +1453,11 @@ function renderArticles() {
         '" alt="' +
         escapeHtml(article.title) +
         '" loading="lazy"><div class="artikel-card-thumb-overlay"></div></div>';
+    } else {
+      html +=
+        '<div class="artikel-card-thumb artikel-card-thumb-placeholder"><div class="artikel-card-thumb-placeholder-inner"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg><span>' +
+        escapeHtml(article.category || 'Artikel') +
+        '</span></div></div>';
     }
     html += '<div class="artikel-card-body"><div class="artikel-card-meta">';
     if (article.date) {
@@ -1731,8 +1734,11 @@ function submitQuizScoreFromModal() {
   quizSubmittedName = name;
   var total = QUIZ_DATA.length;
   var percentage = Math.round((quizScore / total) * 100);
+
   fetch(API_URL, {
     method: 'POST',
+    redirect: 'follow',
+    mode: 'no-cors',
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify({
       action: 'submitQuizScore',
@@ -1742,9 +1748,6 @@ function submitQuizScoreFromModal() {
       total: total
     })
   })
-    .then(function (r) {
-      return r.json();
-    })
     .then(function () {
       showLeaderboardPage(name, percentage);
     })
@@ -1754,7 +1757,7 @@ function submitQuizScoreFromModal() {
 }
 
 function loadQuizLeaderboard() {
-  return fetch(API_URL + '?action=readQuizLeaderboard&t=' + Date.now())
+  return fetch(API_URL + '?action=readSkorKuis&t=' + Date.now())
     .then(function (r) {
       return r.json();
     })
@@ -1763,7 +1766,7 @@ function loadQuizLeaderboard() {
         window._quizLeaderboard = data.map(function (row) {
           return {
             nama: row.nama || row.name || '',
-            score: parseInt(row.score || 0, 10),
+            score: parseInt(row.score || row.skor || 0, 10),
             correct: parseInt(row.correct || 0, 10),
             total: parseInt(row.total || 0, 10),
             timestamp: row.timestamp || row.tanggal || ''
@@ -1845,8 +1848,8 @@ function renderProjects() {
       statusClass === 'ongoing'
         ? 'Ongoing'
         : statusClass === 'completed'
-        ? 'Completed'
-        : 'Upcoming';
+          ? 'Completed'
+          : 'Upcoming';
     html +=
       '<div class="project-card" style="transition-delay:' +
       delay +
@@ -1868,14 +1871,10 @@ function renderProjects() {
         escapeHtml(project.date) +
         '</span>';
     }
-    html +=
-      '<span class="project-card-status ' +
-      statusClass +
-      '">' +
-      statusLabel +
-      '</span></div><div class="project-card-title">' +
+    html += '</div><div class="project-card-title">' +
       escapeHtml(project.title) +
       '</div>';
+
     if (project.excerpt) {
       html +=
         '<div class="project-card-excerpt">' +
@@ -1908,8 +1907,8 @@ function showProjectDetail(idx) {
     statusClass === 'ongoing'
       ? 'Ongoing'
       : statusClass === 'completed'
-      ? 'Completed'
-      : 'Upcoming';
+        ? 'Completed'
+        : 'Upcoming';
   var html =
     '<div class="section-header"><button class="back-btn" onclick="closeProjectDetail()" aria-label="Kembali"><svg viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"/></svg></button><h2>Project Fanbase</h2></div><div class="project-detail-hero' +
     noThumbClass +
@@ -1922,12 +1921,7 @@ function showProjectDetail(idx) {
       escapeHtml(project.title) +
       '" loading="lazy"><div class="project-detail-thumb-overlay"></div></div>';
   }
-  html +=
-    '<div class="project-detail-hero-text"><span class="project-detail-status ' +
-    statusClass +
-    '">' +
-    statusLabel +
-    '</span><div class="project-detail-title">' +
+  html += '<div class="project-detail-hero-text"><span class="project-detail-category"></span><div class="project-detail-title">' +
     escapeHtml(project.title) +
     '</div><div class="project-detail-meta">';
   if (project.date) {
@@ -2038,16 +2032,16 @@ function renderGalFolders() {
       '\')"><div class="gal-folder-cover">' +
       (cover
         ? '<img src="' +
-          cover +
-          '" alt="' +
-          label +
-          '" loading="lazy">'
+        cover +
+        '" alt="' +
+        label +
+        '" loading="lazy">'
         : '<div style="width:100%;height:100%;background:var(--bg-card);display:flex;align-items:center;justify-content:center;color:var(--text-muted);font-size:.8rem">Kosong</div>') +
       '<div class="gal-folder-cover-overlay"></div>' +
       (imgs.length > 0
         ? '<div class="gal-folder-badge"><span class="gal-folder-badge-dot"></span>' +
-          imgs.length +
-          ' foto</div>'
+        imgs.length +
+        ' foto</div>'
         : '') +
       '</div><div class="gal-folder-info"><div class="gal-folder-icon"><svg viewBox="0 0 24 24"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"/></svg></div><div class="gal-folder-text"><div class="gal-folder-name">' +
       label +
@@ -2265,8 +2259,8 @@ function showSection(id) {
     id === 'birthday'
       ? 'profile'
       : id === 'history'
-      ? 'fanbase'
-      : id
+        ? 'fanbase'
+        : id
   );
   if (id === 'gallery')
     loadGallery().then(function () {
@@ -2540,3 +2534,44 @@ window.addEventListener('scroll', function () {
     _origRenderGalFolders();
   };
 })();
+
+(function () {
+  var style = document.createElement('style');
+  style.innerHTML =
+    '.project-card-thumb { aspect-ratio: auto !important; min-height: 200px; }' +
+    '.project-card-thumb img { object-fit: contain !important; width: 100% !important; height: 100% !important; }' +
+    '.project-card-thumb-placeholder { aspect-ratio: auto !important; min-height: 200px; }';
+  document.head.appendChild(style);
+})();
+
+function openYtPopup(videoId) {
+  var existing = document.getElementById('ytPopupOverlay');
+  if (existing) existing.remove();
+
+  var overlay = document.createElement('div');
+  overlay.id = 'ytPopupOverlay';
+  overlay.style.cssText = 'position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.85);z-index:99999;display:flex;align-items:center;justify-content:center;';
+
+  var popup = document.createElement('div');
+  popup.style.cssText = 'position:relative;width:90%;max-width:800px;padding-top:50%;background:#000;border-radius:12px;overflow:hidden;box-shadow:0 8px 30px rgba(0,0,0,.5)';
+
+  var iframe = document.createElement('iframe');
+  iframe.src = 'https://www.youtube.com/embed/' + videoId + '?autoplay=1&rel=0';
+  iframe.style.cssText = 'position:absolute;top:0;left:0;width:100%;height:100%;border:none;';
+  iframe.allow = 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture';
+  iframe.allowFullscreen = true;
+
+  var closeBtn = document.createElement('button');
+  closeBtn.innerHTML = '&times;';
+  closeBtn.style.cssText = 'position:absolute;top:-40px;right:0;background:none;border:none;color:white;font-size:32px;cursor:pointer;';
+  closeBtn.onclick = function () { overlay.remove(); };
+
+  popup.appendChild(iframe);
+  popup.appendChild(closeBtn);
+  overlay.appendChild(popup);
+  document.body.appendChild(overlay);
+
+  overlay.onclick = function (e) {
+    if (e.target === overlay) overlay.remove();
+  };
+};

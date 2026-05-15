@@ -5645,7 +5645,6 @@ body.scrolled {
 }
 
 .quiz-score-label {
-  font-size: .82rem;
   color: var(--text-muted);
   text-transform: uppercase;
   letter-spacing: 1px;
@@ -6658,6 +6657,40 @@ body.scrolled {
     font-size: .88rem;
     letter-spacing: 2px
   }
+
+  .bday-hero {
+    padding: 20px 12px 16px;
+  }
+
+  .bday-hero-icon {
+    font-size: 1.6rem;
+  }
+
+  .bday-hero-date {
+    font-size: 1.2rem;
+  }
+
+  .bday-cd-item {
+    min-width: 48px;
+    padding: 6px 8px;
+  }
+
+  .bday-cd-val {
+    font-size: 1rem;
+  }
+
+  .bday-cd-label {
+    font-size: .5rem;
+  }
+
+  .bday-cd-sep {
+    font-size: .85rem;
+    margin-bottom: 6px;
+  }
+
+  .bday-celebration-text {
+    font-size: 1.8rem;
+  }
 }
 
 @media(max-width: 680px) {
@@ -6741,21 +6774,81 @@ body.scrolled {
     padding: 5px 10px
   }
 
-  .bday-wall {
-    grid-template-columns: 1fr
-  }
+  @media(max-width: 600px) {
+    .bday-wall {
+      grid-template-columns: 1fr
+    }
 
-  .bday-cd-item {
-    min-width: 60px;
-    padding: 10px 12px
-  }
+    .bday-cd-item {
+      min-width: 60px;
+      padding: 10px 12px
+    }
 
-  .bday-cd-val {
-    font-size: 1.4rem
-  }
+    .bday-cd-val {
+      font-size: 1.4rem
+    }
 
-  .bday-celebration-text {
-    font-size: 2.5rem
+    .bday-celebration-text {
+      font-size: 2.5rem
+    }
+
+    .bday-hero {
+      padding: 24px 16px 20px;
+    }
+
+    .bday-hero-icon {
+      font-size: 2rem;
+      margin-bottom: 8px;
+    }
+
+    .bday-hero-text {
+      font-size: .9rem;
+    }
+
+    .bday-hero-date {
+      font-size: 1.5rem;
+    }
+
+    .bday-countdown {
+      gap: 6px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .bday-cd-sep {
+      font-size: 1rem;
+      margin-bottom: 10px;
+    }
+
+    .bday-cd-msg {
+      font-size: .8rem;
+    }
+
+    .bday-actions {
+      margin-bottom: 24px;
+    }
+
+    .bday-btn {
+      font-size: .88rem;
+      padding: 12px 24px;
+    }
+
+    .bday-wall-title {
+      font-size: .72rem;
+      letter-spacing: .8px;
+    }
+
+    .bday-card {
+      padding: 14px;
+    }
+
+    .bday-card-name {
+      font-size: .82rem;
+    }
+
+    .bday-card-msg {
+      font-size: .78rem;
+    }
   }
 
   .vid-page-banner {
@@ -7008,6 +7101,10 @@ body.scrolled {
   .artikel-card,
   .project-card {
     opacity: 1;
-    transform: none
+    transform: none;
+    -webkit-transform: none;
+    -moz-transform: none;
+    -ms-transform: none;
+    -o-transform: none;
   }
 }

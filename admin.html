@@ -5,14 +5,12 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>LANAUTICA Admin</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap"
-    rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-  <!-- LOGIN -->
   <div class="login-gate" id="loginGate">
     <div class="login-orbs">
       <div class="orb"></div>
@@ -24,17 +22,18 @@
       <p>Admin Panel</p>
       <div class="login-input-wrap">
         <input type="password" class="login-input" id="loginPass" placeholder="Masukkan password" autocomplete="off">
-        <button type="button" class="login-eye" id="loginEye"><svg viewBox="0 0 24 24">
+        <button type="button" class="login-eye" id="loginEye">
+          <svg viewBox="0 0 24 24">
             <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z" />
             <circle cx="12" cy="12" r="3" />
-          </svg></button>
+          </svg>
+        </button>
       </div>
       <button class="login-btn" id="loginBtn">Masuk</button>
       <div class="login-error" id="loginError"></div>
     </div>
   </div>
 
-  <!-- DASHBOARD -->
   <div class="dashboard-screen" id="dashboardScreen">
     <div class="dash-bg">
       <div class="orb"></div>
@@ -43,11 +42,13 @@
     </div>
     <div class="dash-header">
       <div class="dash-brand">
-        <div class="dash-brand-icon"><svg viewBox="0 0 24 24">
+        <div class="dash-brand-icon">
+          <svg viewBox="0 0 24 24">
             <polygon points="12 2 2 7 12 12 22 7 12 2" />
             <polyline points="2 17 12 22 22 17" />
             <polyline points="2 12 12 17 22 12" />
-          </svg></div>
+          </svg>
+        </div>
         <div>
           <h1>LANAUTICA</h1><span>Admin Panel</span>
         </div>
@@ -57,124 +58,477 @@
     <div class="dash-content">
       <div class="dash-greeting">
         <h2>Selamat Datang, <span>Admin</span></h2>
-        <p>Pilih menu yang ingin dikelola</p>
+        <p>Pilih kategori menu yang ingin dikelola</p>
       </div>
-      <div class="dash-grid">
-        <div class="dash-card card-jadwal" onclick="openSection('jadwal')">
-          <div class="dash-card-icon"><svg viewBox="0 0 24 24">
-              <rect x="3" y="4" width="18" height="18" rx="2" ry="2" />
-              <line x1="16" y1="2" x2="16" y2="6" />
-              <line x1="8" y1="2" x2="8" y2="6" />
-              <line x1="3" y1="10" x2="21" y2="10" />
-            </svg></div>
-          <div class="dash-card-title">Jadwal</div>
-          <div class="dash-card-desc">Kelola jadwal kegiatan, theater, event, dan lainnya</div>
+      <div class="dash-grid dash-grid-main">
+        <div class="dash-card card-cat-konten" onclick="openCategory('konten')">
+          <div class="dash-card-icon">
+            <svg viewBox="0 0 24 24">
+              <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+            </svg>
+          </div>
+          <div class="dash-card-title">Konten & Media</div>
+          <div class="dash-card-desc">Artikel, Video, Project Fanbase, Galeri</div>
           <div class="dash-card-bottom">
             <div class="dash-card-stats">
-              <div class="dash-card-stat"><strong id="dashJadwalTotal">0</strong>Total</div>
-              <div class="dash-card-stat"><strong id="dashJadwalUpcoming">0</strong>Mendatang</div>
+              <div class="dash-card-stat">
+                <strong>4</strong>Menu
+              </div>
             </div>
-            <div class="dash-card-arrow"><svg viewBox="0 0 24 24">
+            <div class="dash-card-arrow">
+              <svg viewBox="0 0 24 24">
                 <polyline points="9 18 15 12 9 6" />
-              </svg></div>
+              </svg>
+            </div>
           </div>
         </div>
-        <div class="dash-card card-galeri" onclick="openSection('galeri')">
-          <div class="dash-card-icon"><svg viewBox="0 0 24 24">
-              <rect x="3" y="3" width="18" height="18" rx="2" ry="2" />
-              <circle cx="8.5" cy="8.5" r="1.5" />
-              <polyline points="21 15 16 10 5 21" />
-            </svg></div>
-          <div class="dash-card-title">Galeri</div>
-          <div class="dash-card-desc">Kelola foto, album, dan folder galeri</div>
+        <div class="dash-card card-cat-info" onclick="openCategory('info')">
+          <div class="dash-card-icon">
+            <svg viewBox="0 0 24 24">
+              <circle cx="12" cy="12" r="10" />
+              <line x1="12" y1="16" x2="12" y2="12" />
+              <line x1="12" y1="8" x2="12.01" y2="8" />
+            </svg>
+          </div>
+          <div class="dash-card-title">Informasi Fanbase</div>
+          <div class="dash-card-desc">Jadwal, Sejarah, Peraturan, FAQ, Hashtag</div>
           <div class="dash-card-bottom">
             <div class="dash-card-stats">
-              <div class="dash-card-stat"><strong id="dashGaleriTotal">0</strong>Foto</div>
-              <div class="dash-card-stat"><strong id="dashGaleriAlbums">0</strong>Album</div>
+              <div class="dash-card-stat">
+                <strong>5</strong>Menu
+              </div>
             </div>
-            <div class="dash-card-arrow"><svg viewBox="0 0 24 24">
+            <div class="dash-card-arrow">
+              <svg viewBox="0 0 24 24">
                 <polyline points="9 18 15 12 9 6" />
-              </svg></div>
+              </svg>
+            </div>
           </div>
         </div>
-        <div class="dash-card card-hashtag" onclick="openSection('hashtag')">
-          <div class="dash-card-icon"><svg viewBox="0 0 24 24">
-              <line x1="4" y1="9" x2="20" y2="9" />
-              <line x1="4" y1="15" x2="20" y2="15" />
-              <line x1="10" y1="3" x2="8" y2="21" />
-              <line x1="16" y1="3" x2="14" y2="21" />
-            </svg></div>
-          <div class="dash-card-title">Hashtag</div>
-          <div class="dash-card-desc">Kelola hashtag dan keterangan</div>
-          <div class="dash-card-bottom">
-            <div class="dash-card-stats">
-              <div class="dash-card-stat"><strong id="dashHashtagTotal">0</strong>Total</div>
-              <div class="dash-card-stat"><strong id="dashHashtagDesc">0</strong>Dengan Deskripsi</div>
-            </div>
-            <div class="dash-card-arrow"><svg viewBox="0 0 24 24">
-                <polyline points="9 18 15 12 9 6" />
-              </svg></div>
+        <div class="dash-card card-cat-anggota" onclick="openCategory('anggota')">
+          <div class="dash-card-icon">
+            <svg viewBox="0 0 24 24">
+              <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
+              <circle cx="9" cy="7" r="4" />
+              <path d="M23 21v-2a4 4 0 0 0-3-3.87" />
+              <path d="M16 3.13a4 4 0 0 1 0 7.75" />
+            </svg>
           </div>
-        </div>
-        <div class="dash-card card-artikel" onclick="openSection('artikel')">
-          <div class="dash-card-icon"><svg viewBox="0 0 24 24">
-              <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
-              <polyline points="14 2 14 8 20 8" />
-              <line x1="16" y1="13" x2="8" y2="13" />
-              <line x1="16" y1="17" x2="8" y2="17" />
-            </svg></div>
-          <div class="dash-card-title">Artikel</div>
-          <div class="dash-card-desc">Kelola artikel dan berita</div>
+          <div class="dash-card-title">Anggota & Interaksi</div>
+          <div class="dash-card-desc">Pendaftaran, Ucapan, Quiz, Leaderboard</div>
           <div class="dash-card-bottom">
             <div class="dash-card-stats">
-              <div class="dash-card-stat"><strong id="dashArtikelTotal">0</strong>Total</div>
-              <div class="dash-card-stat"><strong id="dashArtikelMonth">0</strong>Bulan Ini</div>
+              <div class="dash-card-stat">
+                <strong>4</strong>Menu
+              </div>
             </div>
-            <div class="dash-card-arrow"><svg viewBox="0 0 24 24">
+            <div class="dash-card-arrow">
+              <svg viewBox="0 0 24 24">
                 <polyline points="9 18 15 12 9 6" />
-              </svg></div>
-          </div>
-        </div>
-        <div class="dash-card card-quiz" onclick="openSection('quiz')">
-          <div class="dash-card-icon"><svg viewBox="0 0 24 24">
-              <path d="M9 11l3 3L22 4" />
-              <path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11" />
-            </svg></div>
-          <div class="dash-card-title">Quiz</div>
-          <div class="dash-card-desc">Kelola pertanyaan kuis untuk pengunjung</div>
-          <div class="dash-card-bottom">
-            <div class="dash-card-stats">
-              <div class="dash-card-stat"><strong id="dashQuizTotal">0</strong>Total</div>
+              </svg>
             </div>
-            <div class="dash-card-arrow"><svg viewBox="0 0 24 24">
-                <polyline points="9 18 15 12 9 6" />
-              </svg></div>
           </div>
         </div>
       </div>
     </div>
   </div>
 
-  <!-- SECTION: JADWAL -->
+  <div class="section-screen" id="categoryKonten">
+    <div class="section-header">
+      <div class="section-left">
+        <button class="section-back" onclick="goToDashboard()">
+          <svg viewBox="0 0 24 24">
+            <polyline points="15 18 9 12 15 6" />
+          </svg> Dashboard
+        </button>
+        <div class="section-title">
+          <div class="section-title-icon" style="background:var(--amber-bg)">
+            <svg viewBox="0 0 24 24" style="stroke:var(--amber)">
+              <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+            </svg>
+          </div>Konten & Media
+        </div>
+      </div>
+    </div>
+    <div class="dash-grid dash-grid-3">
+      <div class="dash-card card-artikel" onclick="openSection('artikel')">
+        <div class="dash-card-icon">
+          <svg viewBox="0 0 24 24">
+            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
+            <polyline points="14 2 14 8 20 8" />
+            <line x1="16" y1="13" x2="8" y2="13" />
+            <line x1="16" y1="17" x2="8" y2="17" />
+          </svg>
+        </div>
+        <div class="dash-card-title">Artikel</div>
+        <div class="dash-card-desc">Kelola artikel dan berita</div>
+        <div class="dash-card-bottom">
+          <div class="dash-card-stats">
+            <div class="dash-card-stat">
+              <strong id="dashArtikelTotal">0</strong>Total
+            </div>
+          </div>
+          <div class="dash-card-arrow">
+            <svg viewBox="0 0 24 24">
+              <polyline points="9 18 15 12 9 6" />
+            </svg>
+          </div>
+        </div>
+      </div>
+      <div class="dash-card card-video" onclick="openSection('video')">
+        <div class="dash-card-icon">
+          <svg viewBox="0 0 24 24">
+            <polygon points="23 7 16 12 23 17 23 7" />
+            <rect x="1" y="5" width="15" height="14" rx="2" ry="2" />
+          </svg>
+        </div>
+        <div class="dash-card-title">Video</div>
+        <div class="dash-card-desc">Kelola konten video</div>
+        <div class="dash-card-bottom">
+          <div class="dash-card-stats">
+            <div class="dash-card-stat">
+              <strong id="dashVideoTotal">0</strong>Total
+            </div>
+          </div>
+          <div class="dash-card-arrow">
+            <svg viewBox="0 0 24 24">
+              <polyline points="9 18 15 12 9 6" />
+            </svg>
+          </div>
+        </div>
+      </div>
+      <div class="dash-card card-project" onclick="openSection('project')">
+        <div class="dash-card-icon">
+          <svg viewBox="0 0 24 24">
+            <path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z" />
+          </svg>
+        </div>
+        <div class="dash-card-title">Project Fanbase</div>
+        <div class="dash-card-desc">Kelola project dan kolaborasi</div>
+        <div class="dash-card-bottom">
+          <div class="dash-card-stats">
+            <div class="dash-card-stat">
+              <strong id="dashProjectTotal">0</strong>Total
+            </div>
+          </div>
+          <div class="dash-card-arrow">
+            <svg viewBox="0 0 24 24">
+              <polyline points="9 18 15 12 9 6" />
+            </svg>
+          </div>
+        </div>
+      </div>
+      <div class="dash-card card-galeri" onclick="openSection('galeri')">
+        <div class="dash-card-icon">
+          <svg viewBox="0 0 24 24">
+            <rect x="3" y="3" width="18" height="18" rx="2" ry="2" />
+            <circle cx="8.5" cy="8.5" r="1.5" />
+            <polyline points="21 15 16 10 5 21" />
+          </svg>
+        </div>
+        <div class="dash-card-title">Galeri</div>
+        <div class="dash-card-desc">Kelola foto dan album</div>
+        <div class="dash-card-bottom">
+          <div class="dash-card-stats">
+            <div class="dash-card-stat">
+              <strong id="dashGaleriTotal">0</strong>Total
+            </div>
+          </div>
+          <div class="dash-card-arrow">
+            <svg viewBox="0 0 24 24">
+              <polyline points="9 18 15 12 9 6" />
+            </svg>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section-screen" id="categoryInfo">
+    <div class="section-header">
+      <div class="section-left">
+        <button class="section-back" onclick="goToDashboard()">
+          <svg viewBox="0 0 24 24">
+            <polyline points="15 18 9 12 15 6" />
+          </svg> Dashboard
+        </button>
+        <div class="section-title">
+          <div class="section-title-icon" style="background:var(--sky-bg)">
+            <svg viewBox="0 0 24 24" style="stroke:var(--sky)">
+              <circle cx="12" cy="12" r="10" />
+              <line x1="12" y1="16" x2="12" y2="12" />
+              <line x1="12" y1="8" x2="12.01" y2="8" />
+            </svg>
+          </div>Informasi Fanbase
+        </div>
+      </div>
+    </div>
+    <div class="dash-grid dash-grid-3">
+      <div class="dash-card card-jadwal" onclick="openSection('jadwal')">
+        <div class="dash-card-icon">
+          <svg viewBox="0 0 24 24">
+            <rect x="3" y="4" width="18" height="18" rx="2" ry="2" />
+            <line x1="16" y1="2" x2="16" y2="6" />
+            <line x1="8" y1="2" x2="8" y2="6" />
+            <line x1="3" y1="10" x2="21" y2="10" />
+          </svg>
+        </div>
+        <div class="dash-card-title">Jadwal</div>
+        <div class="dash-card-desc">Jadwal kegiatan & event</div>
+        <div class="dash-card-bottom">
+          <div class="dash-card-stats">
+            <div class="dash-card-stat">
+              <strong id="dashJadwalTotal">0</strong>Total
+            </div>
+          </div>
+          <div class="dash-card-arrow">
+            <svg viewBox="0 0 24 24">
+              <polyline points="9 18 15 12 9 6" />
+            </svg>
+          </div>
+        </div>
+      </div>
+      <div class="dash-card card-sejarah" onclick="openSection('sejarah')">
+        <div class="dash-card-icon">
+          <svg viewBox="0 0 24 24">
+            <path d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+          </svg>
+        </div>
+        <div class="dash-card-title">Sejarah & Info</div>
+        <div class="dash-card-desc">Profil dan sejarah</div>
+        <div class="dash-card-bottom">
+          <div class="dash-card-stats">
+            <div class="dash-card-stat">
+              <strong id="dashInfoTotal">0</strong>Entri
+            </div>
+          </div>
+          <div class="dash-card-arrow">
+            <svg viewBox="0 0 24 24">
+              <polyline points="9 18 15 12 9 6" />
+            </svg>
+          </div>
+        </div>
+      </div>
+      <div class="dash-card card-peraturan" onclick="openSection('peraturan')">
+        <div class="dash-card-icon">
+          <svg viewBox="0 0 24 24">
+            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
+            <polyline points="14 2 14 8 20 8" />
+          </svg>
+        </div>
+        <div class="dash-card-title">Peraturan</div>
+        <div class="dash-card-desc">Aturan komunitas</div>
+        <div class="dash-card-bottom">
+          <div class="dash-card-stats">
+            <div class="dash-card-stat">
+              <strong id="dashPeraturanTotal">0</strong>Entri
+            </div>
+          </div>
+          <div class="dash-card-arrow">
+            <svg viewBox="0 0 24 24">
+              <polyline points="9 18 15 12 9 6" />
+            </svg>
+          </div>
+        </div>
+      </div>
+      <div class="dash-card card-faq" onclick="openSection('faq')">
+        <div class="dash-card-icon">
+          <svg viewBox="0 0 24 24">
+            <circle cx="12" cy="12" r="10" />
+            <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3" />
+            <line x1="12" y1="17" x2="12.01" y2="17" />
+          </svg>
+        </div>
+        <div class="dash-card-title">FAQ</div>
+        <div class="dash-card-desc">Pertanyaan umum</div>
+        <div class="dash-card-bottom">
+          <div class="dash-card-stats">
+            <div class="dash-card-stat">
+              <strong id="dashFaqTotal">0</strong>Total
+            </div>
+          </div>
+          <div class="dash-card-arrow">
+            <svg viewBox="0 0 24 24">
+              <polyline points="9 18 15 12 9 6" />
+            </svg>
+          </div>
+        </div>
+      </div>
+      <div class="dash-card card-hashtag" onclick="openSection('hashtag')">
+        <div class="dash-card-icon">
+          <svg viewBox="0 0 24 24">
+            <line x1="4" y1="9" x2="20" y2="9" />
+            <line x1="4" y1="15" x2="20" y2="15" />
+            <line x1="10" y1="3" x2="8" y2="21" />
+            <line x1="16" y1="3" x2="14" y2="21" />
+          </svg>
+        </div>
+        <div class="dash-card-title">Hashtag</div>
+        <div class="dash-card-desc">Hashtag resmi</div>
+        <div class="dash-card-bottom">
+          <div class="dash-card-stats">
+            <div class="dash-card-stat">
+              <strong id="dashHashtagTotal">0</strong>Total
+            </div>
+          </div>
+          <div class="dash-card-arrow">
+            <svg viewBox="0 0 24 24">
+              <polyline points="9 18 15 12 9 6" />
+            </svg>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section-screen" id="categoryAnggota">
+    <div class="section-header">
+      <div class="section-left">
+        <button class="section-back" onclick="goToDashboard()">
+          <svg viewBox="0 0 24 24">
+            <polyline points="15 18 9 12 15 6" />
+          </svg> Dashboard
+        </button>
+        <div class="section-title">
+          <div class="section-title-icon" style="background:var(--fuchsia-bg)">
+            <svg viewBox="0 0 24 24" style="stroke:var(--fuchsia)">
+              <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
+              <circle cx="9" cy="7" r="4" />
+              <path d="M23 21v-2a4 4 0 0 0-3-3.87" />
+              <path d="M16 3.13a4 4 0 0 1 0 7.75" />
+            </svg>
+          </div>Anggota & Interaksi
+        </div>
+      </div>
+    </div>
+    <div class="dash-grid dash-grid-3">
+      <div class="dash-card card-daftar" onclick="openSection('pendaftaran')">
+        <div class="dash-card-icon">
+          <svg viewBox="0 0 24 24">
+            <path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
+            <circle cx="8.5" cy="7" r="4" />
+            <line x1="20" y1="8" x2="20" y2="14" />
+            <line x1="23" y1="11" x2="17" y2="11" />
+          </svg>
+        </div>
+        <div class="dash-card-title">Pendaftaran Member</div>
+        <div class="dash-card-desc">Pengaturan pendaftaran</div>
+        <div class="dash-card-bottom">
+          <div class="dash-card-stats">
+            <div class="dash-card-stat">
+              <strong id="dashDaftarStatus">-</strong>Status
+            </div>
+          </div>
+          <div class="dash-card-arrow">
+            <svg viewBox="0 0 24 24">
+              <polyline points="9 18 15 12 9 6" />
+            </svg>
+          </div>
+        </div>
+      </div>
+      <div class="dash-card card-birthday" onclick="openSection('ucapan')">
+        <div class="dash-card-icon">
+          <svg viewBox="0 0 24 24">
+            <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z" />
+          </svg>
+        </div>
+        <div class="dash-card-title">Ucapan (Birthday)</div>
+        <div class="dash-card-desc">Ucapan ulang tahun</div>
+        <div class="dash-card-bottom">
+          <div class="dash-card-stats">
+            <div class="dash-card-stat">
+              <strong id="dashUcapanTotal">0</strong>Total
+            </div>
+            <div class="dash-card-stat">
+              <strong id="dashUcapanToxic" style="color:var(--red)">0</strong>Toxic
+            </div>
+          </div>
+          <div class="dash-card-arrow">
+            <svg viewBox="0 0 24 24">
+              <polyline points="9 18 15 12 9 6" />
+            </svg>
+          </div>
+        </div>
+      </div>
+      <div class="dash-card card-quiz" onclick="openSection('quiz')">
+        <div class="dash-card-icon">
+          <svg viewBox="0 0 24 24">
+            <path d="M9 11l3 3L22 4" />
+            <path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11" />
+          </svg>
+        </div>
+        <div class="dash-card-title">Quiz</div>
+        <div class="dash-card-desc">Bank soal kuis</div>
+        <div class="dash-card-bottom">
+          <div class="dash-card-stats">
+            <div class="dash-card-stat">
+              <strong id="dashQuizTotal">0</strong>Total
+            </div>
+          </div>
+          <div class="dash-card-arrow">
+            <svg viewBox="0 0 24 24">
+              <polyline points="9 18 15 12 9 6" />
+            </svg>
+          </div>
+        </div>
+      </div>
+      <div class="dash-card card-leaderboard" onclick="openSection('skorKuis')">
+        <div class="dash-card-icon">
+          <svg viewBox="0 0 24 24">
+            <path d="M12 20V10" />
+            <path d="M18 20V4" />
+            <path d="M6 20v-4" />
+          </svg>
+        </div>
+        <div class="dash-card-title">Skor Kuis (Leaderboard)</div>
+        <div class="dash-card-desc">Peringkat peserta</div>
+        <div class="dash-card-bottom">
+          <div class="dash-card-stats">
+            <div class="dash-card-stat">
+              <strong id="dashSkorTotal">0</strong>Pemain
+            </div>
+          </div>
+          <div class="dash-card-arrow">
+            <svg viewBox="0 0 24 24">
+              <polyline points="9 18 15 12 9 6" />
+            </svg>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <div class="section-screen" id="sectionJadwal">
     <div class="section-header">
       <div class="section-left">
-        <button class="section-back" onclick="goToDashboard()"><svg viewBox="0 0 24 24">
+        <button class="section-back" onclick="goBackToCategory()">
+          <svg viewBox="0 0 24 24">
             <polyline points="15 18 9 12 15 6" />
-          </svg> Kembali</button>
+          </svg> Kembali
+        </button>
         <div class="section-title">
-          <div class="section-title-icon" style="background:rgba(78,168,222,.12)"><svg viewBox="0 0 24 24"
-              style="stroke:var(--accent2)">
+          <div class="section-title-icon" style="background:rgba(78,168,222,.12)">
+            <svg viewBox="0 0 24 24" style="stroke:var(--accent2)">
               <rect x="3" y="4" width="18" height="18" rx="2" ry="2" />
               <line x1="16" y1="2" x2="16" y2="6" />
               <line x1="8" y1="2" x2="8" y2="6" />
               <line x1="3" y1="10" x2="21" y2="10" />
-            </svg></div>Jadwal
+            </svg>
+          </div>Jadwal
         </div>
       </div>
-      <div class="section-right"><button class="btn-sm" onclick="refreshJadwal()">Refresh</button></div>
+      <div class="section-right">
+        <button class="btn-sm" onclick="refreshJadwal()">Refresh</button>
+        <button class="btn-sm btn-batch-add" onclick="openBatchJadwalModal()">
+          <svg viewBox="0 0 24 24">
+            <polyline points="13 2 13 9 20 9" />
+            <path d="M21 7v13a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h10l6 6z" />
+            <line x1="12" y1="18" x2="12" y2="12" />
+            <line x1="9" y1="15" x2="15" y2="15" />
+          </svg> Batch Add
+        </button>
+      </div>
     </div>
-
     <div id="jadwalHome">
       <div class="stats">
         <div class="stat">
@@ -215,23 +569,32 @@
         </div>
       </div>
       <div class="form-section">
-        <h2><svg viewBox="0 0 24 24">
+        <h2>
+          <svg viewBox="0 0 24 24">
             <circle cx="12" cy="12" r="10" />
             <line x1="12" y1="8" x2="12" y2="16" />
             <line x1="8" y1="12" x2="16" y2="12" />
-          </svg> Tambah Jadwal</h2>
+          </svg> Tambah Jadwal
+        </h2>
         <div class="form-grid">
-          <div class="form-group full"><label class="form-label" id="fNamaLabel">Nama Kegiatan</label>
+          <div class="form-group full">
+            <label class="form-label" id="fNamaLabel">Nama Kegiatan</label>
             <div class="album-dd" id="fNamaDD">
-              <div class="album-dd-trigger" id="fNamaTrigger"><input type="text" class="album-dd-input" id="fNamaSearch"
-                  placeholder="Ketik untuk cari atau tambah baru..." autocomplete="off"><button type="button"
-                  class="album-dd-arrow" id="fNamaArrow" tabindex="-1"><svg viewBox="0 0 24 24">
+              <div class="album-dd-trigger" id="fNamaTrigger">
+                <input type="text" class="album-dd-input" id="fNamaSearch" placeholder="Ketik untuk cari atau tambah baru..."
+                  autocomplete="off">
+                <button type="button" class="album-dd-arrow" id="fNamaArrow" tabindex="-1">
+                  <svg viewBox="0 0 24 24">
                     <polyline points="6 9 12 15 18 9" />
-                  </svg></button></div>
+                  </svg>
+                </button>
+              </div>
               <div class="album-dd-list" id="fNamaList"></div>
             </div>
           </div>
-          <div class="form-group"><label class="form-label">Tipe</label><select class="form-select" id="fTipe">
+          <div class="form-group">
+            <label class="form-label">Tipe</label>
+            <select class="form-select" id="fTipe">
               <option value="theater">Theater</option>
               <option value="event">Event</option>
               <option value="digital">Digital</option>
@@ -240,36 +603,53 @@
               <option value="vc">VC</option>
               <option value="2shoot">2Shoot</option>
               <option value="mg">M&G</option>
-            </select></div>
-          <div class="form-group"><label class="form-label">Tanggal</label><input type="date" class="form-input"
-              id="fTanggal"></div>
-          <div class="form-group" id="fJamGroup"><label class="form-label">Jam</label><input type="time"
-              class="form-input" id="fJam" value="14:00"></div>
-          <div class="form-group full" id="fUnitSongGroup" style="display:none"><label class="form-label">Unit
-              Song</label><textarea class="form-input" id="fUnitSong" rows="3" placeholder="Masukkan unit song..."
-              style="resize:vertical"></textarea></div>
-          <div class="form-group" id="fSoGroup" style="display:none"><label class="form-label">SO (Sold
-              Out)</label><input type="text" class="form-input" id="fSo" placeholder="cth: Sold Out / Ya"></div>
-          <div class="form-group" id="fLinkGroup" style="display:none"><label class="form-label">Link
-              Pembelian</label><input type="url" class="form-input" id="fLink" placeholder="https://linkpembelian.com">
+            </select>
           </div>
-          <div class="form-group full"><label class="form-label">Deskripsi</label><input type="text" class="form-input"
-              id="fDesc" placeholder="cth: Pertunjukan teater rutin"></div>
+          <div class="form-group">
+            <label class="form-label">Tanggal</label>
+            <input type="date" class="form-input" id="fTanggal">
+          </div>
+          <div class="form-group" id="fJamGroup">
+            <label class="form-label">Jam</label>
+            <input type="time" class="form-input" id="fJam" value="14:00">
+          </div>
+          <div class="form-group full" id="fUnitSongGroup" style="display:none">
+            <label class="form-label">Unit Song</label>
+            <textarea class="form-input" id="fUnitSong" rows="3" placeholder="Masukkan unit song..." style="resize:vertical"></textarea>
+          </div>
+          <div class="form-group" id="fSoGroup" style="display:none">
+            <label class="form-label">SO (Sold Out)</label>
+            <input type="text" class="form-input" id="fSo" placeholder="cth: Sold Out / Ya">
+          </div>
+          <div class="form-group" id="fLinkGroup" style="display:none">
+            <label class="form-label">Link Pembelian</label>
+            <input type="url" class="form-input" id="fLink" placeholder="https://linkpembelian.com">
+          </div>
+          <div class="form-group full">
+            <label class="form-label">Deskripsi</label>
+            <input type="text" class="form-input" id="fDesc" placeholder="cth: Pertunjukan teater rutin">
+          </div>
         </div>
-        <div class="form-row"><button class="btn-submit" id="addJBtn" onclick="addJadwal()">Tambah</button><label
-            class="quick-toggle"><input type="checkbox" id="quickJ" checked>Quick Add</label><button class="btn-sm"
-            onclick="resetJForm()" style="margin-left:auto">Reset</button></div>
+        <div class="form-row">
+          <button class="btn-submit" id="addJBtn" onclick="addJadwal()">Tambah</button>
+          <label class="quick-toggle">
+            <input type="checkbox" id="quickJ" checked>Quick Add
+          </label>
+          <button class="btn-sm" onclick="resetJForm()" style="margin-left:auto">Reset</button>
+        </div>
       </div>
     </div>
-
     <div class="table-section">
       <div class="table-header">
-        <div style="display:flex;align-items:center;gap:10px"><button class="back-btn j-hide" id="jadwalBack"
-            onclick="exitJadwalFull()"><svg viewBox="0 0 24 24">
+        <div style="display:flex;align-items:center;gap:10px">
+          <button class="back-btn j-hide" id="jadwalBack" onclick="exitJadwalFull()">
+            <svg viewBox="0 0 24 24">
               <polyline points="15 18 9 12 15 6" />
-            </svg> Kembali</button>
+            </svg> Kembali
+          </button>
           <h2>Data Jadwal</h2>
-        </div><input type="text" class="search-box" id="searchJ" placeholder="Cari..." oninput="onJadwalSearch()">
+        </div>
+        <input type="text" class="search-box" id="searchJ" placeholder="Cari..." oninput="onJadwalSearch()">
       </div>
       <div class="table-wrap">
         <table class="jadwal-table">
@@ -292,25 +672,296 @@
     </div>
   </div>
 
-  <!-- SECTION: GALERI -->
+  <div class="section-screen" id="sectionSejarah">
+    <div class="section-header">
+      <div class="section-left">
+        <button class="section-back" onclick="goBackToCategory()">
+          <svg viewBox="0 0 24 24">
+            <polyline points="15 18 9 12 15 6" />
+          </svg> Kembali
+        </button>
+        <div class="section-title">
+          <div class="section-title-icon" style="background:var(--purple-bg)">
+            <svg viewBox="0 0 24 24" style="stroke:var(--purple)">
+              <path d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+            </svg>
+          </div>Sejarah & Info
+        </div>
+      </div>
+      <div class="section-right">
+        <button class="btn-sm" onclick="refreshInfo()">Refresh</button>
+      </div>
+    </div>
+    <div class="info-tabs">
+      <button class="info-tab active" data-tab="sejarah" onclick="switchInfoTab('sejarah')">
+        <svg viewBox="0 0 24 24">
+          <path d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+        </svg> Sejarah
+      </button>
+      <button class="info-tab" data-tab="makna" onclick="switchInfoTab('makna')">
+        <svg viewBox="0 0 24 24">
+          <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z" />
+        </svg> Makna Logo
+      </button>
+      <button class="info-tab" data-tab="motto" onclick="switchInfoTab('motto')">
+        <svg viewBox="0 0 24 24">
+          <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" />
+        </svg> Motto
+      </button>
+    </div>
+    <div class="stats stats-2col">
+      <div class="stat s-info-total">
+        <div class="stat-val" id="iStatTotal">0</div>
+        <div class="stat-lbl">Total Entri</div>
+      </div>
+      <div class="stat s-info-current">
+        <div class="stat-val" id="iStatCurrent">0</div>
+        <div class="stat-lbl" id="iStatCurrentLbl">Sejarah</div>
+      </div>
+    </div>
+    <div class="form-section">
+      <h2 id="iFormTitle">
+        <svg viewBox="0 0 24 24">
+          <circle cx="12" cy="12" r="10" />
+          <line x1="12" y1="8" x2="12" y2="16" />
+          <line x1="8" y1="12" x2="16" y2="12" />
+        </svg> Tambah Sejarah
+      </h2>
+      <div class="form-grid">
+        <div class="form-group full">
+          <label class="form-label">Judul</label>
+          <input type="text" class="form-input" id="iJudul" placeholder="Judul konten...">
+        </div>
+        <div class="form-group full" id="iFotoGroup" style="display:none">
+          <label class="form-label">Foto</label>
+          <div class="upload-area" id="iUploadArea" onclick="triggerUploadArea(event,'i')" ondragover="handleDragOver(event,'i')"
+            ondragleave="handleDragLeave(event,'i')" ondrop="handleDrop(event,'i')">
+            <div class="upload-preview-wrap" id="iPreviewWrap" style="display:none">
+              <img id="iFotoImg" class="upload-preview-img">
+              <button type="button" class="upload-remove" onclick="removeInfoFoto(event,'add')">&times;</button>
+            </div>
+            <div class="upload-placeholder" id="iPlaceholder">
+              <svg viewBox="0 0 24 24">
+                <rect x="3" y="3" width="18" height="18" rx="2" ry="2" />
+                <circle cx="8.5" cy="8.5" r="1.5" />
+                <polyline points="21 15 16 10 5 21" />
+              </svg>
+              <p>Pilih atau seret foto ke sini</p>
+              <div class="upload-btns">
+                <button type="button" class="btn-sm" onclick="triggerUpload(event,'iFotoGallery')">
+                  <svg viewBox="0 0 24 24">
+                    <rect x="3" y="3" width="18" height="18" rx="2" />
+                    <circle cx="12" cy="12" r="3" />
+                  </svg> Gallery
+                </button>
+              </div>
+              <div class="upload-hint">JPG, PNG, WebP</div>
+            </div>
+            <input type="file" id="iFotoGallery" accept="image/*" style="display:none" onchange="handleInfoFotoUpload(this,'add')">
+          </div>
+        </div>
+        <div class="form-group full">
+          <label class="form-label">Konten</label>
+          <textarea class="form-input" id="iKonten" rows="5" placeholder="Tulis konten di sini..." style="resize:vertical"></textarea>
+        </div>
+      </div>
+      <div class="form-row">
+        <button class="btn-submit" id="addIBtn" onclick="addInfo()">Tambah</button>
+        <button class="btn-sm" onclick="resetIForm()" style="margin-left:auto">Reset</button>
+      </div>
+    </div>
+    <div class="table-section">
+      <div class="table-header">
+        <div style="display:flex;align-items:center;gap:10px">
+          <h2 id="iTableTitle">Data Sejarah</h2>
+        </div>
+      </div>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>No</th>
+              <th>Judul</th>
+              <th>Konten</th>
+              <th>Aksi</th>
+            </tr>
+          </thead>
+          <tbody id="infoBody"></tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <div class="section-screen" id="sectionPeraturan">
+    <div class="section-header">
+      <div class="section-left">
+        <button class="section-back" onclick="goBackToCategory()">
+          <svg viewBox="0 0 24 24">
+            <polyline points="15 18 9 12 15 6" />
+          </svg> Kembali
+        </button>
+        <div class="section-title">
+          <div class="section-title-icon" style="background:var(--amber-bg)">
+            <svg viewBox="0 0 24 24" style="stroke:var(--amber)">
+              <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
+              <polyline points="14 2 14 8 20 8" />
+            </svg>
+          </div>Peraturan
+        </div>
+      </div>
+      <div class="section-right">
+        <button class="btn-sm" onclick="refreshPeraturan()">Refresh</button>
+      </div>
+    </div>
+    <div class="stats stats-2col">
+      <div class="stat s-peraturan">
+        <div class="stat-val" id="rStatTotal">0</div>
+        <div class="stat-lbl">Total Peraturan</div>
+      </div>
+    </div>
+    <div class="form-section">
+      <h2>
+        <svg viewBox="0 0 24 24">
+          <circle cx="12" cy="12" r="10" />
+          <line x1="12" y1="8" x2="12" y2="16" />
+          <line x1="8" y1="12" x2="16" y2="12" />
+        </svg> Tambah Peraturan
+      </h2>
+      <div class="form-grid">
+        <div class="form-group">
+          <label class="form-label">Nomor</label>
+          <input type="number" class="form-input" id="rNomor" min="1" placeholder="1">
+        </div>
+        <div class="form-group full">
+          <label class="form-label">Isi Peraturan</label>
+          <textarea class="form-input" id="rIsi" rows="3" placeholder="Tulis isi peraturan..." style="resize:vertical"></textarea>
+        </div>
+      </div>
+      <div class="form-row">
+        <button class="btn-submit" id="addRBtn" onclick="addPeraturan()">Tambah</button>
+        <button class="btn-sm" onclick="resetRForm()" style="margin-left:auto">Reset</button>
+      </div>
+    </div>
+    <div class="table-section">
+      <div class="table-header">
+        <h2>Data Peraturan</h2>
+      </div>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>Nomor</th>
+              <th>Isi Peraturan</th>
+              <th>Aksi</th>
+            </tr>
+          </thead>
+          <tbody id="peraturanBody"></tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <div class="section-screen" id="sectionFaq">
+    <div class="section-header">
+      <div class="section-left">
+        <button class="section-back" onclick="goBackToCategory()">
+          <svg viewBox="0 0 24 24">
+            <polyline points="15 18 9 12 15 6" />
+          </svg> Kembali
+        </button>
+        <div class="section-title">
+          <div class="section-title-icon" style="background:var(--sky-bg)">
+            <svg viewBox="0 0 24 24" style="stroke:var(--sky)">
+              <circle cx="12" cy="12" r="10" />
+              <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3" />
+              <line x1="12" y1="17" x2="12.01" y2="17" />
+            </svg>
+          </div>FAQ
+        </div>
+      </div>
+      <div class="section-right">
+        <button class="btn-sm" onclick="refreshFaq()">Refresh</button>
+      </div>
+    </div>
+    <div class="stats stats-2col">
+      <div class="stat s-faq">
+        <div class="stat-val" id="fqStatTotal">0</div>
+        <div class="stat-lbl">Total FAQ</div>
+      </div>
+    </div>
+    <div class="form-section">
+      <h2>
+        <svg viewBox="0 0 24 24">
+          <circle cx="12" cy="12" r="10" />
+          <line x1="12" y1="8" x2="12" y2="16" />
+          <line x1="8" y1="12" x2="16" y2="12" />
+        </svg> Tambah FAQ
+      </h2>
+      <div class="form-grid">
+        <div class="form-group full">
+          <label class="form-label">Pertanyaan</label>
+          <input type="text" class="form-input" id="fqPertanyaan" placeholder="Tulis pertanyaan...">
+        </div>
+        <div class="form-group full">
+          <label class="form-label">Jawaban</label>
+          <textarea class="form-input" id="fqJawaban" rows="3" placeholder="Tulis jawaban..." style="resize:vertical"></textarea>
+        </div>
+      </div>
+      <div class="form-row">
+        <button class="btn-submit" id="addFqBtn" onclick="addFaq()">Tambah</button>
+        <button class="btn-sm" onclick="resetFqForm()" style="margin-left:auto">Reset</button>
+      </div>
+    </div>
+    <div class="table-section">
+      <div class="table-header">
+        <h2>Data FAQ</h2>
+      </div>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>No</th>
+              <th>Pertanyaan</th>
+              <th>Jawaban</th>
+              <th>Aksi</th>
+            </tr>
+          </thead>
+          <tbody id="faqBody"></tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
   <div class="section-screen" id="sectionGaleri">
     <div class="section-header">
       <div class="section-left">
-        <button class="section-back" onclick="goToDashboard()"><svg viewBox="0 0 24 24">
+        <button class="section-back" onclick="goBackToCategory()">
+          <svg viewBox="0 0 24 24">
             <polyline points="15 18 9 12 15 6" />
-          </svg> Kembali</button>
+          </svg> Kembali
+        </button>
         <div class="section-title">
-          <div class="section-title-icon" style="background:var(--green-bg)"><svg viewBox="0 0 24 24"
-              style="stroke:var(--green)">
+          <div class="section-title-icon" style="background:var(--green-bg)">
+            <svg viewBox="0 0 24 24" style="stroke:var(--green)">
               <rect x="3" y="3" width="18" height="18" rx="2" ry="2" />
               <circle cx="8.5" cy="8.5" r="1.5" />
               <polyline points="21 15 16 10 5 21" />
-            </svg></div>Galeri
+            </svg>
+          </div>Galeri
         </div>
       </div>
-      <div class="section-right"><button class="btn-sm" onclick="refreshGaleri()">Refresh</button></div>
+      <div class="section-right">
+        <button class="btn-sm" onclick="refreshGaleri()">Refresh</button>
+        <button class="btn-sm btn-batch-add" onclick="openBatchAddModal()">
+          <svg viewBox="0 0 24 24">
+            <polyline points="13 2 13 9 20 9" />
+            <path d="M21 7v13a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h10l6 6z" />
+            <line x1="12" y1="18" x2="12" y2="12" />
+            <line x1="9" y1="15" x2="15" y2="15" />
+          </svg> Batch Add
+        </button>
+      </div>
     </div>
-
     <div id="galeriHome">
       <div class="stats">
         <div class="stat">
@@ -331,61 +982,87 @@
         </div>
       </div>
       <div class="form-section">
-        <h2><svg viewBox="0 0 24 24">
+        <h2>
+          <svg viewBox="0 0 24 24">
             <rect x="3" y="3" width="18" height="18" rx="2" ry="2" />
             <circle cx="8.5" cy="8.5" r="1.5" />
             <polyline points="21 15 16 10 5 21" />
-          </svg> Tambah Foto</h2>
+          </svg> Tambah Foto
+        </h2>
         <div class="form-grid">
-          <div class="form-group"><label class="form-label">Kategori</label><select class="form-select cat-select"
-              id="gCat" onchange="onCategoryChange('add')">
+          <div class="form-group">
+            <label class="form-label">Kategori</label>
+            <select class="form-select cat-select" id="gCat" onchange="onCategoryChange('add')">
               <option value="lana">Lana</option>
               <option value="lanautica">LANAUTICA</option>
-            </select></div>
-          <div class="form-group full"><label class="form-label">Pilih Folder / Buat Baru</label>
+            </select>
+          </div>
+          <div class="form-group full">
+            <label class="form-label">Pilih Folder / Buat Baru</label>
             <div class="album-dd" id="gAlbumDD">
-              <div class="album-dd-trigger" id="gAlbumTrigger"><input type="text" class="album-dd-input"
-                  id="gAlbumSearch" placeholder="Ketik nama folder baru..." autocomplete="off"><button type="button"
-                  class="album-dd-arrow" id="gAlbumArrow" tabindex="-1"><svg viewBox="0 0 24 24">
+              <div class="album-dd-trigger" id="gAlbumTrigger">
+                <input type="text" class="album-dd-input" id="gAlbumSearch" placeholder="Ketik nama folder baru..."
+                  autocomplete="off">
+                <button type="button" class="album-dd-arrow" id="gAlbumArrow" tabindex="-1">
+                  <svg viewBox="0 0 24 24">
                     <polyline points="6 9 12 15 18 9" />
-                  </svg></button></div>
+                  </svg>
+                </button>
+              </div>
               <div class="album-dd-list" id="gAlbumList"></div>
             </div>
           </div>
-          <div class="form-group"><label class="form-label">Label</label><input type="text" class="form-input locked"
-              id="gLabel" readonly tabindex="-1"></div>
-          <div class="form-group"><label class="form-label">Alt Teks</label><input type="text" class="form-input locked"
-              id="gAlt" readonly tabindex="-1"></div>
-          <div class="form-group full" id="gBasePathWrap" style="display:none"><label class="form-label">Base
-              Path</label>
-            <div class="base-path-tag" id="gBasePathTag"><svg viewBox="0 0 24 24">
+          <div class="form-group">
+            <label class="form-label">Label</label>
+            <input type="text" class="form-input locked" id="gLabel" readonly tabindex="-1">
+          </div>
+          <div class="form-group">
+            <label class="form-label">Alt Teks</label>
+            <input type="text" class="form-input locked" id="gAlt" readonly tabindex="-1">
+          </div>
+          <div class="form-group full" id="gBasePathWrap" style="display:none">
+            <label class="form-label">Base Path</label>
+            <div class="base-path-tag" id="gBasePathTag">
+              <svg viewBox="0 0 24 24">
                 <path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z" />
-              </svg><span id="gBasePathText"></span></div>
+              </svg>
+              <span id="gBasePathText"></span>
+            </div>
           </div>
-          <div class="form-group full" id="gRangeWrap" style="display:none"><label class="form-label">Nomor File
-              (Range)</label>
-            <div class="range-row"><input type="number" class="form-input" id="gFileStart" min="1" placeholder="Dari"
-                oninput="generateFilenames()"><span style="color:var(--muted)">sampai</span><input type="number"
-                class="form-input" id="gFileEnd" min="1" placeholder="Sampai" oninput="generateFilenames()"></div>
+          <div class="form-group full" id="gRangeWrap" style="display:none">
+            <label class="form-label">Nomor File (Range)</label>
+            <div class="range-row">
+              <input type="number" class="form-input" id="gFileStart" min="1" placeholder="Dari" oninput="generateFilenames()"><span
+                style="color:var(--muted)">sampai</span><input type="number" class="form-input" id="gFileEnd" min="1"
+                placeholder="Sampai" oninput="generateFilenames()">
+            </div>
           </div>
-          <div class="form-group full"><label class="form-label" id="gPathLabel">Filename / Path Foto</label><textarea
-              class="form-input" id="gSrc" rows="3" placeholder="Akan terisi otomatis dari range..."
-              style="resize:vertical"></textarea></div>
+          <div class="form-group full">
+            <label class="form-label" id="gPathLabel">Filename / Path Foto</label>
+            <textarea class="form-input" id="gSrc" rows="3" placeholder="Akan terisi otomatis dari range..."
+              style="resize:vertical"></textarea>
+          </div>
         </div>
-        <div class="form-row"><button class="btn-submit" id="addGBtn" onclick="addGaleri()">Tambah</button><label
-            class="quick-toggle"><input type="checkbox" id="quickG" checked>Quick Add</label><button class="btn-sm"
-            onclick="resetGForm()" style="margin-left:auto">Reset</button></div>
+        <div class="form-row">
+          <button class="btn-submit" id="addGBtn" onclick="addGaleri()">Tambah</button>
+          <label class="quick-toggle">
+            <input type="checkbox" id="quickG" checked>Quick Add
+          </label>
+          <button class="btn-sm" onclick="resetGForm()" style="margin-left:auto">Reset</button>
+        </div>
       </div>
     </div>
-
     <div class="table-section">
       <div class="table-header">
-        <div style="display:flex;align-items:center;gap:10px"><button class="back-btn j-hide" id="galeriBack"
-            onclick="galeriGoBack()"><svg viewBox="0 0 24 24">
+        <div style="display:flex;align-items:center;gap:10px">
+          <button class="back-btn j-hide" id="galeriBack" onclick="galeriGoBack()">
+            <svg viewBox="0 0 24 24">
               <polyline points="15 18 9 12 15 6" />
-            </svg> Kembali</button>
+            </svg> Kembali
+          </button>
           <h2>Data Galeri</h2>
-        </div><input type="text" class="search-box" id="searchG" placeholder="Cari..." oninput="onGaleriSearch()">
+        </div>
+        <input type="text" class="search-box" id="searchG" placeholder="Cari..." oninput="onGaleriSearch()">
       </div>
       <div class="detail-bar j-hide" id="galeriDetailBar"><span class="folder-badge" id="galeriDetailBadge"></span><span
           class="detail-label" id="galeriDetailName"></span><span class="detail-count" id="galeriDetailCount"></span>
@@ -395,26 +1072,37 @@
     </div>
   </div>
 
-  <!-- SECTION: HASHTAG -->
   <div class="section-screen" id="sectionHashtag">
     <div class="section-header">
       <div class="section-left">
-        <button class="section-back" onclick="goToDashboard()"><svg viewBox="0 0 24 24">
+        <button class="section-back" onclick="goBackToCategory()">
+          <svg viewBox="0 0 24 24">
             <polyline points="15 18 9 12 15 6" />
-          </svg> Kembali</button>
+          </svg> Kembali
+        </button>
         <div class="section-title">
-          <div class="section-title-icon" style="background:var(--purple-bg)"><svg viewBox="0 0 24 24"
-              style="stroke:var(--purple)">
+          <div class="section-title-icon" style="background:var(--purple-bg)">
+            <svg viewBox="0 0 24 24" style="stroke:var(--purple)">
               <line x1="4" y1="9" x2="20" y2="9" />
               <line x1="4" y1="15" x2="20" y2="15" />
               <line x1="10" y1="3" x2="8" y2="21" />
               <line x1="16" y1="3" x2="14" y2="21" />
-            </svg></div>Hashtag
+            </svg>
+          </div>Hashtag
         </div>
       </div>
-      <div class="section-right"><button class="btn-sm" onclick="refreshHashtag()">Refresh</button></div>
+      <div class="section-right">
+        <button class="btn-sm" onclick="refreshHashtag()">Refresh</button>
+        <button class="btn-sm btn-batch-add" onclick="openBatchHashtagModal()">
+          <svg viewBox="0 0 24 24">
+            <polyline points="13 2 13 9 20 9" />
+            <path d="M21 7v13a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h10l6 6z" />
+            <line x1="12" y1="18" x2="12" y2="12" />
+            <line x1="9" y1="15" x2="15" y2="15" />
+          </svg> Batch Add
+        </button>
+      </div>
     </div>
-
     <div id="hashtagHome">
       <div class="stats stats-2col">
         <div class="stat">
@@ -427,34 +1115,47 @@
         </div>
       </div>
       <div class="form-section">
-        <h2><svg viewBox="0 0 24 24">
+        <h2>
+          <svg viewBox="0 0 24 24">
             <line x1="4" y1="9" x2="20" y2="9" />
             <line x1="4" y1="15" x2="20" y2="15" />
             <line x1="10" y1="3" x2="8" y2="21" />
             <line x1="16" y1="3" x2="14" y2="21" />
-          </svg> Tambah Hashtag</h2>
+          </svg> Tambah Hashtag
+        </h2>
         <div class="form-grid">
-          <div class="form-group"><label class="form-label">Hashtag</label>
-            <div class="input-prefix-wrap"><span class="input-prefix">#</span><input type="text"
-                class="form-input has-prefix" id="hTag" placeholder="contohhashtag" autocomplete="off"></div>
+          <div class="form-group">
+            <label class="form-label">Hashtag</label>
+            <div class="input-prefix-wrap">
+              <span class="input-prefix">#</span>
+              <input type="text" class="form-input has-prefix" id="hTag" placeholder="contohhashtag" autocomplete="off">
+            </div>
           </div>
-          <div class="form-group"><label class="form-label">Deskripsi</label><input type="text" class="form-input"
-              id="hDesk" placeholder="Deskripsi singkat hashtag..."></div>
+          <div class="form-group">
+            <label class="form-label">Deskripsi</label>
+            <input type="text" class="form-input" id="hDesk" placeholder="Deskripsi singkat hashtag...">
+          </div>
         </div>
-        <div class="form-row"><button class="btn-submit" id="addHBtn" onclick="addHashtag()">Tambah</button><label
-            class="quick-toggle"><input type="checkbox" id="quickH" checked>Quick Add</label><button class="btn-sm"
-            onclick="resetHForm()" style="margin-left:auto">Reset</button></div>
+        <div class="form-row">
+          <button class="btn-submit" id="addHBtn" onclick="addHashtag()">Tambah</button>
+          <label class="quick-toggle">
+            <input type="checkbox" id="quickH" checked>Quick Add
+          </label>
+          <button class="btn-sm" onclick="resetHForm()" style="margin-left:auto">Reset</button>
+        </div>
       </div>
     </div>
-
     <div class="table-section">
       <div class="table-header">
-        <div style="display:flex;align-items:center;gap:10px"><button class="back-btn j-hide" id="hashtagBack"
-            onclick="exitHashtagFull()"><svg viewBox="0 0 24 24">
+        <div style="display:flex;align-items:center;gap:10px">
+          <button class="back-btn j-hide" id="hashtagBack" onclick="exitHashtagFull()">
+            <svg viewBox="0 0 24 24">
               <polyline points="15 18 9 12 15 6" />
-            </svg> Kembali</button>
+            </svg> Kembali
+          </button>
           <h2>Data Hashtag</h2>
-        </div><input type="text" class="search-box" id="searchH" placeholder="Cari..." oninput="onHashtagSearch()">
+        </div>
+        <input type="text" class="search-box" id="searchH" placeholder="Cari..." oninput="onHashtagSearch()">
       </div>
       <div class="table-wrap">
         <table class="hashtag-table">
@@ -473,26 +1174,29 @@
     </div>
   </div>
 
-  <!-- SECTION: ARTIKEL -->
   <div class="section-screen" id="sectionArtikel">
     <div class="section-header">
       <div class="section-left">
-        <button class="section-back" onclick="goToDashboard()"><svg viewBox="0 0 24 24">
+        <button class="section-back" onclick="goBackToCategory()">
+          <svg viewBox="0 0 24 24">
             <polyline points="15 18 9 12 15 6" />
-          </svg> Kembali</button>
+          </svg> Kembali
+        </button>
         <div class="section-title">
-          <div class="section-title-icon" style="background:var(--orange-bg)"><svg viewBox="0 0 24 24"
-              style="stroke:var(--orange)">
+          <div class="section-title-icon" style="background:var(--orange-bg)">
+            <svg viewBox="0 0 24 24" style="stroke:var(--orange)">
               <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
               <polyline points="14 2 14 8 20 8" />
               <line x1="16" y1="13" x2="8" y2="13" />
               <line x1="16" y1="17" x2="8" y2="17" />
-            </svg></div>Artikel
+            </svg>
+          </div>Artikel
         </div>
       </div>
-      <div class="section-right"><button class="btn-sm" onclick="refreshArtikel()">Refresh</button></div>
+      <div class="section-right">
+        <button class="btn-sm" onclick="refreshArtikel()">Refresh</button>
+      </div>
     </div>
-
     <div id="artikelHome">
       <div class="stats stats-2col">
         <div class="stat s-artikel">
@@ -505,66 +1209,103 @@
         </div>
       </div>
       <div class="form-section">
-        <h2><svg viewBox="0 0 24 24">
+        <h2>
+          <svg viewBox="0 0 24 24">
             <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
             <polyline points="14 2 14 8 20 8" />
             <line x1="16" y1="13" x2="8" y2="13" />
             <line x1="16" y1="17" x2="8" y2="17" />
-            <polyline points="10 9 9 9 8 9" />
-          </svg> Tambah Artikel</h2>
+          </svg> Tambah Artikel
+        </h2>
         <div class="form-grid">
-          <div class="form-group full"><label class="form-label">Judul Artikel</label><input type="text"
-              class="form-input" id="aJudul" placeholder="Masukkan judul artikel..."></div>
-          <div class="form-group full"><label class="form-label">Konten Artikel</label><textarea class="form-input"
-              id="aKonten" rows="5" placeholder="Tulis isi artikel di sini..." style="resize:vertical"></textarea></div>
-          <div class="form-group"><label class="form-label">Tanggal Dibuat</label><input type="date" class="form-input"
-              id="aTanggal"></div>
-          <div class="form-group"><label class="form-label">Penulis</label><input type="text" class="form-input"
-              id="aPenulis" placeholder="Nama penulis..."></div>
-          <div class="form-group full"><label class="form-label">Foto Artikel</label>
-            <div class="upload-area" id="aUploadArea" onclick="triggerUploadArea(event,'a')"
-              ondragover="handleDragOver(event,'a')" ondragleave="handleDragLeave(event,'a')"
-              ondrop="handleDrop(event,'a')">
-              <div class="upload-preview-wrap" id="aPreviewWrap" style="display:none"><img id="aFotoImg"
-                  class="upload-preview-img"><button type="button" class="upload-remove"
-                  onclick="removeFoto(event,'add')">&times;</button></div>
-              <div class="upload-placeholder" id="aPlaceholder"><svg viewBox="0 0 24 24">
+          <div class="form-group full">
+            <label class="form-label">Judul Artikel</label>
+            <input type="text" class="form-input" id="aJudul" placeholder="Masukkan judul artikel...">
+          </div>
+          <div class="form-group">
+            <label class="form-label">Kategori</label>
+            <select class="form-select" id="aKategori">
+              <option value="Berita">Berita</option>
+              <option value="Info">Info</option>
+              <option value="Update">Update</option>
+              <option value="Event">Event</option>
+              <option value="Opini">Opini</option>
+              <option value="Lainnya">Lainnya</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label class="form-label">Tanggal Dibuat</label>
+            <input type="date" class="form-input" id="aTanggal">
+          </div>
+          <div class="form-group full">
+            <label class="form-label">Ringkasan</label>
+            <textarea class="form-input" id="aRingkasan" rows="2" placeholder="Tulis ringkasan singkat artikel..."
+              style="resize:vertical;min-height:60px"></textarea>
+          </div>
+          <div class="form-group full">
+            <label class="form-label">Konten Artikel</label>
+            <textarea class="form-input" id="aKonten" rows="5" placeholder="Tulis isi artikel di sini..." style="resize:vertical"></textarea>
+          </div>
+          <div class="form-group">
+            <label class="form-label">Penulis</label>
+            <input type="text" class="form-input" id="aPenulis" placeholder="Nama penulis...">
+          </div>
+          <div class="form-group full">
+            <label class="form-label">Foto Artikel</label>
+            <div class="upload-area" id="aUploadArea" onclick="triggerUploadArea(event,'a')" ondragover="handleDragOver(event,'a')"
+              ondragleave="handleDragLeave(event,'a')" ondrop="handleDrop(event,'a')">
+              <div class="upload-preview-wrap" id="aPreviewWrap" style="display:none">
+                <img id="aFotoImg" class="upload-preview-img">
+                <button type="button" class="upload-remove" onclick="removeFoto(event,'add')">&times;</button>
+              </div>
+              <div class="upload-placeholder" id="aPlaceholder">
+                <svg viewBox="0 0 24 24">
                   <rect x="3" y="3" width="18" height="18" rx="2" ry="2" />
                   <circle cx="8.5" cy="8.5" r="1.5" />
                   <polyline points="21 15 16 10 5 21" />
                 </svg>
                 <p>Pilih atau seret foto ke sini</p>
-                <div class="upload-btns"><button type="button" class="btn-sm"
-                    onclick="triggerUpload(event,'aFotoGallery')"><svg viewBox="0 0 24 24">
+                <div class="upload-btns">
+                  <button type="button" class="btn-sm" onclick="triggerUpload(event,'aFotoGallery')">
+                    <svg viewBox="0 0 24 24">
                       <rect x="3" y="3" width="18" height="18" rx="2" />
                       <circle cx="12" cy="12" r="3" />
-                    </svg> Gallery</button><button type="button" class="btn-sm"
-                    onclick="triggerUpload(event,'aFotoFolder')"><svg viewBox="0 0 24 24">
+                    </svg> Gallery
+                  </button>
+                  <button type="button" class="btn-sm" onclick="triggerUpload(event,'aFotoFolder')">
+                    <svg viewBox="0 0 24 24">
                       <path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z" />
-                    </svg> Folder</button></div>
+                    </svg> Folder
+                  </button>
+                </div>
                 <div class="upload-hint">JPG, PNG, WebP</div>
               </div>
-              <input type="file" id="aFotoGallery" accept="image/*" style="display:none"
-                onchange="handleFotoUpload(this,'add')"><input type="file" id="aFotoFolder"
-                accept="image/jpeg,image/png,image/webp,image/gif" style="display:none"
+              <input type="file" id="aFotoGallery" accept="image/*" style="display:none" onchange="handleFotoUpload(this,'add')">
+              <input type="file" id="aFotoFolder" accept="image/jpeg,image/png,image/webp,image/gif" style="display:none"
                 onchange="handleFotoUpload(this,'add')">
             </div>
           </div>
         </div>
-        <div class="form-row"><button class="btn-submit" id="addABtn" onclick="addArtikel()">Tambah</button><label
-            class="quick-toggle"><input type="checkbox" id="quickA" checked>Quick Add</label><button class="btn-sm"
-            onclick="resetAForm()" style="margin-left:auto">Reset</button></div>
+        <div class="form-row">
+          <button class="btn-submit" id="addABtn" onclick="addArtikel()">Tambah</button>
+          <label class="quick-toggle">
+            <input type="checkbox" id="quickA" checked>Quick Add
+          </label>
+          <button class="btn-sm" onclick="resetAForm()" style="margin-left:auto">Reset</button>
+        </div>
       </div>
     </div>
-
     <div class="table-section">
       <div class="table-header">
-        <div style="display:flex;align-items:center;gap:10px"><button class="back-btn j-hide" id="artikelBack"
-            onclick="exitArtikelFull()"><svg viewBox="0 0 24 24">
+        <div style="display:flex;align-items:center;gap:10px">
+          <button class="back-btn j-hide" id="artikelBack" onclick="exitArtikelFull()">
+            <svg viewBox="0 0 24 24">
               <polyline points="15 18 9 12 15 6" />
-            </svg> Kembali</button>
+            </svg> Kembali
+          </button>
           <h2>Data Artikel</h2>
-        </div><input type="text" class="search-box" id="searchA" placeholder="Cari..." oninput="onArtikelSearch()">
+        </div>
+        <input type="text" class="search-box" id="searchA" placeholder="Cari..." oninput="onArtikelSearch()">
       </div>
       <div class="table-wrap">
         <table class="artikel-table">
@@ -573,6 +1314,7 @@
               <th>No</th>
               <th>Foto</th>
               <th>Judul</th>
+              <th>Kategori</th>
               <th>Tanggal</th>
               <th>Penulis</th>
               <th>Aksi</th>
@@ -585,24 +1327,245 @@
     </div>
   </div>
 
-  <!-- SECTION: QUIZ -->
+  <div class="section-screen" id="sectionVideo">
+    <div class="section-header">
+      <div class="section-left">
+        <button class="section-back" onclick="goBackToCategory()">
+          <svg viewBox="0 0 24 24">
+            <polyline points="15 18 9 12 15 6" />
+          </svg> Kembali
+        </button>
+        <div class="section-title">
+          <div class="section-title-icon" style="background:var(--red-bg)">
+            <svg viewBox="0 0 24 24" style="stroke:var(--red)">
+              <polygon points="23 7 16 12 23 17 23 7" />
+              <rect x="1" y="5" width="15" height="14" rx="2" ry="2" />
+            </svg>
+          </div>Video
+        </div>
+      </div>
+      <div class="section-right">
+        <button class="btn-sm" onclick="refreshVideo()">Refresh</button>
+      </div>
+    </div>
+    <div id="videoHome">
+      <div class="stats stats-2col">
+        <div class="stat s-video">
+          <div class="stat-val" id="vStatTotal">0</div>
+          <div class="stat-lbl">Total Video</div>
+        </div>
+        <div class="stat s-video">
+          <div class="stat-val" id="vStatBulan">0</div>
+          <div class="stat-lbl">Bulan Ini</div>
+        </div>
+      </div>
+      <div class="form-section">
+        <h2>
+          <svg viewBox="0 0 24 24">
+            <polygon points="23 7 16 12 23 17 23 7" />
+            <rect x="1" y="5" width="15" height="14" rx="2" ry="2" />
+          </svg> Tambah Video
+        </h2>
+        <div class="form-grid">
+          <div class="form-group full">
+            <label class="form-label">Judul Video</label>
+            <input type="text" class="form-input" id="vJudul" placeholder="Masukkan judul video...">
+          </div>
+          <div class="form-group full">
+            <label class="form-label">Link Video</label>
+            <input type="url" class="form-input" id="vLink" placeholder="https://youtube.com/watch?v=...">
+          </div>
+          <div class="form-group">
+            <label class="form-label">Platform</label>
+            <select class="form-select" id="vPlatform">
+              <option value="YouTube">YouTube</option>
+              <option value="TikTok">TikTok</option>
+              <option value="Instagram">Instagram</option>
+              <option value="X (Twitter)">X (Twitter)</option>
+              <option value="Facebook">Facebook</option>
+              <option value="Lainnya">Lainnya</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label class="form-label">Tanggal</label>
+            <input type="date" class="form-input" id="vTanggal">
+          </div>
+          <div class="form-group full">
+            <label class="form-label">Deskripsi</label>
+            <input type="text" class="form-input" id="vDeskripsi" placeholder="Deskripsi singkat video...">
+          </div>
+        </div>
+        <div class="form-row">
+          <button class="btn-submit" id="addVBtn" onclick="addVideo()">Tambah</button>
+          <label class="quick-toggle">
+            <input type="checkbox" id="quickV" checked>Quick Add
+          </label>
+          <button class="btn-sm" onclick="resetVForm()" style="margin-left:auto">Reset</button>
+        </div>
+      </div>
+    </div>
+    <div class="table-section">
+      <div class="table-header">
+        <div style="display:flex;align-items:center;gap:10px">
+          <button class="back-btn j-hide" id="videoBack" onclick="exitVideoFull()">
+            <svg viewBox="0 0 24 24">
+              <polyline points="15 18 9 12 15 6" />
+            </svg> Kembali
+          </button>
+          <h2>Data Video</h2>
+        </div>
+        <input type="text" class="search-box" id="searchV" placeholder="Cari..." oninput="onVideoSearch()">
+      </div>
+      <div class="table-wrap">
+        <table class="video-table">
+          <thead>
+            <tr>
+              <th>No</th>
+              <th>Judul</th>
+              <th>Platform</th>
+              <th>Link</th>
+              <th>Tanggal</th>
+              <th>Aksi</th>
+            </tr>
+          </thead>
+          <tbody id="videoBody"></tbody>
+        </table>
+      </div>
+      <div id="videoFooter"></div>
+    </div>
+  </div>
+
+  <div class="section-screen" id="sectionProject">
+    <div class="section-header">
+      <div class="section-left">
+        <button class="section-back" onclick="goBackToCategory()">
+          <svg viewBox="0 0 24 24">
+            <polyline points="15 18 9 12 15 6" />
+          </svg> Kembali
+        </button>
+        <div class="section-title">
+          <div class="section-title-icon" style="background:var(--cyan-bg)">
+            <svg viewBox="0 0 24 24" style="stroke:var(--cyan)">
+              <path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z" />
+            </svg>
+          </div>Project Fanbase
+        </div>
+      </div>
+      <div class="section-right">
+        <button class="btn-sm" onclick="refreshProject()">Refresh</button>
+      </div>
+    </div>
+    <div id="projectHome">
+      <div class="stats stats-2col">
+        <div class="stat s-project">
+          <div class="stat-val" id="pStatTotal">0</div>
+          <div class="stat-lbl">Total Project</div>
+        </div>
+      </div>
+      <div class="form-section">
+        <h2>
+          <svg viewBox="0 0 24 24">
+            <path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z" />
+          </svg> Tambah Project
+        </h2>
+        <div class="form-grid">
+          <div class="form-group full">
+            <label class="form-label">Nama Project</label>
+            <input type="text" class="form-input" id="pNama" placeholder="Masukkan nama project...">
+          </div>
+          <div class="form-group full">
+            <label class="form-label">Foto Project</label>
+            <div class="upload-area" id="pUploadArea" onclick="triggerUploadArea(event,'p')" ondragover="handleDragOver(event,'p')"
+              ondragleave="handleDragLeave(event,'p')" ondrop="handleDrop(event,'p')">
+              <div class="upload-preview-wrap" id="pPreviewWrap" style="display:none">
+                <img id="pFotoImg" class="upload-preview-img">
+                <button type="button" class="upload-remove" onclick="removeProjectFoto(event,'add')">&times;</button>
+              </div>
+              <div class="upload-placeholder" id="pPlaceholder">
+                <svg viewBox="0 0 24 24">
+                  <rect x="3" y="3" width="18" height="18" rx="2" ry="2" />
+                  <circle cx="8.5" cy="8.5" r="1.5" />
+                  <polyline points="21 15 16 10 5 21" />
+                </svg>
+                <p>Pilih atau seret foto ke sini</p>
+                <div class="upload-btns">
+                  <button type="button" class="btn-sm" onclick="triggerUpload(event,'pFotoGallery')"><svg viewBox="0 0 24 24">
+                      <rect x="3" y="3" width="18" height="18" rx="2" />
+                      <circle cx="12" cy="12" r="3" />
+                    </svg> Gallery</button>
+                  <button type="button" class="btn-sm" onclick="triggerUpload(event,'pFotoFolder')"><svg viewBox="0 0 24 24">
+                      <path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z" />
+                    </svg> Folder</button>
+                </div>
+                <div class="upload-hint">JPG, PNG, WebP</div>
+              </div>
+              <input type="file" id="pFotoGallery" accept="image/*" style="display:none" onchange="handleProjectFotoUpload(this,'add')">
+              <input type="file" id="pFotoFolder" accept="image/jpeg,image/png,image/webp,image/gif" style="display:none"
+                onchange="handleProjectFotoUpload(this,'add')">
+            </div>
+          </div>
+          <div class="form-group full">
+            <label class="form-label">Keterangan</label>
+            <textarea class="form-input" id="pDeskripsi" rows="2" placeholder="Keterangan singkat project..."
+              style="resize:vertical;min-height:60px"></textarea>
+          </div>
+        </div>
+        <div class="form-row">
+          <button class="btn-submit" id="addPBtn" onclick="addProject()">Tambah</button>
+          <button class="btn-sm" onclick="resetPForm()" style="margin-left:auto">Reset</button>
+        </div>
+      </div>
+    </div>
+    <div class="table-section">
+      <div class="table-header">
+        <div style="display:flex;align-items:center;gap:10px">
+          <button class="back-btn j-hide" id="projectBack" onclick="exitProjectFull()">
+            <svg viewBox="0 0 24 24">
+              <polyline points="15 18 9 12 15 6" />
+            </svg> Kembali
+          </button>
+          <h2>Data Project</h2>
+        </div>
+        <input type="text" class="search-box" id="searchP" placeholder="Cari..." oninput="onProjectSearch()">
+      </div>
+      <div class="table-wrap">
+        <table class="project-table">
+          <thead>
+            <tr>
+              <th>No</th>
+              <th>Foto</th>
+              <th>Project</th>
+              <th>Aksi</th>
+            </tr>
+          </thead>
+          <tbody id="projectBody"></tbody>
+        </table>
+      </div>
+      <div id="projectFooter"></div>
+    </div>
+  </div>
+
   <div class="section-screen" id="sectionQuiz">
     <div class="section-header">
       <div class="section-left">
-        <button class="section-back" onclick="goToDashboard()"><svg viewBox="0 0 24 24">
+        <button class="section-back" onclick="goBackToCategory()">
+          <svg viewBox="0 0 24 24">
             <polyline points="15 18 9 12 15 6" />
-          </svg> Kembali</button>
+          </svg> Kembali
+        </button>
         <div class="section-title">
-          <div class="section-title-icon" style="background:var(--lime-bg)"><svg viewBox="0 0 24 24"
-              style="stroke:var(--lime)">
+          <div class="section-title-icon" style="background:var(--lime-bg)">
+            <svg viewBox="0 0 24 24" style="stroke:var(--lime)">
               <path d="M9 11l3 3L22 4" />
               <path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11" />
-            </svg></div>Quiz
+            </svg>
+          </div>Quiz
         </div>
       </div>
-      <div class="section-right"><button class="btn-sm" onclick="refreshQuiz()">Refresh</button></div>
+      <div class="section-right">
+        <button class="btn-sm" onclick="refreshQuiz()">Refresh</button>
+      </div>
     </div>
-
     <div id="quizHome">
       <div class="stats stats-2col">
         <div class="stat s-quiz">
@@ -611,43 +1574,63 @@
         </div>
       </div>
       <div class="form-section">
-        <h2><svg viewBox="0 0 24 24">
+        <h2>
+          <svg viewBox="0 0 24 24">
             <path d="M9 11l3 3L22 4" />
             <path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11" />
-          </svg> Tambah Soal Quiz</h2>
+          </svg> Tambah Soal Quiz
+        </h2>
         <div class="form-grid">
-          <div class="form-group full"><label class="form-label">Pertanyaan</label><input type="text" class="form-input"
-              id="qPertanyaan" placeholder="Tulis pertanyaan..."></div>
-          <div class="form-group"><label class="form-label">Opsi A</label><input type="text" class="form-input"
-              id="qOpsiA" placeholder="Pilihan A"></div>
-          <div class="form-group"><label class="form-label">Opsi B</label><input type="text" class="form-input"
-              id="qOpsiB" placeholder="Pilihan B"></div>
-          <div class="form-group"><label class="form-label">Opsi C</label><input type="text" class="form-input"
-              id="qOpsiC" placeholder="Pilihan C"></div>
-          <div class="form-group"><label class="form-label">Opsi D</label><input type="text" class="form-input"
-              id="qOpsiD" placeholder="Pilihan D"></div>
-          <div class="form-group full"><label class="form-label">Jawaban Benar</label><select class="form-select"
-              id="qJawaban">
+          <div class="form-group full">
+            <label class="form-label">Pertanyaan</label>
+            <input type="text" class="form-input" id="qPertanyaan" placeholder="Tulis pertanyaan...">
+          </div>
+          <div class="form-group">
+            <label class="form-label">Opsi A</label>
+            <input type="text" class="form-input" id="qOpsiA" placeholder="Pilihan A">
+          </div>
+          <div class="form-group">
+            <label class="form-label">Opsi B</label>
+            <input type="text" class="form-input" id="qOpsiB" placeholder="Pilihan B">
+          </div>
+          <div class="form-group">
+            <label class="form-label">Opsi C</label>
+            <input type="text" class="form-input" id="qOpsiC" placeholder="Pilihan C">
+          </div>
+          <div class="form-group">
+            <label class="form-label">Opsi D</label>
+            <input type="text" class="form-input" id="qOpsiD" placeholder="Pilihan D">
+          </div>
+          <div class="form-group full">
+            <label class="form-label">Jawaban Benar</label>
+            <select class="form-select" id="qJawaban">
               <option value="A">A</option>
               <option value="B">B</option>
               <option value="C">C</option>
               <option value="D">D</option>
-            </select></div>
+            </select>
+          </div>
         </div>
-        <div class="form-row"><button class="btn-submit" id="addQBtn" onclick="addQuiz()">Tambah</button><label
-            class="quick-toggle"><input type="checkbox" id="quickQ" checked>Quick Add</label><button class="btn-sm"
-            onclick="resetQForm()" style="margin-left:auto">Reset</button></div>
+        <div class="form-row">
+          <button class="btn-submit" id="addQBtn" onclick="addQuiz()">Tambah</button>
+          <label class="quick-toggle">
+            <input type="checkbox" id="quickQ" checked>Quick Add
+          </label>
+          <button class="btn-sm" onclick="resetQForm()" style="margin-left:auto">Reset</button>
+        </div>
       </div>
     </div>
-
     <div class="table-section">
       <div class="table-header">
-        <div style="display:flex;align-items:center;gap:10px"><button class="back-btn j-hide" id="quizBack"
-            onclick="exitQuizFull()"><svg viewBox="0 0 24 24">
+        <div style="display:flex;align-items:center;gap:10px">
+          <button class="back-btn j-hide" id="quizBack" onclick="exitQuizFull()">
+            <svg viewBox="0 0 24 24">
               <polyline points="15 18 9 12 15 6" />
-            </svg> Kembali</button>
+            </svg> Kembali
+          </button>
           <h2>Data Quiz</h2>
-        </div><input type="text" class="search-box" id="searchQ" placeholder="Cari..." oninput="onQuizSearch()">
+        </div>
+        <input type="text" class="search-box" id="searchQ" placeholder="Cari..." oninput="onQuizSearch()">
       </div>
       <div class="table-wrap">
         <table>
@@ -670,25 +1653,193 @@
     </div>
   </div>
 
-  <!-- MODALS -->
+  <div class="section-screen" id="sectionPendaftaran">
+    <div class="section-header">
+      <div class="section-left">
+        <button class="section-back" onclick="goBackToCategory()">
+          <svg viewBox="0 0 24 24">
+            <polyline points="15 18 9 12 15 6" />
+          </svg> Kembali
+        </button>
+        <div class="section-title">
+          <div class="section-title-icon" style="background:var(--green-bg)">
+            <svg viewBox="0 0 24 24" style="stroke:var(--green)">
+              <path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
+              <circle cx="8.5" cy="7" r="4" />
+              <line x1="20" y1="8" x2="20" y2="14" />
+              <line x1="23" y1="11" x2="17" y2="11" />
+            </svg>
+          </div>Pendaftaran Member
+        </div>
+      </div>
+      <div class="section-right">
+        <button class="btn-sm" onclick="refreshPendaftaran()">Refresh</button>
+      </div>
+    </div>
+    <div class="form-section" style="max-width:600px">
+      <h2>
+        <svg viewBox="0 0 24 24">
+          <circle cx="12" cy="12" r="3" />
+          <path
+            d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06A1.65 1.65 0 0 0 4.68 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06A1.65 1.65 0 0 0 9 4.68a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z" />
+        </svg> Pengaturan Pendaftaran
+      </h2>
+      <div class="form-grid">
+        <div class="form-group full">
+          <label class="form-label">Status Pendaftaran</label>
+          <div class="toggle-row">
+            <span class="toggle-label" id="daftarStatusLabel">Tutup</span>
+            <label class="toggle-switch">
+              <input type="checkbox" id="daftarStatusToggle" onchange="updateDaftarLabel()"><span class="toggle-slider"></span>
+            </label>
+          </div>
+        </div>
+        <div class="form-group full">
+          <label class="form-label">Link Formulir Pendaftaran</label>
+          <input type="url" class="form-input" id="daftarLink" placeholder="https://forms.google.com/...">
+        </div>
+      </div>
+      <div class="form-row">
+        <button class="btn-submit" onclick="savePendaftaran()">Simpan Pengaturan</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="section-screen" id="sectionUcapan">
+    <div class="section-header">
+      <div class="section-left">
+        <button class="section-back" onclick="goBackToCategory()">
+          <svg viewBox="0 0 24 24">
+            <polyline points="15 18 9 12 15 6" />
+          </svg> Kembali
+        </button>
+        <div class="section-title">
+          <div class="section-title-icon" style="background:var(--pink-bg)">
+            <svg viewBox="0 0 24 24" style="stroke:var(--pink)">
+              <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z" />
+            </svg>
+          </div>Ucapan (Birthday)
+        </div>
+      </div>
+      <div class="section-right">
+        <button class="btn-sm" onclick="refreshUcapan()">Refresh</button>
+      </div>
+    </div>
+    <div class="stats stats-2col">
+      <div class="stat s-pink-stat">
+        <div class="stat-val" id="uStatTotal">0</div>
+        <div class="stat-lbl">Total Ucapan</div>
+      </div>
+      <div class="stat s-red-stat">
+        <div class="stat-val" id="uStatToxic">0</div>
+        <div class="stat-lbl">Toxic Terdeteksi</div>
+      </div>
+    </div>
+    <div class="table-section">
+      <div class="table-header">
+        <div style="display:flex;align-items:center;gap:10px">
+          <h2>Data Ucapan</h2>
+        </div>
+        <input type="text" class="search-box" id="searchU" placeholder="Cari..." oninput="renderUcapanTable()">
+      </div>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>No</th>
+              <th>Nama</th>
+              <th>Pesan</th>
+              <th>Status</th>
+              <th>Aksi</th>
+            </tr>
+          </thead>
+          <tbody id="ucapanBody"></tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <div class="section-screen" id="sectionSkorKuis">
+    <div class="section-header">
+      <div class="section-left">
+        <button class="section-back" onclick="goBackToCategory()">
+          <svg viewBox="0 0 24 24">
+            <polyline points="15 18 9 12 15 6" />
+          </svg> Kembali
+        </button>
+        <div class="section-title">
+          <div class="section-title-icon" style="background:var(--yellow-bg)">
+            <svg viewBox="0 0 24 24" style="stroke:var(--yellow)">
+              <path d="M12 20V10" />
+              <path d="M18 20V4" />
+              <path d="M6 20v-4" />
+            </svg>
+          </div>Skor Kuis (Leaderboard)
+        </div>
+      </div>
+      <div class="section-right">
+        <button class="btn-sm" onclick="refreshSkorKuis()">Refresh</button>
+      </div>
+    </div>
+    <div class="stats stats-2col">
+      <div class="stat s-yellow-stat">
+        <div class="stat-val" id="skStatTotal">0</div>
+        <div class="stat-lbl">Total Pemain</div>
+      </div>
+      <div class="stat s-lime-stat">
+        <div class="stat-val" id="skStatAvg">0</div>
+        <div class="stat-lbl">Rata-rata Skor</div>
+      </div>
+    </div>
+    <div class="table-section">
+      <div class="table-header">
+        <div style="display:flex;align-items:center;gap:10px">
+          <h2>Data Skor Kuis</h2>
+        </div>
+        <input type="text" class="search-box" id="searchSk" placeholder="Cari..." oninput="renderSkorKuisTable()">
+      </div>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>Rank</th>
+              <th>Nama</th>
+              <th>Skor</th>
+              <th>Tanggal</th>
+              <th>Aksi</th>
+            </tr>
+          </thead>
+          <tbody id="skorKuisBody"></tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
   <div class="modal-overlay" id="editJModal">
     <div class="modal">
       <div class="modal-head">
-        <h3>Edit Jadwal</h3><button class="modal-close" onclick="closeModal('editJModal')">&times;</button>
+        <h3>Edit Jadwal</h3>
+        <button class="modal-close" onclick="closeModal('editJModal')">&times;</button>
       </div>
       <div class="modal-body">
         <div class="form-grid">
-          <div class="form-group full"><label class="form-label" id="eNamaLabel">Nama</label>
+          <div class="form-group full">
+            <label class="form-label" id="eNamaLabel">Nama</label>
             <div class="album-dd" id="eNamaDD">
-              <div class="album-dd-trigger" id="eNamaTrigger"><input type="text" class="album-dd-input" id="eNamaSearch"
-                  placeholder="Ketik..." autocomplete="off"><button type="button" class="album-dd-arrow" id="eNamaArrow"
-                  tabindex="-1"><svg viewBox="0 0 24 24">
+              <div class="album-dd-trigger" id="eNamaTrigger">
+                <input type="text" class="album-dd-input" id="eNamaSearch" placeholder="Ketik..." autocomplete="off">
+                <button type="button" class="album-dd-arrow" id="eNamaArrow" tabindex="-1">
+                  <svg viewBox="0 0 24 24">
                     <polyline points="6 9 12 15 18 9" />
-                  </svg></button></div>
+                  </svg>
+                </button>
+              </div>
               <div class="album-dd-list" id="eNamaList"></div>
             </div>
           </div>
-          <div class="form-group"><label class="form-label">Tipe</label><select class="form-select" id="eTipe">
+          <div class="form-group">
+            <label class="form-label">Tipe</label>
+            <select class="form-select" id="eTipe">
               <option value="theater">Theater</option>
               <option value="event">Event</option>
               <option value="digital">Digital</option>
@@ -697,179 +1848,613 @@
               <option value="vc">VC</option>
               <option value="2shoot">2Shoot</option>
               <option value="mg">M&G</option>
-            </select></div>
-          <div class="form-group"><label class="form-label">Tanggal</label><input type="date" class="form-input"
-              id="eTanggal"></div>
-          <div class="form-group" id="eJamGroup"><label class="form-label">Jam</label><input type="time"
-              class="form-input" id="eJam"></div>
-          <div class="form-group full" id="eUnitSongGroup" style="display:none"><label class="form-label">Unit
-              Song</label><textarea class="form-input" id="eUnitSong" rows="3" style="resize:vertical"></textarea></div>
-          <div class="form-group" id="eSoGroup" style="display:none"><label class="form-label">SO (Sold
-              Out)</label><input type="text" class="form-input" id="eSo" placeholder="cth: Sold Out / Ya"></div>
-          <div class="form-group" id="eLinkGroup" style="display:none"><label class="form-label">Link
-              Pembelian</label><input type="url" class="form-input" id="eLink" placeholder="https://linkpembelian.com">
+            </select>
           </div>
-          <div class="form-group full"><label class="form-label">Deskripsi</label><input type="text" class="form-input"
-              id="eDesc"></div>
+          <div class="form-group">
+            <label class="form-label">Tanggal</label>
+            <input type="date" class="form-input" id="eTanggal">
+          </div>
+          <div class="form-group" id="eJamGroup">
+            <label class="form-label">Jam</label>
+            <input type="time" class="form-input" id="eJam">
+          </div>
+          <div class="form-group full" id="eUnitSongGroup" style="display:none">
+            <label class="form-label">Unit Song</label>
+            <textarea class="form-input" id="eUnitSong" rows="3" style="resize:vertical"></textarea>
+          </div>
+          <div class="form-group" id="eSoGroup" style="display:none">
+            <label class="form-label">SO (Sold Out)</label>
+            <input type="text" class="form-input" id="eSo" placeholder="cth: Sold Out / Ya">
+          </div>
+          <div class="form-group" id="eLinkGroup" style="display:none">
+            <label class="form-label">Link Pembelian</label>
+            <input type="url" class="form-input" id="eLink" placeholder="https://linkpembelian.com">
+          </div>
+          <div class="form-group full">
+            <label class="form-label">Deskripsi</label>
+            <input type="text" class="form-input" id="eDesc">
+          </div>
         </div>
       </div>
-      <div class="modal-foot"><button class="btn-cancel" onclick="closeModal('editJModal')">Batal</button><button
-          class="btn-save" onclick="saveEditJ()">Simpan</button></div>
+      <div class="modal-foot">
+        <button class="btn-cancel" onclick="closeModal('editJModal')">Batal</button>
+        <button class="btn-save" onclick="saveEditJ()">Simpan</button>
+      </div>
     </div>
   </div>
 
   <div class="modal-overlay" id="editGModal">
     <div class="modal">
       <div class="modal-head">
-        <h3>Edit Foto</h3><button class="modal-close" onclick="closeModal('editGModal')">&times;</button>
+        <h3>Edit Foto</h3>
+        <button class="modal-close" onclick="closeModal('editGModal')">&times;</button>
       </div>
       <div class="modal-body">
         <div class="form-grid">
-          <div class="form-group"><label class="form-label">Kategori</label><select class="form-select cat-select"
-              id="egCat" onchange="onCategoryChange('edit')">
+          <div class="form-group">
+            <label class="form-label">Kategori</label>
+            <select class="form-select cat-select" id="egCat" onchange="onCategoryChange('edit')">
               <option value="lana">Lana</option>
               <option value="lanautica">LANAUTICA</option>
-            </select></div>
-          <div class="form-group full"><label class="form-label">Pilih Folder</label>
+            </select>
+          </div>
+          <div class="form-group full">
+            <label class="form-label">Pilih Folder</label>
             <div class="album-dd" id="egAlbumDD">
-              <div class="album-dd-trigger" id="egAlbumTrigger"><input type="text" class="album-dd-input"
-                  id="egAlbumSearch" placeholder="Ketik..." autocomplete="off"><button type="button"
-                  class="album-dd-arrow" id="egAlbumArrow" tabindex="-1"><svg viewBox="0 0 24 24">
+              <div class="album-dd-trigger" id="egAlbumTrigger">
+                <input type="text" class="album-dd-input" id="egAlbumSearch" placeholder="Ketik..." autocomplete="off">
+                <button type="button" class="album-dd-arrow" id="egAlbumArrow" tabindex="-1">
+                  <svg viewBox="0 0 24 24">
                     <polyline points="6 9 12 15 18 9" />
-                  </svg></button></div>
+                  </svg>
+                </button>
+              </div>
               <div class="album-dd-list" id="egAlbumList"></div>
             </div>
           </div>
-          <div class="form-group"><label class="form-label">Label</label><input type="text" class="form-input locked"
-              id="egLabel" readonly tabindex="-1"></div>
-          <div class="form-group"><label class="form-label">Alt Teks</label><input type="text" class="form-input locked"
-              id="egAlt" readonly tabindex="-1"></div>
-          <div class="form-group full" id="egBasePathWrap" style="display:none"><label class="form-label">Base
-              Path</label>
-            <div class="base-path-tag" id="egBasePathTag"><svg viewBox="0 0 24 24">
-                <path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z" />
-              </svg><span id="egBasePathText"></span></div>
+          <div class="form-group">
+            <label class="form-label">Label</label>
+            <input type="text" class="form-input locked" id="egLabel" readonly tabindex="-1">
           </div>
-          <div class="form-group full"><label class="form-label">Path Foto</label><input type="text" class="form-input"
-              id="egSrc"></div>
+          <div class="form-group">
+            <label class="form-label">Alt Teks</label>
+            <input type="text" class="form-input locked" id="egAlt" readonly tabindex="-1">
+          </div>
+          <div class="form-group full" id="egBasePathWrap" style="display:none">
+            <label class="form-label">Base Path</label>
+            <div class="base-path-tag" id="egBasePathTag">
+              <svg viewBox="0 0 24 24">
+                <path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z" />
+              </svg>
+              <span id="egBasePathText"></span>
+            </div>
+          </div>
+          <div class="form-group full">
+            <label class="form-label">Path Foto</label>
+            <input type="text" class="form-input" id="egSrc">
+          </div>
         </div>
       </div>
-      <div class="modal-foot"><button class="btn-cancel" onclick="closeModal('editGModal')">Batal</button><button
-          class="btn-save" onclick="saveEditG()">Simpan</button></div>
+      <div class="modal-foot">
+        <button class="btn-cancel" onclick="closeModal('editGModal')">Batal</button>
+        <button class="btn-save" onclick="saveEditG()">Simpan</button>
+      </div>
     </div>
   </div>
 
   <div class="modal-overlay" id="editHModal">
     <div class="modal">
       <div class="modal-head">
-        <h3>Edit Hashtag</h3><button class="modal-close" onclick="closeModal('editHModal')">&times;</button>
+        <h3>Edit Hashtag</h3>
+        <button class="modal-close" onclick="closeModal('editHModal')">&times;</button>
       </div>
       <div class="modal-body">
         <div class="form-grid">
-          <div class="form-group"><label class="form-label">Hashtag</label>
-            <div class="input-prefix-wrap"><span class="input-prefix">#</span><input type="text"
-                class="form-input has-prefix" id="ehTag" placeholder="contohhashtag" autocomplete="off"></div>
+          <div class="form-group">
+            <label class="form-label">Hashtag</label>
+            <div class="input-prefix-wrap">
+              <span class="input-prefix">#</span>
+              <input type="text" class="form-input has-prefix" id="ehTag" placeholder="contohhashtag" autocomplete="off">
+            </div>
           </div>
-          <div class="form-group"><label class="form-label">Deskripsi</label><input type="text" class="form-input"
-              id="ehDesk" placeholder="Deskripsi..."></div>
+          <div class="form-group">
+            <label class="form-label">Deskripsi</label>
+            <input type="text" class="form-input" id="ehDesk" placeholder="Deskripsi...">
+          </div>
         </div>
       </div>
-      <div class="modal-foot"><button class="btn-cancel" onclick="closeModal('editHModal')">Batal</button><button
-          class="btn-save" onclick="saveEditH()">Simpan</button></div>
+      <div class="modal-foot">
+        <button class="btn-cancel" onclick="closeModal('editHModal')">Batal</button>
+        <button class="btn-save" onclick="saveEditH()">Simpan</button>
+      </div>
     </div>
   </div>
 
   <div class="modal-overlay" id="editAModal">
     <div class="modal" style="max-width:560px">
       <div class="modal-head">
-        <h3>Edit Artikel</h3><button class="modal-close" onclick="closeModal('editAModal')">&times;</button>
+        <h3>Edit Artikel</h3>
+        <button class="modal-close" onclick="closeModal('editAModal')">&times;</button>
       </div>
       <div class="modal-body">
         <div class="form-grid">
-          <div class="form-group full"><label class="form-label">Judul Artikel</label><input type="text"
-              class="form-input" id="eaJudul" placeholder="Masukkan judul artikel..."></div>
-          <div class="form-group full"><label class="form-label">Konten Artikel</label><textarea class="form-input"
-              id="eaKonten" rows="5" placeholder="Tulis isi artikel di sini..." style="resize:vertical"></textarea>
+          <div class="form-group full">
+            <label class="form-label">Judul Artikel</label>
+            <input type="text" class="form-input" id="eaJudul">
           </div>
-          <div class="form-group"><label class="form-label">Tanggal Dibuat</label><input type="date" class="form-input"
-              id="eaTanggal"></div>
-          <div class="form-group"><label class="form-label">Penulis</label><input type="text" class="form-input"
-              id="eaPenulis" placeholder="Nama penulis..."></div>
-          <div class="form-group full"><label class="form-label">Foto Artikel</label>
-            <div class="upload-area" id="eaUploadArea" onclick="triggerUploadArea(event,'ea')"
-              ondragover="handleDragOver(event,'ea')" ondragleave="handleDragLeave(event,'ea')"
-              ondrop="handleDrop(event,'ea')">
-              <div class="upload-preview-wrap" id="eaPreviewWrap" style="display:none"><img id="eaFotoImg"
-                  class="upload-preview-img"><button type="button" class="upload-remove"
-                  onclick="removeFoto(event,'edit')">&times;</button></div>
-              <div class="upload-placeholder" id="eaPlaceholder"><svg viewBox="0 0 24 24">
+          <div class="form-group">
+            <label class="form-label">Kategori</label>
+            <select class="form-select" id="eaKategori">
+              <option value="Berita">Berita</option>
+              <option value="Info">Info</option>
+              <option value="Update">Update</option>
+              <option value="Event">Event</option>
+              <option value="Opini">Opini</option>
+              <option value="Lainnya">Lainnya</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label class="form-label">Tanggal Dibuat</label>
+            <input type="date" class="form-input" id="eaTanggal">
+          </div>
+          <div class="form-group full">
+            <label class="form-label">Ringkasan</label>
+            <textarea class="form-input" id="eaRingkasan" rows="2" style="resize:vertical;min-height:60px"></textarea>
+          </div>
+          <div class="form-group full">
+            <label class="form-label">Konten Artikel</label>
+            <textarea class="form-input" id="eaKonten" rows="5" style="resize:vertical"></textarea>
+          </div>
+          <div class="form-group">
+            <label class="form-label">Penulis</label>
+            <input type="text" class="form-input" id="eaPenulis">
+          </div>
+          <div class="form-group full">
+            <label class="form-label">Foto Artikel</label>
+            <div class="upload-area" id="eaUploadArea" onclick="triggerUploadArea(event,'ea')" ondragover="handleDragOver(event,'ea')"
+              ondragleave="handleDragLeave(event,'ea')" ondrop="handleDrop(event,'ea')">
+              <div class="upload-preview-wrap" id="eaPreviewWrap" style="display:none">
+                <img id="eaFotoImg" class="upload-preview-img">
+                <button type="button" class="upload-remove" onclick="removeFoto(event,'edit')">&times;</button>
+              </div>
+              <div class="upload-placeholder" id="eaPlaceholder">
+                <svg viewBox="0 0 24 24">
                   <rect x="3" y="3" width="18" height="18" rx="2" ry="2" />
                   <circle cx="8.5" cy="8.5" r="1.5" />
                   <polyline points="21 15 16 10 5 21" />
                 </svg>
                 <p>Pilih atau seret foto ke sini</p>
-                <div class="upload-btns"><button type="button" class="btn-sm"
-                    onclick="triggerUpload(event,'eaFotoGallery')"><svg viewBox="0 0 24 24">
+                <div class="upload-btns">
+                  <button type="button" class="btn-sm" onclick="triggerUpload(event,'eaFotoGallery')">
+                    <svg viewBox="0 0 24 24">
                       <rect x="3" y="3" width="18" height="18" rx="2" />
                       <circle cx="12" cy="12" r="3" />
-                    </svg> Gallery</button><button type="button" class="btn-sm"
-                    onclick="triggerUpload(event,'eaFotoFolder')"><svg viewBox="0 0 24 24">
+                    </svg> Gallery
+                  </button>
+                  <button type="button" class="btn-sm" onclick="triggerUpload(event,'eaFotoFolder')">
+                    <svg viewBox="0 0 24 24">
                       <path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z" />
-                    </svg> Folder</button></div>
-              </div><input type="file" id="eaFotoGallery" accept="image/*" style="display:none"
-                onchange="handleFotoUpload(this,'edit')"><input type="file" id="eaFotoFolder"
-                accept="image/jpeg,image/png,image/webp,image/gif" style="display:none"
+                    </svg> Folder
+                  </button>
+                </div>
+              </div>
+              <input type="file" id="eaFotoGallery" accept="image/*" style="display:none" onchange="handleFotoUpload(this,'edit')">
+              <input type="file" id="eaFotoFolder" accept="image/jpeg,image/png,image/webp,image/gif" style="display:none"
                 onchange="handleFotoUpload(this,'edit')">
             </div>
           </div>
         </div>
       </div>
-      <div class="modal-foot"><button class="btn-cancel" onclick="closeModal('editAModal')">Batal</button><button
-          class="btn-save" onclick="saveEditA()">Simpan</button></div>
+      <div class="modal-foot">
+        <button class="btn-cancel" onclick="closeModal('editAModal')">Batal</button>
+        <button class="btn-save" onclick="saveEditA()">Simpan</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal-overlay" id="editVModal">
+    <div class="modal">
+      <div class="modal-head">
+        <h3>Edit Video</h3>
+        <button class="modal-close" onclick="closeModal('editVModal')">&times;</button>
+      </div>
+      <div class="modal-body">
+        <div class="form-grid">
+          <div class="form-group full">
+            <label class="form-label">Judul Video</label>
+            <input type="text" class="form-input" id="evJudul">
+          </div>
+          <div class="form-group full">
+            <label class="form-label">Link Video</label>
+            <input type="url" class="form-input" id="evLink">
+          </div>
+          <div class="form-group">
+            <label class="form-label">Platform</label>
+            <select class="form-select" id="evPlatform">
+              <option value="YouTube">YouTube</option>
+              <option value="TikTok">TikTok</option>
+              <option value="Instagram">Instagram</option>
+              <option value="X (Twitter)">X (Twitter)</option>
+              <option value="Facebook">Facebook</option>
+              <option value="Lainnya">Lainnya</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label class="form-label">Tanggal</label>
+            <input type="date" class="form-input" id="evTanggal">
+          </div>
+          <div class="form-group full">
+            <label class="form-label">Deskripsi</label>
+            <input type="text" class="form-input" id="evDeskripsi">
+          </div>
+        </div>
+      </div>
+      <div class="modal-foot">
+        <button class="btn-cancel" onclick="closeModal('editVModal')">Batal</button>
+        <button class="btn-save" onclick="saveEditV()">Simpan</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal-overlay" id="editPModal">
+    <div class="modal">
+      <div class="modal-head">
+        <h3>Edit Project</h3>
+        <button class="modal-close" onclick="closeModal('editPModal')">&times;</button>
+      </div>
+      <div class="modal-body">
+        <div class="form-grid">
+          <div class="form-group full">
+            <label class="form-label">Nama Project</label>
+            <input type="text" class="form-input" id="epNama">
+          </div>
+          <div class="form-group full">
+            <label class="form-label">Foto Project</label>
+            <div class="upload-area" id="epUploadArea" onclick="triggerUploadArea(event,'ep')" ondragover="handleDragOver(event,'ep')"
+              ondragleave="handleDragLeave(event,'ep')" ondrop="handleDrop(event,'ep')">
+              <div class="upload-preview-wrap" id="epPreviewWrap" style="display:none">
+                <img id="epFotoImg" class="upload-preview-img">
+                <button type="button" class="upload-remove" onclick="removeProjectFoto(event,'edit')">&times;</button>
+              </div>
+              <div class="upload-placeholder" id="epPlaceholder">
+                <svg viewBox="0 0 24 24">
+                  <rect x="3" y="3" width="18" height="18" rx="2" ry="2" />
+                  <circle cx="8.5" cy="8.5" r="1.5" />
+                  <polyline points="21 15 16 10 5 21" />
+                </svg>
+                <p>Pilih atau seret foto ke sini</p>
+                <div class="upload-btns">
+                  <button type="button" class="btn-sm" onclick="triggerUpload(event,'epFotoGallery')"><svg viewBox="0 0 24 24">
+                      <rect x="3" y="3" width="18" height="18" rx="2" />
+                      <circle cx="12" cy="12" r="3" />
+                    </svg> Gallery</button>
+                  <button type="button" class="btn-sm" onclick="triggerUpload(event,'epFotoFolder')"><svg viewBox="0 0 24 24">
+                      <path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z" />
+                    </svg> Folder</button>
+                </div>
+              </div>
+              <input type="file" id="epFotoGallery" accept="image/*" style="display:none" onchange="handleProjectFotoUpload(this,'edit')">
+              <input type="file" id="epFotoFolder" accept="image/jpeg,image/png,image/webp,image/gif" style="display:none"
+                onchange="handleProjectFotoUpload(this,'edit')">
+            </div>
+          </div>
+          <div class="form-group full">
+            <label class="form-label">Keterangan</label>
+            <textarea class="form-input" id="epDeskripsi" rows="2" style="resize:vertical;min-height:60px"></textarea>
+          </div>
+          <div class="form-group full">
+            <label class="form-label">Keterangan</label>
+            <textarea class="form-input" id="epDeskripsi" rows="2" style="resize:vertical;min-height:60px"></textarea>
+          </div>
+        </div>
+      </div>
+      <div class="modal-foot">
+        <button class="btn-cancel" onclick="closeModal('editPModal')">Batal</button>
+        <button class="btn-save" onclick="saveEditP()">Simpan</button>
+      </div>
     </div>
   </div>
 
   <div class="modal-overlay" id="editQModal">
     <div class="modal">
       <div class="modal-head">
-        <h3>Edit Quiz</h3><button class="modal-close" onclick="closeModal('editQModal')">&times;</button>
+        <h3>Edit Quiz</h3>
+        <button class="modal-close" onclick="closeModal('editQModal')">&times;</button>
       </div>
       <div class="modal-body">
         <div class="form-grid">
-          <div class="form-group full"><label class="form-label">Pertanyaan</label><input type="text" class="form-input"
-              id="eqPertanyaan"></div>
-          <div class="form-group"><label class="form-label">Opsi A</label><input type="text" class="form-input"
-              id="eqOpsiA"></div>
-          <div class="form-group"><label class="form-label">Opsi B</label><input type="text" class="form-input"
-              id="eqOpsiB"></div>
-          <div class="form-group"><label class="form-label">Opsi C</label><input type="text" class="form-input"
-              id="eqOpsiC"></div>
-          <div class="form-group"><label class="form-label">Opsi D</label><input type="text" class="form-input"
-              id="eqOpsiD"></div>
-          <div class="form-group full"><label class="form-label">Jawaban Benar</label><select class="form-select"
-              id="eqJawaban">
+          <div class="form-group full">
+            <label class="form-label">Pertanyaan</label>
+            <input type="text" class="form-input" id="eqPertanyaan">
+          </div>
+          <div class="form-group">
+            <label class="form-label">Opsi A</label>
+            <input type="text" class="form-input" id="eqOpsiA">
+          </div>
+          <div class="form-group">
+            <label class="form-label">Opsi B</label>
+            <input type="text" class="form-input" id="eqOpsiB">
+          </div>
+          <div class="form-group">
+            <label class="form-label">Opsi C</label>
+            <input type="text" class="form-input" id="eqOpsiC">
+          </div>
+          <div class="form-group">
+            <label class="form-label">Opsi D</label>
+            <input type="text" class="form-input" id="eqOpsiD">
+          </div>
+          <div class="form-group full">
+            <label class="form-label">Jawaban Benar</label>
+            <select class="form-select" id="eqJawaban">
               <option value="A">A</option>
               <option value="B">B</option>
               <option value="C">C</option>
               <option value="D">D</option>
-            </select></div>
+            </select>
+          </div>
         </div>
       </div>
-      <div class="modal-foot"><button class="btn-cancel" onclick="closeModal('editQModal')">Batal</button><button
-          class="btn-save" onclick="saveEditQ()">Simpan</button></div>
+      <div class="modal-foot">
+        <button class="btn-cancel" onclick="closeModal('editQModal')">Batal</button>
+        <button class="btn-save" onclick="saveEditQ()">Simpan</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal-overlay" id="editIModal">
+    <div class="modal" style="max-width:560px">
+      <div class="modal-head">
+        <h3 id="eiModalTitle">Edit</h3>
+        <button class="modal-close" onclick="closeModal('editIModal')">&times;</button>
+      </div>
+      <div class="modal-body">
+        <div class="form-grid">
+          <div class="form-group full">
+            <label class="form-label">Judul</label>
+            <input type="text" class="form-input" id="eiJudul">
+          </div>
+          <div class="form-group full" id="eiFotoGroup" style="display:none">
+            <label class="form-label">Foto</label>
+            <div class="upload-area" id="eiUploadArea" onclick="triggerUploadArea(event,'ei')" ondragover="handleDragOver(event,'ei')"
+              ondragleave="handleDragLeave(event,'ei')" ondrop="handleDrop(event,'ei')">
+              <div class="upload-preview-wrap" id="eiPreviewWrap" style="display:none">
+                <img id="eiFotoImg" class="upload-preview-img">
+                <button type="button" class="upload-remove" onclick="removeInfoFoto(event,'edit')">&times;</button>
+              </div>
+              <div class="upload-placeholder" id="eiPlaceholder">
+                <svg viewBox="0 0 24 24">
+                  <rect x="3" y="3" width="18" height="18" rx="2" ry="2" />
+                  <circle cx="8.5" cy="8.5" r="1.5" />
+                  <polyline points="21 15 16 10 5 21" />
+                </svg>
+                <p>Pilih atau seret foto ke sini</p>
+                <div class="upload-btns">
+                  <button type="button" class="btn-sm" onclick="triggerUpload(event,'eiFotoGallery')">
+                    <svg viewBox="0 0 24 24">
+                      <rect x="3" y="3" width="18" height="18" rx="2" />
+                      <circle cx="12" cy="12" r="3" />
+                    </svg> Gallery
+                  </button>
+                </div>
+              </div>
+              <input type="file" id="eiFotoGallery" accept="image/*" style="display:none" onchange="handleInfoFotoUpload(this,'edit')">
+            </div>
+          </div>
+          <div class="form-group full">
+            <label class="form-label">Konten</label>
+            <textarea class="form-input" id="eiKonten" rows="5" style="resize:vertical"></textarea>
+          </div>
+        </div>
+      </div>
+      <div class="modal-foot">
+        <button class="btn-cancel" onclick="closeModal('editIModal')">Batal</button>
+        <button class="btn-save" onclick="saveEditI()">Simpan</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal-overlay" id="editRModal">
+    <div class="modal">
+      <div class="modal-head">
+        <h3>Edit Peraturan</h3>
+        <button class="modal-close" onclick="closeModal('editRModal')">&times;</button>
+      </div>
+      <div class="modal-body">
+        <div class="form-grid">
+          <div class="form-group">
+            <label class="form-label">Nomor</label>
+            <input type="number" class="form-input" id="erNomor" min="1">
+          </div>
+          <div class="form-group full">
+            <label class="form-label">Isi Peraturan</label>
+            <textarea class="form-input" id="erIsi" rows="3" style="resize:vertical"></textarea>
+          </div>
+        </div>
+      </div>
+      <div class="modal-foot">
+        <button class="btn-cancel" onclick="closeModal('editRModal')">Batal</button>
+        <button class="btn-save" onclick="saveEditR()">Simpan</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal-overlay" id="editFqModal">
+    <div class="modal">
+      <div class="modal-head">
+        <h3>Edit FAQ</h3>
+        <button class="modal-close" onclick="closeModal('editFqModal')">&times;</button>
+      </div>
+      <div class="modal-body">
+        <div class="form-grid">
+          <div class="form-group full">
+            <label class="form-label">Pertanyaan</label>
+            <input type="text" class="form-input" id="efqPertanyaan">
+          </div>
+          <div class="form-group full">
+            <label class="form-label">Jawaban</label>
+            <textarea class="form-input" id="efqJawaban" rows="3" style="resize:vertical"></textarea>
+          </div>
+        </div>
+      </div>
+      <div class="modal-foot">
+        <button class="btn-cancel" onclick="closeModal('editFqModal')">Batal</button>
+        <button class="btn-save" onclick="saveEditFq()">Simpan</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal-overlay" id="batchAddModal">
+    <div class="modal" style="max-width:560px">
+      <div class="modal-head">
+        <h3>Batch Add Foto</h3>
+        <button class="modal-close" onclick="closeModal('batchAddModal')">&times;</button>
+      </div>
+      <div class="modal-body">
+        <div class="form-grid">
+          <div class="form-group">
+            <label class="form-label">Kategori</label>
+            <select class="form-select cat-select" id="bCat" onchange="onBatchCategoryChange()">
+              <option value="lana">Lana</option>
+              <option value="lanautica">LANAUTICA</option>
+            </select>
+          </div>
+          <div class="form-group full">
+            <label class="form-label">Pilih Folder / Buat Baru</label>
+            <div class="album-dd" id="bAlbumDD">
+              <div class="album-dd-trigger" id="bAlbumTrigger">
+                <input type="text" class="album-dd-input" id="bAlbumSearch" placeholder="Ketik nama folder..." autocomplete="off">
+                <button type="button" class="album-dd-arrow" id="bAlbumArrow" tabindex="-1">
+                  <svg viewBox="0 0 24 24">
+                    <polyline points="6 9 12 15 18 9" />
+                  </svg>
+                </button>
+              </div>
+              <div class="album-dd-list" id="bAlbumList"></div>
+            </div>
+          </div>
+          <div class="form-group full">
+            <label class="form-label">Upload Banyak Foto</label>
+            <div class="upload-area" id="bUploadArea" onclick="document.getElementById('bFileInput').click()"
+              ondragover="event.preventDefault();this.classList.add('dragover')" ondragleave="this.classList.remove('dragover')"
+              ondrop="handleBatchDrop(event)">
+              <div id="bPlaceholder" class="upload-placeholder">
+                <svg viewBox="0 0 24 24">
+                  <rect x="3" y="3" width="18" height="18" rx="2" ry="2" />
+                  <circle cx="8.5" cy="8.5" r="1.5" />
+                  <polyline points="21 15 16 10 5 21" />
+                </svg>
+                <p>Pilih atau seret banyak foto ke sini</p>
+                <div class="upload-btns">
+                  <button type="button" class="btn-sm"
+                    onclick="event.stopPropagation();document.getElementById('bFileInput').click()">
+                    <svg viewBox="0 0 24 24">
+                      <rect x="3" y="3" width="18" height="18" rx="2" />
+                      <circle cx="12" cy="12" r="3" />
+                    </svg> Pilih Foto
+                  </button>
+                </div>
+                <div class="upload-hint">JPG, PNG, WebP — Bisa pilih banyak sekaligus</div>
+              </div>
+              <div id="bPreviewArea" style="display:none">
+                <div id="bFileCount" style="font-weight:600;color:var(--accent2);margin-bottom:10px"></div>
+                <div id="bPreviewGrid" class="batch-preview-grid"></div>
+              </div>
+              <input type="file" id="bFileInput" accept="image/*" multiple style="display:none" onchange="handleBatchFiles(this.files)">
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal-foot">
+        <button class="btn-cancel" onclick="closeModal('batchAddModal')">Batal</button>
+        <button class="btn-save" id="batchAddBtn" onclick="submitBatchAdd()">Tambah Semua</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal-overlay" id="batchJadwalModal">
+    <div class="modal" style="max-width:560px">
+      <div class="modal-head">
+        <h3>Batch Add Jadwal</h3>
+        <button class="modal-close" onclick="closeModal('batchJadwalModal')">&times;</button>
+      </div>
+      <div class="modal-body">
+        <div class="form-grid">
+          <div class="form-group">
+            <label class="form-label">Tipe</label>
+            <select class="form-select" id="bjTipe">
+              <option value="theater">Theater</option>
+              <option value="event">Event</option>
+              <option value="digital">Digital</option>
+              <option value="concert">Concert</option>
+              <option value="offair">Off Air Event</option>
+              <option value="vc">VC</option>
+              <option value="2shoot">2Shoot</option>
+              <option value="mg">M&G</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label class="form-label">Tanggal</label>
+            <input type="date" class="form-input" id="bjTanggal">
+          </div>
+          <div class="form-group full">
+            <label class="form-label">Daftar Kegiatan</label>
+            <textarea class="form-input" id="bjNama" rows="6"
+              placeholder="Satu nama kegiatan per baris, contoh:&#10;JKT48 Theater Show&#10;JKT48 Concert&#10;Meet & Greet Session"
+              style="resize:vertical"></textarea>
+          </div>
+          <div class="form-group full">
+            <label class="form-label">Jam (Opsional)</label>
+            <input type="time" class="form-input" id="bjJam" value="14:00">
+          </div>
+        </div>
+      </div>
+      <div class="modal-foot">
+        <button class="btn-cancel" onclick="closeModal('batchJadwalModal')">Batal</button>
+        <button class="btn-save" id="batchJBtn" onclick="submitBatchJadwal()">Tambah Semua</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal-overlay" id="batchHashtagModal">
+    <div class="modal" style="max-width:480px">
+      <div class="modal-head">
+        <h3>Batch Add Hashtag</h3>
+        <button class="modal-close" onclick="closeModal('batchHashtagModal')">&times;</button>
+      </div>
+      <div class="modal-body">
+        <div class="form-grid">
+          <div class="form-group full">
+            <label class="form-label">Daftar Hashtag</label>
+            <textarea class="form-input" id="bhTags" rows="5"
+              placeholder="Pisah dengan koma, spasi, atau baris baru&#10;Contoh: lanautica, jkt48, lana&#10;atau: #lanautica #jkt48 #lana"
+              style="resize:vertical"></textarea>
+          </div>
+          <div class="form-group full">
+            <label class="form-label">Deskripsi (Opsional, berlaku untuk semua)</label>
+            <input type="text" class="form-input" id="bhDesk" placeholder="Deskripsi singkat...">
+          </div>
+        </div>
+      </div>
+      <div class="modal-foot">
+        <button class="btn-cancel" onclick="closeModal('batchHashtagModal')">Batal</button>
+        <button class="btn-save" id="batchHBtn" onclick="submitBatchHashtag()">Tambah Semua</button>
+      </div>
     </div>
   </div>
 
   <div class="modal-overlay" id="deleteModal">
     <div class="modal" style="max-width:380px">
       <div class="modal-head">
-        <h3>Hapus</h3><button class="modal-close" onclick="closeModal('deleteModal')">&times;</button>
+        <h3>Hapus</h3>
+        <button class="modal-close" onclick="closeModal('deleteModal')">&times;</button>
       </div>
       <div class="modal-body">
         <p id="deleteMsg" style="font-size:.88rem;color:var(--muted);line-height:1.6"></p>
       </div>
-      <div class="modal-foot"><button class="btn-cancel" onclick="closeModal('deleteModal')">Batal</button><button
-          class="btn-confirm" id="deleteConfirmBtn">Hapus</button></div>
+      <div class="modal-foot">
+        <button class="btn-cancel" onclick="closeModal('deleteModal')">Batal</button>
+        <button class="btn-confirm" id="deleteConfirmBtn">Hapus</button>
+      </div>
     </div>
   </div>
 
