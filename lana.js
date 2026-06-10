@@ -2575,3 +2575,65 @@ function openYtPopup(videoId) {
     if (e.target === overlay) overlay.remove();
   };
 };
+
+function getCurrentTheme() {
+  return document.documentElement.getAttribute('data-theme') || 'dark';
+}
+
+function setTheme(theme, animate) {
+  if (animate) {
+    document.documentElement.classList.add('theme-anim');
+    setTimeout(function() {
+      document.documentElement.classList.remove('theme-anim');
+    }, 400);
+  }
+  if (theme === 'light') {
+    document.documentElement.setAttribute('data-theme', 'light');
+  } else {
+    document.documentElement.removeAttribute('data-theme');
+  }
+  localStorage.setItem('lanautica-theme', theme);
+  updateThemeUI(theme);
+}
+
+function toggleTheme() {
+  var current = getCurrentTheme();
+  var next = current === 'light' ? 'dark' : 'light';
+  setTheme(next, true);
+}
+
+function updateThemeUI(theme) {
+  var mobileThemeText = document.getElementById('mobileThemeText');
+  var mobileThemeStatus = document.getElementById('mobileThemeStatus');
+  var mobileThemeItem = document.getElementById('mobileThemeItem');
+  if (mobileThemeText) {
+    mobileThemeText.textContent = theme === 'light' ? 'Tema Terang' : 'Tema Gelap';
+  }
+  if (mobileThemeStatus) {
+    mobileThemeStatus.textContent = 'Aktif';
+    mobileThemeStatus.className = 'mobile-menu-theme-status ' + (theme === 'light' ? 'light' : 'dark');
+  }
+  if (mobileThemeItem) {
+    var darkIcon = mobileThemeItem.querySelector('.mobile-theme-icon-dark');
+    var lightIcon = mobileThemeItem.querySelector('.mobile-theme-icon-light');
+    if (darkIcon && lightIcon) {
+      darkIcon.style.display = theme === 'dark' ? '' : 'none';
+      lightIcon.style.display = theme === 'light' ? '' : 'none';
+    }
+  }
+}
+
+document.addEventListener('DOMContentLoaded', function() {
+  var theme = getCurrentTheme();
+  updateThemeUI(theme);
+  if (window.matchMedia) {
+    var mediaQuery = window.matchMedia('(prefers-color-scheme: light)');
+    if (mediaQuery.addEventListener) {
+      mediaQuery.addEventListener('change', function(e) {
+        if (!localStorage.getItem('lanautica-theme')) {
+          setTheme(e.matches ? 'light' : 'dark', true);
+        }
+      });
+    }
+  }
+});
