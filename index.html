@@ -4,18 +4,11 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <script> (function(){
-    var saved = localStorage.getItem('lanautica-theme');
-    if (saved) {
-      document.documentElement.setAttribute('data-theme', saved);
-    } else if (window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches) {
-      document.documentElement.setAttribute('data-theme', 'light');
-    }
-  })();
-</script>
   <title>LANAUTICA ☾.</title>
   <link rel="icon" type="image/png" href="Lana/3.jpeg">
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Poppins:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet">
   <link rel="stylesheet" href="lana.css">
 </head>
 
@@ -154,11 +147,14 @@
       <a class="topnav-link home-link" onclick="backToHero()">Home</a>
       <div class="topnav-spacer"></div>
       <a class="topnav-link" onclick="showSection('profile')" data-section="profile">About Lana</a>
-      <a class="topnav-link" onclick="showSection('artikel')" data-section="artikel">Artikel<span class="nav-badge-soon">Segera Hadir</span></a>
+      <a class="topnav-link" onclick="showSection('artikel')" data-section="artikel">Artikel<span
+          class="nav-badge-soon">Segera Hadir</span></a>
       <a class="topnav-link" onclick="showSection('reschedule')" data-section="reschedule">Reschedule</a>
       <a class="topnav-link" onclick="showSection('gallery')" data-section="gallery">Galeri</a>
-      <a class="topnav-link" onclick="showSection('quiz')" data-section="quiz">Quiz<span class="nav-badge-soon">Segera Hadir</span></a>
-      <a class="topnav-link" onclick="showSection('project')" data-section="project">Project Fanbase<span class="nav-badge-soon">Segera Hadir</span></a>
+      <a class="topnav-link" onclick="showSection('quiz')" data-section="quiz">Quiz<span class="nav-badge-soon">Segera
+          Hadir</span></a>
+      <a class="topnav-link" onclick="showSection('project')" data-section="project">Project Fanbase<span
+          class="nav-badge-soon">Segera Hadir</span></a>
       <a class="topnav-link" onclick="showSection('fanbase')" data-section="fanbase">Fanbase</a>
       <button class="theme-toggle" id="themeToggleDesktop" onclick="toggleTheme()" aria-label="Ganti tema" title="Ganti tema">
         <span class="theme-toggle-icon icon-sun"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg></span>
@@ -209,27 +205,44 @@
         <div class="biodata">
           <div class="biodata-title">Aurhel Alana</div>
           <div class="biodata-list">
-            <div class="biodata-item"><span class="biodata-label">☘︎ Nama Panggilan</span><span class="biodata-value">Lana</span></div>
-            <div class="biodata-item bday-trigger" onclick="goToBirthday()" title="Ada kejutan tersembunyi..."><span class="biodata-label">☘︎ Tanggal Lahir</span><span class="biodata-value">14 September 2006 <span style="font-size:0.7em;opacity:0.5">✨</span></span></div>
-            <div class="biodata-item"><span class="biodata-label">☘︎ Tinggi Badan</span><span class="biodata-value">162 cm</span></div>
-            <div class="biodata-item"><span class="biodata-label">☘︎ Golongan Darah</span><span class="biodata-value">A</span></div>
-            <div class="biodata-item"><span class="biodata-label">☘︎ Horoskop</span><span class="biodata-value">Virgo</span></div>
-            <div class="biodata-item"><span class="biodata-label">☘︎ Team</span><span class="biodata-value">Love&#9829;</span></div>
+            <div class="biodata-item"><span class="biodata-label">☘︎ Nama Panggilan</span><span
+                class="biodata-value">Lana</span></div>
+            <div class="biodata-item bday-trigger" onclick="goToBirthday()" title="Ada kejutan tersembunyi..."><span
+                class="biodata-label">☘︎ Tanggal Lahir</span><span class="biodata-value">14 September 2006 <span
+                  style="font-size:0.7em;opacity:0.5">✨</span></span></div>
+            <div class="biodata-item"><span class="biodata-label">☘︎ Tinggi Badan</span><span class="biodata-value">162
+                cm</span></div>
+            <div class="biodata-item"><span class="biodata-label">☘︎ Golongan Darah</span><span
+                class="biodata-value">A</span></div>
+            <div class="biodata-item"><span class="biodata-label">☘︎ Horoskop</span><span
+                class="biodata-value">Virgo</span></div>
+            <div class="biodata-item"><span class="biodata-label">☘︎ Team</span><span
+                class="biodata-value">Love&#9829;</span></div>
           </div>
           <div class="social-links">
-            <a href="https://www.instagram.com/jkt48.lana.a" target="_blank" rel="noopener" class="ig" aria-label="Instagram"><svg viewBox="0 0 24 24">
-                <path d="M12 2.163c3.204 0 3.584.012 4.85.07 1.17.054 1.97.24 2.43.403a4.088 4.088 0 0 1 1.523.99 4.088 4.088 0 0 1 .99 1.524c.163.46.35 1.26.403 2.428.058 1.267.07 1.647.07 4.85s-.012 3.584-.07 4.85c-.054 1.17-.24 1.97-.403 2.43a4.088 4.088 0 0 1-.99 1.523 4.088 4.088 0 0 1-1.524.99c-.46.163-1.26.35-2.428.403-1.267.058-1.647.07-4.85.07s-3.584-.012-4.85-.07c-1.17-.054-1.97-.24-2.43-.403a4.088 4.088 0 0 1-1.523-.99 4.088 4.088 0 0 1-.99-1.524c-.163-.46-.35-1.26-.403-2.428C2.175 15.584 2.163 15.204 2.163 12s.012-3.584.07-4.85c.054-1.17.24-1.97.403-2.43a4.088 4.088 0 0 1 .99-1.523A4.088 4.088 0 0 1 5.15 2.207c.46-.163 1.26-.35 2.428-.403C8.846 2.175 9.226 2.163 12 2.163zM12 0C8.741 0 8.333.014 7.053.072 5.775.131 4.903.333 4.14.63a5.876 5.876 0 0 0-2.126 1.384A5.876 5.876 0 0 0 .63 4.14C.333 4.903.131 5.775.072 7.053.014 8.333 0 8.741 0 12s.014 3.667.072 4.947c.059 1.277.261 2.149.558 2.913a5.876 5.876 0 0 0 1.384 2.126A5.876 5.876 0 0 0 4.14 23.37c.763.296 1.636.499 2.913.558C8.333 23.986 8.741 24 12 24s3.667-.014 4.947-.072c1.277-.059 2.149-.261 2.913-.558a5.876 5.876 0 0 0 2.126-1.384 5.876 5.876 0 0 0 1.384-2.126c.296-.763.499-1.636.558-2.913C23.986 15.667 24 15.259 24 12s-.014-3.667-.072-4.947c-.059-1.277-.261-2.149-.558-2.913a5.876 5.876 0 0 0-1.384-2.126A5.876 5.876 0 0 0 19.86.63C19.097.333 18.224.131 16.947.072 15.667.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z" />
+            <a href="https://www.instagram.com/jkt48.lana.a" target="_blank" rel="noopener" class="ig"
+              aria-label="Instagram"><svg viewBox="0 0 24 24">
+                <path
+                  d="M12 2.163c3.204 0 3.584.012 4.85.07 1.17.054 1.97.24 2.43.403a4.088 4.088 0 0 1 1.523.99 4.088 4.088 0 0 1 .99 1.524c.163.46.35 1.26.403 2.428.058 1.267.07 1.647.07 4.85s-.012 3.584-.07 4.85c-.054 1.17-.24 1.97-.403 2.43a4.088 4.088 0 0 1-.99 1.523 4.088 4.088 0 0 1-1.524.99c-.46.163-1.26.35-2.428.403-1.267.058-1.647.07-4.85.07s-3.584-.012-4.85-.07c-1.17-.054-1.97-.24-2.43-.403a4.088 4.088 0 0 1-1.523-.99 4.088 4.088 0 0 1-.99-1.524c-.163-.46-.35-1.26-.403-2.428C2.175 15.584 2.163 15.204 2.163 12s.012-3.584.07-4.85c.054-1.17.24-1.97.403-2.43a4.088 4.088 0 0 1 .99-1.523A4.088 4.088 0 0 1 5.15 2.207c.46-.163 1.26-.35 2.428-.403C8.846 2.175 9.226 2.163 12 2.163zM12 0C8.741 0 8.333.014 7.053.072 5.775.131 4.903.333 4.14.63a5.876 5.876 0 0 0-2.126 1.384A5.876 5.876 0 0 0 .63 4.14C.333 4.903.131 5.775.072 7.053.014 8.333 0 8.741 0 12s.014 3.667.072 4.947c.059 1.277.261 2.149.558 2.913a5.876 5.876 0 0 0 1.384 2.126A5.876 5.876 0 0 0 4.14 23.37c.763.296 1.636.499 2.913.558C8.333 23.986 8.741 24 12 24s3.667-.014 4.947-.072c1.277-.059 2.149-.261 2.913-.558a5.876 5.876 0 0 0 2.126-1.384 5.876 5.876 0 0 0 1.384-2.126c.296-.763.499-1.636.558-2.913C23.986 15.667 24 15.259 24 12s-.014-3.667-.072-4.947c-.059-1.277-.261-2.149-.558-2.913a5.876 5.876 0 0 0-1.384-2.126A5.876 5.876 0 0 0 19.86.63C19.097.333 18.224.131 16.947.072 15.667.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z" />
               </svg></a>
-            <a href="https://x.com/AR_LanaJKT48" target="_blank" rel="noopener" class="x" aria-label="X"><svg viewBox="0 0 24 24">
-                <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
+            <a href="https://x.com/AR_LanaJKT48" target="_blank" rel="noopener" class="x" aria-label="X"><svg
+                viewBox="0 0 24 24">
+                <path
+                  d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
               </svg></a>
-            <a href="https://www.tiktok.com/@jkt48.lana" target="_blank" rel="noopener" class="tt" aria-label="TikTok"><svg viewBox="0 0 24 24">
-                <path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-2.88 2.5 2.89 2.89 0 0 1-2.89-2.89 2.89 2.89 0 0 1 2.89-2.89c.28 0 .54.04.79.1v-3.5a6.37 6.37 0 0 0-.79-.05A6.34 6.34 0 0 0 3.15 15.2a6.34 6.34 0 0 0 6.34 6.34 6.34 6.34 0 0 0 6.34-6.34V8.69a8.17 8.17 0 0 0 4.76 1.52v-3.4a4.85 4.85 0 0 1-1-.12z" />
+            <a href="https://www.tiktok.com/@jkt48.lana" target="_blank" rel="noopener" class="tt"
+              aria-label="TikTok"><svg viewBox="0 0 24 24">
+                <path
+                  d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-2.88 2.5 2.89 2.89 0 0 1-2.89-2.89 2.89 2.89 0 0 1 2.89-2.89c.28 0 .54.04.79.1v-3.5a6.37 6.37 0 0 0-.79-.05A6.34 6.34 0 0 0 3.15 15.2a6.34 6.34 0 0 0 6.34 6.34 6.34 0 0 0 6.34-6.34V8.69a8.17 8.17 0 0 0 4.76 1.52v-3.4a4.85 4.85 0 0 1-1-.12z" />
               </svg></a>
-            <a href="https://idn-app.idn.link/s/profile-mr8ure" target="_blank" rel="noopener" class="idn" aria-label="IDN"><svg viewBox="0 0 24 24">
-                <rect x="3" y="3" width="18" height="18" rx="5" ry="5" fill="none" stroke="currentColor" stroke-width="1.5" /><text x="12" y="16" text-anchor="middle" font-size="7" font-weight="700" fill="currentColor" font-family="Arial,sans-serif">IDN</text>
+            <a href="https://idn-app.idn.link/s/profile-mr8ure" target="_blank" rel="noopener" class="idn"
+              aria-label="IDN"><svg viewBox="0 0 24 24">
+                <rect x="3" y="3" width="18" height="18" rx="5" ry="5" fill="none" stroke="currentColor"
+                  stroke-width="1.5" /><text x="12" y="16" text-anchor="middle" font-size="7" font-weight="700"
+                  fill="currentColor" font-family="Arial,sans-serif">IDN</text>
               </svg></a>
-            <a href="https://www.showroom-live.com/r/JKT48_Lana?t=1777993057" target="_blank" rel="noopener" class="sr" aria-label="Showroom"><svg viewBox="0 0 24 24">
+            <a href="https://www.showroom-live.com/r/JKT48_Lana?t=1777993057" target="_blank" rel="noopener" class="sr"
+              aria-label="Showroom"><svg viewBox="0 0 24 24">
                 <circle cx="12" cy="12" r="10" fill="none" stroke="currentColor" stroke-width="1.5" />
                 <polygon points="10,7 17,12 10,17" fill="currentColor" />
               </svg></a>
@@ -246,8 +259,7 @@
         <div class="sched-summary" id="schedSummary"></div>
         <div class="sched-table-wrap">
           <div class="sched-table-header">
-            <span>No</span><span>Kegiatan</span><span>Tanggal</span><span>Jam</span><span>Status</span>
-          </div>
+            <span>No</span><span>Kegiatan</span><span>Tanggal</span><span>Jam</span><span>Status</span></div>
           <div id="schedContent"></div>
         </div>
       </div>
@@ -284,7 +296,8 @@
     </section>
 
     <section id="birthday" class="section">
-      <div class="section-header"><button class="back-btn" onclick="showSection('profile')" aria-label="Kembali"><svg viewBox="0 0 24 24">
+      <div class="section-header"><button class="back-btn" onclick="showSection('profile')" aria-label="Kembali"><svg
+            viewBox="0 0 24 24">
             <polyline points="15 18 9 12 15 6" />
           </svg></button>
         <h2>Lana's Birthday</h2>
@@ -296,18 +309,23 @@
       </div>
       <div class="bday-countdown-wrap">
         <div class="bday-countdown" id="bdayCountdown">
-          <div class="bday-cd-item"><span class="bday-cd-val" id="cdDays">00</span><span class="bday-cd-label">Hari</span></div>
+          <div class="bday-cd-item"><span class="bday-cd-val" id="cdDays">00</span><span
+              class="bday-cd-label">Hari</span></div>
           <div class="bday-cd-sep">:</div>
-          <div class="bday-cd-item"><span class="bday-cd-val" id="cdHours">00</span><span class="bday-cd-label">Jam</span></div>
+          <div class="bday-cd-item"><span class="bday-cd-val" id="cdHours">00</span><span
+              class="bday-cd-label">Jam</span></div>
           <div class="bday-cd-sep">:</div>
-          <div class="bday-cd-item"><span class="bday-cd-val" id="cdMins">00</span><span class="bday-cd-label">Menit</span></div>
+          <div class="bday-cd-item"><span class="bday-cd-val" id="cdMins">00</span><span
+              class="bday-cd-label">Menit</span></div>
           <div class="bday-cd-sep">:</div>
-          <div class="bday-cd-item"><span class="bday-cd-val" id="cdSecs">00</span><span class="bday-cd-label">Detik</span></div>
+          <div class="bday-cd-item"><span class="bday-cd-val" id="cdSecs">00</span><span
+              class="bday-cd-label">Detik</span></div>
         </div>
         <div class="bday-cd-msg" id="cdMsg">Menuju hari istimewanya Lana ✨</div>
       </div>
       <div class="bday-celebration-text" id="bdayCelebrationText">HAPPY<br>BIRTHDAY<br>☾</div>
-      <div class="bday-actions"><button class="btn-enter bday-btn" onclick="openBdayModal()">Tulis Harapan & Ucapan ☾</button></div>
+      <div class="bday-actions"><button class="btn-enter bday-btn" onclick="openBdayModal()">Tulis Harapan & Ucapan
+          ☾</button></div>
       <div class="bday-wall-title">Dinding Harapan dari Fans</div>
       <div class="bday-wall" id="bdayWall"></div>
     </section>
@@ -317,8 +335,10 @@
       <div class="bday-modal-content">
         <button class="lightbox-close" onclick="closeBdayModal()" aria-label="Tutup">&times;</button>
         <h3>Tulis Ucapanmu ☾</h3>
-        <div class="bday-form-group"><label>Nama Panggilan</label><input type="text" id="bdayInputName" placeholder="Cth: Fan Lana" maxlength="20"></div>
-        <div class="bday-form-group"><label>Ucapan & Harapan</label><textarea id="bdayInputMsg" placeholder="Tulis ucapan terbaikmu untuk Lana..." rows="4" maxlength="200"></textarea></div>
+        <div class="bday-form-group"><label>Nama Panggilan</label><input type="text" id="bdayInputName"
+            placeholder="Cth: Fan Lana" maxlength="20"></div>
+        <div class="bday-form-group"><label>Ucapan & Harapan</label><textarea id="bdayInputMsg"
+            placeholder="Tulis ucapan terbaikmu untuk Lana..." rows="4" maxlength="200"></textarea></div>
         <button class="btn-enter bday-submit-btn" onclick="submitBdayCard()">Kirim Ucapan ✨</button>
       </div>
     </div>
@@ -328,13 +348,15 @@
       <div class="bday-modal-content">
         <button class="lightbox-close" onclick="closeQuizNameModal()" aria-label="Tutup">&times;</button>
         <h3>Simpan Skormu ☾</h3>
-        <div class="bday-form-group"><label>Nama Panggilan</label><input type="text" id="quizInputName" placeholder="Cth: Fan Lana" maxlength="20"></div>
+        <div class="bday-form-group"><label>Nama Panggilan</label><input type="text" id="quizInputName"
+            placeholder="Cth: Fan Lana" maxlength="20"></div>
         <button class="btn-enter bday-submit-btn" onclick="submitQuizScoreFromModal()">Kirim Skor ✨</button>
       </div>
     </div>
 
     <section id="hashtags" class="section">
-      <div class="section-header"><button class="back-btn" onclick="showSection('profile')" aria-label="Kembali"><svg viewBox="0 0 24 24">
+      <div class="section-header"><button class="back-btn" onclick="showSection('profile')" aria-label="Kembali"><svg
+            viewBox="0 0 24 24">
             <polyline points="15 18 9 12 15 6" />
           </svg></button>
         <h2>Hashtag Lana</h2>
@@ -350,19 +372,22 @@
           <div class="ht-page-banner-text">
             <div class="ht-page-title">Semua Hashtag Lana</div>
             <div class="ht-page-subtitle">Daftar hashtag resmi untuk mendukung Lana</div>
-            <div class="ht-page-badge"><span class="ht-page-badge-dot"></span><span id="htTotalBadge">0</span> Hashtag</div>
+            <div class="ht-page-badge"><span class="ht-page-badge-dot"></span><span id="htTotalBadge">0</span> Hashtag
+            </div>
           </div>
         </div>
       </div>
       <div class="ht-search-wrap"><svg class="ht-search-icon" viewBox="0 0 24 24">
           <circle cx="11" cy="11" r="8" />
           <line x1="21" y1="21" x2="16.65" y2="16.65" />
-        </svg><input type="text" class="ht-search" id="htSearch" placeholder="Cari hashtag..." oninput="filterHashtags()"></div>
+        </svg><input type="text" class="ht-search" id="htSearch" placeholder="Cari hashtag..."
+          oninput="filterHashtags()"></div>
       <div class="ht-grid" id="htGrid"></div>
     </section>
 
     <section id="videos" class="section">
-      <div class="section-header"><button class="back-btn" onclick="showSection('profile')" aria-label="Kembali"><svg viewBox="0 0 24 24">
+      <div class="section-header"><button class="back-btn" onclick="showSection('profile')" aria-label="Kembali"><svg
+            viewBox="0 0 24 24">
             <polyline points="15 18 9 12 15 6" />
           </svg></button>
         <h2>Video Lana</h2>
@@ -376,7 +401,8 @@
           <div class="vid-page-banner-text">
             <div class="vid-page-title">Semua Video Lana</div>
             <div class="vid-page-subtitle">Kumpulan video Lana JKT48</div>
-            <div class="vid-page-badge"><span class="vid-page-badge-dot"></span><span id="vidTotalBadge">0</span> Video</div>
+            <div class="vid-page-badge"><span class="vid-page-badge-dot"></span><span id="vidTotalBadge">0</span> Video
+            </div>
           </div>
         </div>
       </div>
@@ -431,7 +457,8 @@
         </div>
         <div class="fb-stat">
           <div class="fb-stat-icon"><svg viewBox="0 0 24 24">
-              <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z" />
+              <path
+                d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z" />
             </svg></div>
           <div class="fb-stat-label">Oshi</div>
           <div class="fb-stat-value">Aurhel Alana</div>
@@ -449,34 +476,42 @@
       </div>
       <div class="card fb-socials-card">
         <div class="fb-socials-title">Sosial Media Fanbase</div>
-        <div class="fb-socials-list"><a href="https://www.instagram.com/lanautica_ofc" target="_blank" rel="noopener" class="fb-social-item ig">
+        <div class="fb-socials-list"><a href="https://www.instagram.com/lanautica_ofc" target="_blank" rel="noopener"
+            class="fb-social-item ig">
             <div class="fb-social-item-icon"><svg viewBox="0 0 24 24">
-                <path d="M12 2.163c3.204 0 3.584.012 4.85.07 1.17.054 1.97.24 2.43.403a4.088 4.088 0 0 1 1.523.99 4.088 4.088 0 0 1 .99 1.524c.163.46.35 1.26.403 2.428.058 1.267.07 1.647.07 4.85s-.012 3.584-.07 4.85c-.054 1.17-.24 1.97-.403 2.43a4.088 4.088 0 0 1-.99 1.523 4.088 4.088 0 0 1-1.524.99c-.46.163-1.26.35-2.428.403-1.267.058-1.647.07-4.85.07s-3.584-.012-4.85-.07c-1.17-.054-1.97-.24-2.43-.403a4.088 4.088 0 0 1-1.523-.99 4.088 4.088 0 0 1-.99-1.524c-.163-.46-.35-1.26-.403-2.428C2.175 15.584 2.163 15.204 2.163 12s.012-3.584.07-4.85c.054-1.17.24-1.97.403-2.43a4.088 4.088 0 0 1 .99-1.523A4.088 4.088 0 0 1 5.15 2.207c.46-.163 1.26-.35 2.428-.403C8.846 2.175 9.226 2.163 12 2.163zM12 0C8.741 0 8.333.014 7.053.072 5.775.131 4.903.333 4.14.63a5.876 5.876 0 0 0-2.126 1.384A5.876 5.876 0 0 0 .63 4.14C.333 4.903.131 5.775.072 7.053.014 8.333 0 8.741 0 12s.014 3.667.072 4.947c.059 1.277.261 2.149.558 2.913a5.876 5.876 0 0 0 1.384 2.126A5.876 5.876 0 0 0 4.14 23.37c.763.296 1.636.499 2.913.558C8.333 23.986 8.741 24 12 24s3.667-.014 4.947-.072c1.277-.059 2.149-.261 2.913-.558a5.876 5.876 0 0 0 2.126-1.384 5.876 5.876 0 0 0 1.384-2.126c.296-.763.499-1.636.558-2.913C23.986 15.667 24 15.259 24 12s-.014-3.667-.072-4.947c-.059-1.277-.261-2.149-.558-2.913a5.876 5.876 0 0 0-1.384-2.126A5.876 5.876 0 0 0 19.86.63C19.097.333 18.224.131 16.947.072 15.667.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z" />
+                <path
+                  d="M12 2.163c3.204 0 3.584.012 4.85.07 1.17.054 1.97.24 2.43.403a4.088 4.088 0 0 1 1.523.99 4.088 4.088 0 0 1 .99 1.524c.163.46.35 1.26.403 2.428.058 1.267.07 1.647.07 4.85s-.012 3.584-.07 4.85c-.054 1.17-.24 1.97-.403 2.43a4.088 4.088 0 0 1-.99 1.523 4.088 4.088 0 0 1-1.524.99c-.46.163-1.26.35-2.428.403-1.267.058-1.647.07-4.85.07s-3.584-.012-4.85-.07c-1.17-.054-1.97-.24-2.43-.403a4.088 4.088 0 0 1-1.523-.99 4.088 4.088 0 0 1-.99-1.524c-.163-.46-.35-1.26-.403-2.428C2.175 15.584 2.163 15.204 2.163 12s.012-3.584.07-4.85c.054-1.17.24-1.97.403-2.43a4.088 4.088 0 0 1 .99-1.523A4.088 4.088 0 0 1 5.15 2.207c.46-.163 1.26-.35 2.428-.403C8.846 2.175 9.226 2.163 12 2.163zM12 0C8.741 0 8.333.014 7.053.072 5.775.131 4.903.333 4.14.63a5.876 5.876 0 0 0-2.126 1.384A5.876 5.876 0 0 0 .63 4.14C.333 4.903.131 5.775.072 7.053.014 8.333 0 8.741 0 12s.014 3.667.072 4.947c.059 1.277.261 2.149.558 2.913a5.876 5.876 0 0 0 1.384 2.126A5.876 5.876 0 0 0 4.14 23.37c.763.296 1.636.499 2.913.558C8.333 23.986 8.741 24 12 24s3.667-.014 4.947-.072c1.277-.059 2.149-.261 2.913-.558a5.876 5.876 0 0 0 2.126-1.384 5.876 5.876 0 0 0 1.384-2.126c.296-.763.499-1.636.558-2.913C23.986 15.667 24 15.259 24 12s-.014-3.667-.072-4.947c-.059-1.277-.261-2.149-.558-2.913a5.876 5.876 0 0 0-1.384-2.126A5.876 5.876 0 0 0 19.86.63C19.097.333 18.224.131 16.947.072 15.667.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z" />
               </svg></div>
             <div class="fb-social-item-text">
               <div class="fb-social-item-name">Instagram</div>
               <div class="fb-social-item-handle">@lanautica_ofc</div>
-            </div><svg class="fb-social-item-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            </div><svg class="fb-social-item-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+              stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
               <polyline points="9 18 15 12 9 6" />
             </svg>
           </a><a href="https://x.com/Lanautica_OFC" target="_blank" rel="noopener" class="fb-social-item x">
             <div class="fb-social-item-icon"><svg viewBox="0 0 24 24">
-                <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
+                <path
+                  d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
               </svg></div>
             <div class="fb-social-item-text">
               <div class="fb-social-item-name">X (Twitter)</div>
               <div class="fb-social-item-handle">@Lanautica_OFC</div>
-            </div><svg class="fb-social-item-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            </div><svg class="fb-social-item-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+              stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
               <polyline points="9 18 15 12 9 6" />
             </svg>
-          </a><a href="https://www.tiktok.com/@lanautica_ofc" target="_blank" rel="noopener" class="fb-social-item tt">
+          </a><a href="https://www.tiktok.com/@lanautica_ofc" target="_blank" rel="noopener"
+            class="fb-social-item tt">
             <div class="fb-social-item-icon"><svg viewBox="0 0 24 24">
-                <path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-2.88 2.5 2.89 2.89 0 0 1-2.89-2.89 2.89 2.89 0 0 1 2.89-2.89c.28 0 .54.04.79.1v-3.5a6.37 6.37 0 0 0-.79-.05A6.34 6.34 0 0 0 3.15 15.2a6.34 6.34 0 0 0 6.34 6.34 6.34 6.34 0 0 0 6.34-6.34V8.69a8.17 8.17 0 0 0 4.76 1.52v-3.4a4.85 4.85 0 0 1-1-.12z" />
+                <path
+                  d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-2.88 2.5 2.89 2.89 0 0 1-2.89-2.89 2.89 2.89 0 0 1 2.89-2.89c.28 0 .54.04.79.1v-3.5a6.37 6.37 0 0 0-.79-.05A6.34 6.34 0 0 0 3.15 15.2a6.34 6.34 0 0 0 6.34 6.34 6.34 0 0 0 6.34-6.34V8.69a8.17 8.17 0 0 0 4.76 1.52v-3.4a4.85 4.85 0 0 1-1-.12z" />
               </svg></div>
             <div class="fb-social-item-text">
               <div class="fb-social-item-name">TikTok</div>
               <div class="fb-social-item-handle">@lanautica_ofc</div>
-            </div><svg class="fb-social-item-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            </div><svg class="fb-social-item-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+              stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
               <polyline points="9 18 15 12 9 6" />
             </svg>
           </a></div>
@@ -505,7 +540,8 @@
     </section>
 
     <section id="history" class="section">
-      <div class="section-header"><button class="back-btn" onclick="showSection('fanbase')" aria-label="Kembali"><svg viewBox="0 0 24 24">
+      <div class="section-header"><button class="back-btn" onclick="showSection('fanbase')" aria-label="Kembali"><svg
+            viewBox="0 0 24 24">
             <polyline points="15 18 9 12 15 6" />
           </svg></button>
         <h2>Sejarah & Identitas</h2>
@@ -532,7 +568,8 @@
             <div class="project-banner-text">
               <div class="project-banner-title">Project Fanbase</div>
               <div class="project-banner-subtitle">Berbagai project dan kegiatan dari LANAUTICA</div>
-              <div class="project-banner-badge"><span class="project-banner-badge-dot"></span><span id="projectTotalBadge">0</span> Project</div>
+              <div class="project-banner-badge"><span class="project-banner-badge-dot"></span><span
+                  id="projectTotalBadge">0</span> Project</div>
             </div>
           </div>
         </div>
@@ -548,15 +585,19 @@
     </section>
 
     <section id="gallery" class="section">
-      <div class="gal-root-tabs" id="galRootTabs"><button class="gal-root-tab active" data-folder="lana" onclick="switchRootFolder('lana')"><span class="gal-root-tab-icon"><svg viewBox="0 0 24 24">
+      <div class="gal-root-tabs" id="galRootTabs"><button class="gal-root-tab active" data-folder="lana"
+          onclick="switchRootFolder('lana')"><span class="gal-root-tab-icon"><svg viewBox="0 0 24 24">
               <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" />
               <circle cx="12" cy="7" r="4" />
-            </svg></span><span class="gal-root-tab-label">Lana</span><span class="gal-root-tab-count">0</span></button><button class="gal-root-tab" data-folder="lanautica" onclick="switchRootFolder('lanautica')"><span class="gal-root-tab-icon"><svg viewBox="0 0 24 24">
+            </svg></span><span class="gal-root-tab-label">Lana</span><span
+            class="gal-root-tab-count">0</span></button><button class="gal-root-tab" data-folder="lanautica"
+          onclick="switchRootFolder('lanautica')"><span class="gal-root-tab-icon"><svg viewBox="0 0 24 24">
               <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
               <circle cx="9" cy="7" r="4" />
               <path d="M23 21v-2a4 4 0 0 0-3-3.87" />
               <path d="M16 3.13a4 4 0 0 1 0 7.75" />
-            </svg></span><span class="gal-root-tab-label">LANAUTICA</span><span class="gal-root-tab-count">0</span></button></div>
+            </svg></span><span class="gal-root-tab-label">LANAUTICA</span><span
+            class="gal-root-tab-count">0</span></button></div>
       <div id="galContent"></div>
     </section>
 
@@ -577,7 +618,8 @@
             <div class="artikel-banner-text">
               <div class="artikel-banner-title">Artikel Lana</div>
               <div class="artikel-banner-subtitle">Berita, cerita, dan informasi terbaru seputar Lana</div>
-              <div class="artikel-banner-badge"><span class="artikel-banner-badge-dot"></span><span id="artikelTotalBadge">0</span> Artikel</div>
+              <div class="artikel-banner-badge"><span class="artikel-banner-badge-dot"></span><span
+                  id="artikelTotalBadge">0</span> Artikel</div>
             </div>
           </div>
         </div>
@@ -606,7 +648,8 @@
           <div class="quiz-banner-text">
             <div class="quiz-banner-title">Quiz Lana</div>
             <div class="quiz-banner-subtitle">Uji pengetahuanmu tentang Lana JKT48!</div>
-            <div class="quiz-banner-badge"><span class="quiz-banner-badge-dot"></span><span id="quizTotalBadge">0</span> Soal</div>
+            <div class="quiz-banner-badge"><span class="quiz-banner-badge-dot"></span><span id="quizTotalBadge">0</span>
+              Soal</div>
           </div>
         </div>
       </div>
@@ -636,7 +679,8 @@
     <footer class="site-footer">&copy; 2026 LANAUTICA Fanbase</footer>
   </main>
 
-  <button class="back-to-top" id="backToTop" onclick="window.scrollTo({top:0,behavior:'smooth'})" aria-label="Kembali ke atas"><svg viewBox="0 0 24 24">
+  <button class="back-to-top" id="backToTop" onclick="window.scrollTo({top:0,behavior:'smooth'})"
+    aria-label="Kembali ke atas"><svg viewBox="0 0 24 24">
       <polyline points="18 15 12 9 6 15" />
     </svg></button>
 
@@ -644,11 +688,13 @@
     <div class="lightbox-backdrop" onclick="closeLightbox()"></div>
     <div class="lightbox-content">
       <button class="lightbox-close" onclick="closeLightbox()" aria-label="Tutup">&times;</button>
-      <button class="lb-nav lb-prev disabled" id="lbPrev" onclick="event.stopPropagation();lightboxNav(-1)" aria-label="Sebelumnya"><svg viewBox="0 0 24 24">
+      <button class="lb-nav lb-prev disabled" id="lbPrev" onclick="event.stopPropagation();lightboxNav(-1)"
+        aria-label="Sebelumnya"><svg viewBox="0 0 24 24">
           <polyline points="15 18 9 12 15 6" />
         </svg></button>
       <img src="" alt="Preview" id="lightboxImg" onclick="event.stopPropagation()">
-      <button class="lb-nav lb-next" id="lbNext" onclick="event.stopPropagation();lightboxNav(1)" aria-label="Selanjutnya"><svg viewBox="0 0 24 24">
+      <button class="lb-nav lb-next" id="lbNext" onclick="event.stopPropagation();lightboxNav(1)"
+        aria-label="Selanjutnya"><svg viewBox="0 0 24 24">
           <polyline points="9 18 15 12 9 6" />
         </svg></button>
       <div class="lb-counter" id="lbCounter"></div>

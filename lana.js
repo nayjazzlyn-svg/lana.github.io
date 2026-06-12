@@ -268,7 +268,7 @@ function loadRules() {
 }
 
 function loadFAQ() {
-  return fetch(API_URL + '?action=readFaq&t=' + Date.now())
+  return fetch(API_URL + '?action=readFaq&t=' + Date.now())  // ← ganti readFAQ → readFaq
     .then(function (r) {
       return r.json();
     })
@@ -295,6 +295,7 @@ function loadRegStatus() {
     })
     .then(function (data) {
       if (data && (data.status || data.link)) {
+        // Konversi status ke teks agar mudah dicek
         var statusStr = String(data.status || '').toLowerCase().trim();
         REG_STATUS = {
           status: statusStr === 'true' || statusStr === 'open',
@@ -343,7 +344,7 @@ function loadArticles() {
 }
 
 function loadQuiz() {
-  return fetch(API_URL + '?action=readQuizzes&t=' + Date.now())
+  return fetch(API_URL + '?action=readQuizzes&t=' + Date.now()) // ← Ganti readQuiz jadi readQuizzes
     .then(function (r) {
       return r.json();
     })
@@ -382,6 +383,7 @@ function loadProjects() {
       if (Array.isArray(data) && data.length > 0) {
         PROJECT_DATA = data
           .map(function (row) {
+            // PERBAIKAN STATUS: Cek row.status, jika kosong defaultnya 'upcoming'
             var rawStatus = (row.status || 'upcoming').toLowerCase().trim();
             var normalizedStatus = 'upcoming';
             if (rawStatus === 'selesai' || rawStatus === 'completed') {
@@ -392,13 +394,12 @@ function loadProjects() {
 
             return {
               id: row.id || row.row || '',
-              title: row.nama || row.title || row.judul || '',
-              date: row.date || row.tanggal || '',
-              excerpt: row.deskripsi || row.excerpt || row.ringkasan || '',
-              content: row.deskripsi || row.content || row.isi || row.konten || '',
-              thumbnail: row.link || row.thumbnail || row.foto || row.gambar || '',
-              photos: row.photos || row.galeri || row.dokumentasi || '',
-              status: normalizedStatus
+              title: row.nama || row.title || row.judul || '', // Utamakan 'nama' dari admin
+              date: row.date || row.tanggal || '', 
+              excerpt: row.deskripsi || row.excerpt || row.ringkasan || '', // Utamakan 'deskripsi' dari admin
+              content: row.deskripsi || row.content || row.isi || row.konten || '', // Utamakan 'deskripsi' dari admin
+              thumbnail: row.link || row.thumbnail || row.foto || row.gambar || '', // UTAMAKAN 'link' DARI ADMIN (tempat foto disimpan)
+              photos: row.photos || row.galeri || row.dokumentasi || ''
             };
           })
           .filter(function (p) {
@@ -1236,7 +1237,7 @@ function renderHistoryPage() {
   });
   var logoItem = HISTORY_DATA.find(function (item) {
     return item.section === 'makna';
-  });
+});
   var mottoItem = HISTORY_DATA.find(function (item) {
     return item.section === 'motto';
   });
@@ -1347,6 +1348,7 @@ function renderFAQ() {
 
 function renderRegStatus() {
   var el = document.getElementById('fbRegSection');
+  // Cek apakah status true (dari boolean) atau "true"/"open" (dari string)
   var isOpen = REG_STATUS.status === true || String(REG_STATUS.status).toLowerCase().trim() === 'true' || String(REG_STATUS.status).toLowerCase().trim() === 'open';
 
   if (!isOpen) {
@@ -1757,7 +1759,7 @@ function submitQuizScoreFromModal() {
 }
 
 function loadQuizLeaderboard() {
-  return fetch(API_URL + '?action=readSkorKuis&t=' + Date.now())
+  return fetch(API_URL + '?action=readSkorKuis&t=' + Date.now()) // ← Ganti readQuizLeaderboard jadi readSkorKuis
     .then(function (r) {
       return r.json();
     })
@@ -1871,10 +1873,11 @@ function renderProjects() {
         escapeHtml(project.date) +
         '</span>';
     }
+    // PERBAIKAN DI SINI: Tag div dan span ditutup dengan benar, lalu judul dipindahkan ke dalamnya
     html += '</div><div class="project-card-title">' +
       escapeHtml(project.title) +
       '</div>';
-
+      
     if (project.excerpt) {
       html +=
         '<div class="project-card-excerpt">' +
@@ -1921,7 +1924,7 @@ function showProjectDetail(idx) {
       escapeHtml(project.title) +
       '" loading="lazy"><div class="project-detail-thumb-overlay"></div></div>';
   }
-  html += '<div class="project-detail-hero-text"><span class="project-detail-category"></span><div class="project-detail-title">' +
+    '</span><div class="project-detail-title">' +
     escapeHtml(project.title) +
     '</div><div class="project-detail-meta">';
   if (project.date) {
@@ -2535,14 +2538,16 @@ window.addEventListener('scroll', function () {
   };
 })();
 
-(function () {
+// --- INJECT CSS AGAR FOTO PROJECT TIDAK TERPOTONG ---
+(function() {
   var style = document.createElement('style');
-  style.innerHTML =
+  style.innerHTML = 
     '.project-card-thumb { aspect-ratio: auto !important; min-height: 200px; }' +
     '.project-card-thumb img { object-fit: contain !important; width: 100% !important; height: 100% !important; }' +
     '.project-card-thumb-placeholder { aspect-ratio: auto !important; min-height: 200px; }';
   document.head.appendChild(style);
 })();
+// ----------------------------------------------------
 
 function openYtPopup(videoId) {
   var existing = document.getElementById('ytPopupOverlay');
